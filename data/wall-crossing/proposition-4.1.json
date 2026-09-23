@@ -1,0 +1,3899 @@
+{
+  "statement": {
+    "label": "命题 4.1",
+    "text": "跨墙数等于墙两侧涡旋不变量之差，也等于辅助模空间 \\(\\mathcal P_0/T\\) 上的欧拉类积分。",
+    "formula": "\\Phi_{\\lambda,g}^{\\rho,\\tau_0+\\varepsilon\\tau_1}(\\alpha)-\\Phi_{\\lambda,g}^{\\rho,\\tau_0-\\varepsilon\\tau_1}(\\alpha)=\\int_{\\mathcal P_0/T}\\pi^*\\alpha.",
+    "equation_number": "(20)",
+    "source_page": {
+      "pdf": [13],
+      "printed": [145]
+    },
+    "evidence": "Proposition 4.1. The wall crossing number can be expressed in the form ... (20).",
+    "inferred": false
+  },
+  "intuitive_explanation": {
+    "text": "把参数 \\(\\tau\\) 沿指定方向微小地移过这面墙时，不变量产生的全部变化都由墙上的一个规范化模空间 \\(\\mathcal P_0/T\\) 捕获；因此，比较两个腔室中的不变量，被化成了计算一个单独的墙贡献。",
+    "source_page": {
+      "pdf": [12, 13],
+      "printed": [144, 145]
+    },
+    "evidence": "The authors say that they cut out a neighborhood of the singular set, evaluate the resulting third boundary component, and then deform it to another \\(T\\)-moduli problem; Proposition 4.1 identifies the result with the integral over \\(\\mathcal P_0/T\\).",
+    "inferred": true
+  },
+  "symbols": [
+    {
+      "symbol": "T",
+      "meaning": "涡旋问题中的 \\(k\\) 维环面。",
+      "explanation": "它在 \\(\\mathbb C^n\\) 上作对角作用。先除以带基点规范变换后，常值规范变换留下剩余的 \\(T\\)-作用，用于商空间 \\(\\mathcal M(\\tau)/T\\) 和 \\(\\mathcal P_0/T\\)。",
+      "source_page": {
+        "pdf": [1, 6],
+        "printed": [133, 138]
+      },
+      "evidence": "Let \\(T\\) be a torus of dimension \\(k\\); later, the paper states that \\(T\\), viewed as the group of constant gauge transformations, acts on \\(\\mathcal B\\).",
+      "inferred": false
+    },
+    {
+      "symbol": "\\rho",
+      "meaning": "\\(T\\) 在 \\(\\mathbb C^n\\) 上的对角作用。",
+      "explanation": "该作用由特征标 \\(\\rho_\\nu:T\\to S^1\\) 指定；等价地，也可由对偶格中的权 \\(w_\\nu\\) 描述。",
+      "source_page": {
+        "pdf": [1],
+        "printed": [133]
+      },
+      "evidence": "The action is determined by \\(n\\) homomorphisms \\(\\rho_\\nu:T\\to S^1\\).",
+      "inferred": false
+    },
+    {
+      "symbol": "\\lambda=\\lambda(P)",
+      "meaning": "主 \\(T\\)-丛 \\(P\\to\\Sigma\\) 的特征向量。",
+      "explanation": "它记录涡旋问题所处的拓扑扇区，并属于整数格 \\(\\Lambda\\)。对连接 \\(A\\)，论文用曲率在 \\(\\Sigma\\) 上的积分定义它；所得结果与 \\(A\\) 的选择无关。",
+      "source_page": {
+        "pdf": [5, 6],
+        "printed": [137, 138]
+      },
+      "evidence": "The characteristic vector of \\(P\\) is denoted by \\(\\lambda(P):=\\int_\\Sigma F_A\\in\\Lambda\\), and is independent of the connection.",
+      "inferred": false
+    },
+    {
+      "symbol": "g",
+      "meaning": "紧黎曼曲面 \\(\\Sigma\\) 的亏格。",
+      "explanation": "论文在指标公式的 \\(2-2g\\) 中使用 \\(g\\)，并说明跨墙结果适用于任意亏格，但没有用一句独立的话明确写出“\\(g\\) 是亏格”。",
+      "source_page": {
+        "pdf": [7, 9],
+        "printed": [139, 141]
+      },
+      "evidence": "The index formula contains \\((n-\\dim T)(2-2g)\\), and Section 3 introduces the wall-crossing formula for arbitrary genus.",
+      "inferred": true
+    },
+    {
+      "symbol": "\\tau_0",
+      "meaning": "位于余维一墙上的参数。",
+      "explanation": "它是墙上的奇异参数值；命题比较它附近墙两侧的参数 \\(\\tau_0\\pm\\varepsilon\\tau_1\\)。",
+      "source_page": {
+        "pdf": [9],
+        "printed": [141]
+      },
+      "evidence": "Section 3 fixes an element \\(\\tau_0\\in\\mathfrak t^*\\) of a wall of codimension one.",
+      "inferred": false
+    },
+    {
+      "symbol": "\\tau_1",
+      "meaning": "在 \\(\\tau_0\\) 处横截于墙的方向。",
+      "explanation": "它指定参数穿过墙的方向。通过选择满足 \\(\\langle\\tau_1,e_1\\rangle>0\\) 的 \\(e_1\\) 来固定其正向。",
+      "source_page": {
+        "pdf": [9],
+        "printed": [141]
+      },
+      "evidence": "Choose a vector \\(\\tau_1\\in\\mathfrak t^*\\) that is transverse to \\(\\mu(\\mathbb C^I)\\), with \\(\\langle\\tau_1,e_1\\rangle>0\\).",
+      "inferred": false
+    },
+    {
+      "symbol": "\\varepsilon",
+      "meaning": "充分小的正跨墙距离。",
+      "explanation": "命题 4.1 中的两个参数由 \\(\\tau_0\\) 沿 \\(\\pm\\varepsilon\\tau_1\\) 移动得到。论文要求 \\(\\varepsilon\\) 充分小，但没有给出数值界。",
+      "source_page": {
+        "pdf": [10],
+        "printed": [142]
+      },
+      "evidence": "Theorem 3.1 assumes every sufficiently small positive number \\(\\varepsilon\\).",
+      "inferred": false
+    },
+    {
+      "symbol": "\\alpha",
+      "meaning": "由不变量进行求值的等变上同调插入类。",
+      "explanation": "它属于 \\(S^*(\\mathfrak t^*)\\otimes H^*(\\mathcal A/\\mathcal G_0)\\)，并与 \\(H_T^*(\\mathcal A/\\mathcal G_0)\\) 认同。",
+      "source_page": {
+        "pdf": [8, 10],
+        "printed": [140, 142]
+      },
+      "evidence": "The paper takes \\(\\alpha\\in S^*(\\mathfrak t^*)\\otimes H^*(\\mathcal A/\\mathcal G_0)\\).",
+      "inferred": false
+    },
+    {
+      "symbol": "\\Phi_{\\lambda,g}^{\\rho,\\tau}(\\alpha)",
+      "meaning": "作用 \\(\\rho\\)、拓扑类 \\(\\lambda\\)、亏格 \\(g\\) 和参数 \\(\\tau\\) 对应的辛涡旋不变量，在 \\(\\alpha\\) 上取值。",
+      "explanation": "它定义为 \\(T\\)-模问题 \\((\\mathcal B,\\mathcal E,\\mathcal S)\\) 的欧拉类在 \\(\\pi^*\\alpha\\) 上的求值。\\(\\mathcal M(\\tau)/T\\) 上的积分是论文对这一求值所用的几何记号。",
+      "source_page": {
+        "pdf": [8],
+        "printed": [140]
+      },
+      "evidence": "\\(\\Phi_{\\lambda,g}^{\\rho,\\tau}(\\alpha):=\\chi^{\\mathcal B,\\mathcal E,\\mathcal S}(\\pi^*\\alpha)=:\\int_{\\mathcal M(\\tau)/T}\\pi^*\\alpha\\).",
+      "inferred": false
+    },
+    {
+      "symbol": "e_1",
+      "meaning": "垂直于墙的本原格向量。",
+      "explanation": "由“与墙正交”及 \\(\\langle\\tau_1,e_1\\rangle>0\\) 两个条件唯一确定。它决定哪些坐标沿墙方向，并在证明中用于解出 \\(t\\)。",
+      "source_page": {
+        "pdf": [9, 15],
+        "printed": [141, 147]
+      },
+      "evidence": "The paper chooses the unique primitive lattice vector \\(e_1\\) orthogonal to the wall and satisfying \\(\\langle\\tau_1,e_1\\rangle>0\\).",
+      "inferred": false
+    },
+    {
+      "symbol": "I",
+      "meaning": "权向量沿墙方向的坐标指标集合。",
+      "explanation": "定义为 \\(I=\\{\\nu\\mid\\langle w_\\nu,e_1\\rangle=0\\}\\)。指标满足 \\(\\nu\\notin I\\) 的规范化场产生辅助的墙贡献。",
+      "source_page": {
+        "pdf": [2, 12],
+        "printed": [134, 144]
+      },
+      "evidence": "\\(I:=\\{\\nu\\mid\\langle w_\\nu,e_1\\rangle=0\\}\\); equation (17) imposes \\(\\sum_{\\nu\\notin I}\\lVert u_\\nu\\rVert^2=1\\).",
+      "inferred": false
+    },
+    {
+      "symbol": "\\mathcal G_0",
+      "meaning": "带基点规范群。",
+      "explanation": "它由在固定基点 \\(z_0\\in\\Sigma\\) 处取恒等元的规范变换组成。\\(\\mathcal M(\\tau)\\) 与 \\(\\mathcal P_0\\) 都先对这个群取商。",
+      "source_page": {
+        "pdf": [6],
+        "printed": [138]
+      },
+      "evidence": "\\(\\mathcal G_0:=\\{g\\in\\mathcal G\\mid g(z_0)=\\mathbb 1\\}\\).",
+      "inferred": false
+    },
+    {
+      "symbol": "\\mathcal P_0/T",
+      "meaning": "辅助规范化墙上模空间对剩余 \\(T\\)-作用的商。",
+      "explanation": "\\(\\mathcal P_0\\) 由方程 (17) 的解的带基点规范等价类组成。除墙上的涡旋方程与全纯性方程外，(17) 还要求 \\(\\nu\\notin I\\) 的模态总 \\(L^2\\) 范数平方为 1。",
+      "source_page": {
+        "pdf": [12],
+        "printed": [144]
+      },
+      "evidence": "\\(\\mathcal P_0:=\\{(A,u)\\mid A\\text{ and }u\\text{ satisfy }(17)\\}/\\mathcal G_0\\).",
+      "inferred": false
+    },
+    {
+      "symbol": "\\pi",
+      "meaning": "投影 \\(\\mathcal B\\to\\mathcal A/\\mathcal G_0\\)：忘掉截面变量，只保留连接的等价类。",
+      "explanation": "它诱导的拉回把插入类 \\(\\alpha\\) 送到等变类 \\(\\pi^*\\alpha\\)；该类同时出现在涡旋不变量和命题 4.1 的右端。",
+      "source_page": {
+        "pdf": [8],
+        "printed": [140]
+      },
+      "evidence": "The projection \\(\\pi:\\mathcal B\\to\\mathcal A/\\mathcal G_0\\) induces a homomorphism \\(\\pi^*\\) on equivariant cohomology.",
+      "inferred": false
+    },
+    {
+      "symbol": "\\int_{\\mathcal P_0/T}\\pi^*\\alpha",
+      "meaning": "与 \\(T\\)-模问题 \\((\\mathcal B,\\mathcal E_0,\\mathcal S_0)\\) 对应的欧拉类求值。",
+      "explanation": "这个记号不能自动理解为光滑流形上的普通积分。论文明确把它定义为 \\(\\chi^{\\mathcal B,\\mathcal E_0,\\mathcal S_0}(\\pi^*\\alpha)\\)，其定向由注 4.2 固定。",
+      "source_page": {
+        "pdf": [13],
+        "printed": [145]
+      },
+      "evidence": "The integral is understood as \\(\\chi^{\\mathcal B,\\mathcal E_0,\\mathcal S_0}(\\pi^*\\alpha)\\), with the orientation specified in Remark 4.2.",
+      "inferred": false
+    }
+  ],
+  "proof": {
+    "logic": {
+      "title": "命题 4.1 的证明解读",
+      "notation": "下文将左端简记为 \\(\\Delta\\Phi(\\alpha)\\)，并令 \\(\\tau_{\\pm\\varepsilon}=\\tau_0\\pm\\varepsilon\\tau_1\\)。所有积分均指模问题的欧拉类求值；不是默认光滑流形上的积分。",
+      "goal_formula_id": "logic-goal",
+      "backbone": [
+        {
+          "label": "A · 差值变成切口贡献",
+          "formula_id": "logic-equality-a",
+          "reason": "切除非有限稳定子点集；按边界定向使用配边公理。"
+        },
+        {
+          "label": "B · 切口贡献变成辅助贡献",
+          "formula_id": "logic-equality-b",
+          "reason": "保持全纯性与长度约束，做紧的有向同伦，再归一化。"
+        }
+      ],
+      "setup": {
+        "title": "证明的输入：方程 (6) 与跨墙参数",
+        "source_page": {"pdf": [6, 9, 14], "printed": [138, 141, 146]},
+        "evidence": "Equation (6); Section 3 fixes a codimension-one wall and a positively oriented normal; the proof defines the parameter family W on page 146.",
+        "inferred": false,
+        "formula_ids": [
+          "vortex-equations-6"
+        ],
+        "context": "固定 \\(P,\\lambda(P),g,\\alpha\\)。取 \\(\\tau_t=\\tau_0+t\\tau_1\\)，\\(-\\varepsilon\\le t\\le\\varepsilon\\)；\\(\\mathcal W=\\{[t,A,u]:(A,u)\\text{ 满足 (6)，}\\tau=\\tau_t\\}\\)。\\(I\\) 是墙内权重指标，\\(\\langle w_\\nu,e_1\\rangle=0\\)（\\(\\nu\\in I\\)），\\(\\langle\\tau_1,e_1\\rangle>0\\)；\\(\\varepsilon>0\\) 充分小，两端参数均正则。"
+      },
+      "arguments": [
+        {
+          "id": "cut-and-control",
+          "title": "排除配边障碍，并证明切口不碰两端",
+          "formula_ids": [
+            "singular-locus-criterion",
+            "logic-excision",
+            "logic-cutoff-estimate"
+          ],
+          "uses": [
+            "在 \\(\\mathcal W\\) 中，非有限稳定子点集恰好是 \\(\\mathcal M_0=\\{t=0,\\ r^2=0\\}\\)。",
+            "取 \\(\\delta>0\\) 且 \\(C\\delta<\\varepsilon\\)；常数 \\(C\\) 与 \\(\\delta\\) 无关。"
+          ],
+          "reason": "曲率方程与 \\(e_1\\) 配对并积分，曲率项与拓扑项抵消、墙内项消失。由 \\(|t|\\le Cr^2\\)，在 \\(r^2\\le\\delta\\) 上必有 \\(|t|<\\varepsilon\\)：既排除切口的角点，也保证两个端点的解没有被切掉。",
+          "result": "两端模空间完整保留；剩余零点集的稳定子有限且避开角点。限制到其小邻域后，得到可用的带边界 \\(T\\)-模问题。",
+          "source_page": {
+            "pdf": [
+              9,
+              15
+            ],
+            "printed": [
+              141,
+              147
+            ]
+          },
+          "evidence": "The proof identifies non-finite isotropy, cuts out r²<δ, and uses (26) to exclude corners.",
+          "inferred": true
+        },
+        {
+          "id": "cobordism-equality",
+          "title": "按定向写出三个边界贡献，得到 A",
+          "formula_ids": [
+            "logic-boundary-evaluation"
+          ],
+          "uses": [
+            "上一步得到的合格配边；对三部分使用同一个拉回类。",
+            "注 4.4：\\(\\mathcal M^\\delta\\) 的指定定向与诱导边界定向相反。"
+          ],
+          "reason": "定理 A.4 的配边公理使带符号的边界求值之和为零。正端为正，负端为负；切口取相反定向，因此也是负号。移项才得到式 (29) 的正号。",
+          "result": "已证 A：\\(\\Delta\\Phi(\\alpha)=\\int_{\\mathcal M^\\delta/T}\\pi^*\\alpha\\)。此时右端还不是 \\(\\mathcal P_0\\)。",
+          "source_page": {
+            "pdf": [
+              15,
+              16,
+              17,
+              19,
+              47
+            ],
+            "printed": [
+              147,
+              148,
+              149,
+              151,
+              179
+            ]
+          },
+          "evidence": "Opposite boundary orientation is verified in Remark 4.4. With the orientations understood, Cobordism in Theorem A.4 implies (29).",
+          "inferred": true
+        },
+        {
+          "id": "oriented-homotopy",
+          "title": "关闭墙外耦合，但不改变欧拉类求值",
+          "formula_ids": [
+            "logic-homotopy",
+            "logic-homotopy-value"
+          ],
+          "uses": [
+            "\\(s=1\\)：恢复切口方程；\\(s=0\\)：曲率方程只剩墙内分量。",
+            "始终保留 \\(\\bar\\partial_Au_\\nu=0\\) 与 \\(r^2=\\delta>0\\)，墙外截面没有被置零。",
+            "整个同伦零点集紧；\\(D_s\\) 的复线性保证定向连续（原文的关键分析与定向结论）。"
+          ],
+          "reason": "固定 \\(\\mathcal B^\\delta,\\mathcal E^\\delta\\)，只按式 (30) 改变截面；\\(\\delta>0\\) 排除了墙外分量全为零。由紧性、有限稳定子与连续定向，定理 A.4 的配边公理可用于同伦两端。",
+          "result": "切口积分等于 \\(s=0\\) 模问题的求值；长度仍是 \\(\\sqrt\\delta\\)，还需归一化才能得到 \\(\\mathcal P_0\\)。",
+          "source_page": {
+            "pdf": [
+              15,
+              17,
+              47
+            ],
+            "printed": [
+              147,
+              149,
+              179
+            ]
+          },
+          "evidence": "The zero sets form a compact subset of [0,1]×Bδ. Since D_s is complex linear the orientation varies continuously.",
+          "inferred": true
+        },
+        {
+          "id": "normalize-and-finish",
+          "title": "归一化并用函子性，完成 B",
+          "formula_ids": [
+            "definition-17",
+            "logic-normalization",
+            "logic-final-chain"
+          ],
+          "uses": [
+            "\\(s=0\\) 的曲率方程不含墙外分量；只缩放 \\(\\nu\\notin I\\) 的截面。",
+            "原文给出保定向的模问题态射；仅验证零点集对应还不够。",
+            "联络 \\(A\\) 不变，所以投影 \\(\\pi[A,u]=[A]\\) 不变，比较的仍是同一个 \\(\\pi^*\\alpha\\)。"
+          ],
+          "reason": "缩放后，全纯方程、墙上曲率方程、单位长度约束恰好是定义 \\(\\mathcal P_0\\) 的方程 (17)。对原文的保定向态射使用定理 A.4 的函子性，再接上同伦两端的等值，即得 B。",
+          "result": "A 与 B 连起来就是命题 4.1；这里证明的是欧拉类求值相同，不是两个空间同胚。",
+          "source_page": {
+            "pdf": [
+              8,
+              12,
+              13,
+              17,
+              47
+            ],
+            "printed": [
+              140,
+              144,
+              145,
+              149,
+              179
+            ]
+          },
+          "evidence": "The proof asserts an orientation-preserving morphism at s=0, applies Cobordism and Functoriality, and concludes (20) from (29).",
+          "inferred": true
+        }
+      ],
+      "conclusion": {
+        "text": "这条等值链依赖四项核对：零点集紧且稳定子有限；切口避开角点；边界符号与同伦定向匹配；保定向态射保留同一个拉回类。缺少这些条件，不能只凭“连续变形”宣布积分相等。",
+        "source_page": {
+          "pdf": [
+            15,
+            16,
+            17,
+            47
+          ],
+          "printed": [
+            147,
+            148,
+            149,
+            179
+          ]
+        },
+        "evidence": "Equation (26), Remark 4.4, compactness and continuous orientation, and the Cobordism/Functoriality axioms supply these checks.",
+        "inferred": true
+      }
+    },
+    "logic_formulas": [
+      {
+        "id": "definition-17",
+        "label": "定义（17）：辅助模空间的完整条件",
+        "latex": "\\begin{aligned}\n\\bar\\partial_Au_\\nu&=0\\qquad(\\nu=1,\\ldots,n),\\\\\n*F_A+\\pi\\sum_{\\nu\\in I}|u_\\nu|^2w_\\nu&=\\frac{*_{\\mathfrak t}\\lambda(P)}{\\operatorname{Vol}(\\Sigma)}+\\tau_0,\\\\\n\\sum_{\\nu\\notin I}\\|u_\\nu\\|_{L^2}^2&=1,\\\\[.6em]\n\\mathcal P_0&:=\\{(A,u)\\mid (A,u)\\text{ 满足 (17)}\\}/\\mathcal G_0 .\n\\end{aligned}",
+        "explanation": "前三行是式 (17)：全体截面全纯、曲率求和只含墙内指标 \\(\\nu\\in I\\)、墙外截面的总 \\(L^2\\) 平方范数为 1。最后一行按带基点规范群 \\(\\mathcal G_0\\) 取商，得到 \\(\\mathcal P_0\\)。",
+        "source_page": {
+          "pdf": [
+            12
+          ],
+          "printed": [
+            144
+          ]
+        },
+        "evidence": "Equation (17) imposes holomorphicity for all components, the curvature equation summed over \\(\\nu\\in I\\), and \\(\\sum_{\\nu\\notin I}\\|u_\\nu\\|^2=1\\). The following display defines \\(\\mathcal P_0\\) as the space of based gauge equivalence classes of its solutions.",
+        "inferred": false
+      },
+      {
+        "id": "logic-goal",
+        "label": "目标 · 命题 4.1，式 (20)",
+        "latex": "\\Phi_{\\lambda,g}^{\\rho,\\tau_0+\\varepsilon\\tau_1}(\\alpha)-\\Phi_{\\lambda,g}^{\\rho,\\tau_0-\\varepsilon\\tau_1}(\\alpha)=\\int_{\\mathcal P_0/T}\\pi^*\\alpha",
+        "explanation": "固定同一个上同调类与拓扑类型，比较墙两侧参数的求值。",
+        "source_page": {
+          "pdf": [
+            13
+          ],
+          "printed": [
+            145
+          ]
+        },
+        "evidence": "Proposition 4.1, equation (20).",
+        "inferred": false
+      },
+      {
+        "id": "logic-equality-a",
+        "label": "等式 A · 切除与配边",
+        "latex": "\\Delta\\Phi(\\alpha)=\\int_{\\mathcal M^\\delta/T}\\pi^*\\alpha",
+        "explanation": "式 (29)，这里只把左端记为跨墙差值。",
+        "source_page": {
+          "pdf": [
+            17
+          ],
+          "printed": [
+            149
+          ]
+        },
+        "evidence": "The (Cobordism) axiom in Theorem A.4 implies equation (29).",
+        "inferred": false
+      },
+      {
+        "id": "logic-equality-b",
+        "label": "等式 B · 同伦与函子性",
+        "latex": "\\int_{\\mathcal M^\\delta/T}\\pi^*\\alpha=\\int_{\\mathcal P_0/T}\\pi^*\\alpha",
+        "explanation": "紧的有向同伦和保定向态射保留欧拉类求值，不要求两个零点集同胚。",
+        "source_page": {
+          "pdf": [
+            17,
+            47
+          ],
+          "printed": [
+            149,
+            179
+          ]
+        },
+        "evidence": "The (Cobordism) and (Functoriality) axioms imply that the integrals over Mδ/T and P0/T agree.",
+        "inferred": false
+      },
+      {
+        "id": "logic-excision",
+        "label": "去掉异常点，但保留一个新边界",
+        "latex": "\\begin{aligned}r^2(u)&:=\\sum_{\\nu\\notin I}\\|u_\\nu\\|_{L^2}^2,\\\\\n\\mathcal W^\\delta&=\\{[t,A,u]\\in\\mathcal W:r^2(u)\\ge\\delta\\},\\\\\n\\mathcal M^\\delta&=\\{[t,A,u]\\in\\mathcal W:r^2(u)=\\delta\\}.\\end{aligned}",
+        "explanation": "r² 是本页简写。所有等式都同时包含原涡旋方程与带基点规范等价关系。",
+        "source_page": {
+          "pdf": [
+            15
+          ],
+          "printed": [
+            147
+          ]
+        },
+        "evidence": "The proof defines Q by the inequality and the third boundary by equality in the norm constraint.",
+        "inferred": true
+      },
+      {
+        "id": "logic-cutoff-estimate",
+        "label": "式 (26) 排除角点",
+        "latex": "\\begin{aligned}t(u)&=\\frac{\\pi\\sum_{\\nu\\notin I}\\|u_\\nu\\|_{L^2}^2\\langle w_\\nu,e_1\\rangle}{\\langle\\tau_1,e_1\\rangle\\operatorname{Vol}(\\Sigma)},\\\\ |t(u)|&\\le C r^2(u),\\qquad C\\delta<\\varepsilon,\\\\ C&=\\frac{\\pi\\max_{\\nu\\notin I}|\\langle w_\\nu,e_1\\rangle|}{\\langle\\tau_1,e_1\\rangle\\operatorname{Vol}(\\Sigma)}.\\end{aligned}",
+        "explanation": "式 (26) 给出 \\(t(u)\\)，三角不等式给出 \\(|t|\\le Cr^2\\)。取 \\(C\\delta<\\varepsilon\\)，则整个 \\(r^2\\le\\delta\\) 的区域都不碰 \\(t=\\pm\\varepsilon\\)；切口无角点，两端解也不会被切掉。这是补充推导。",
+        "source_page": {
+          "pdf": [
+            9,
+            15
+          ],
+          "printed": [
+            141,
+            147
+          ]
+        },
+        "evidence": "Formula (26) determines t by u and shows |t|<ε for sufficiently small δ. The explicit bound Cδ is a supplementary derivation.",
+        "inferred": true
+      },
+      {
+        "id": "logic-boundary-evaluation",
+        "label": "先写带符号的求值，再移项",
+        "latex": "\\begin{aligned}\n0&=\\Phi_{\\lambda,g}^{\\rho,\\tau_{+\\varepsilon}}(\\alpha)\n-\\Phi_{\\lambda,g}^{\\rho,\\tau_{-\\varepsilon}}(\\alpha)\n-\\int_{\\mathcal M^\\delta/T}\\pi^*\\alpha,\\\\\n\\Delta\\Phi(\\alpha)&=\\int_{\\mathcal M^\\delta/T}\\pi^*\\alpha.\n\\end{aligned}",
+        "explanation": "三个项是有向边界模问题的欧拉类贡献；不是把零点集假设成普通光滑流形后使用 Stokes 定理。",
+        "source_page": {
+          "pdf": [
+            16,
+            17,
+            19,
+            47
+          ],
+          "printed": [
+            148,
+            149,
+            151,
+            179
+          ]
+        },
+        "evidence": "The orientation on the third moduli problem is opposite to the boundary orientation (Remark 4.4); Cobordism gives (29).",
+        "inferred": true
+      },
+      {
+        "id": "logic-homotopy",
+        "label": "式 (30) · 只改变曲率方程",
+        "latex": "\\begin{gathered}\n*F_A+\\pi\\sum_{\\nu\\in I}|u_\\nu|^2w_\\nu-\\frac{*_{\\mathfrak t}\\lambda(P)}{\\operatorname{Vol}(\\Sigma)}-\\tau_0\\\\\n=s\\left(t(u)\\tau_1-\\pi\\sum_{\\nu\\notin I}|u_\\nu|^2w_\\nu\\right),\\qquad 0\\le s\\le1,\\\\\n\\bar\\partial_Au_\\nu=0\\quad(\\nu=1,\\ldots,n),\\qquad r^2(u)=\\delta .\n\\end{gathered}",
+        "explanation": "t(u) 始终由 (26) 定义；s 乘整个括号。底空间、全纯方程和长度约束不变。",
+        "source_page": {
+          "pdf": [
+            15,
+            17
+          ],
+          "printed": [
+            147,
+            149
+          ]
+        },
+        "evidence": "Replace the second equation in (25) by (30). This defines sections S_s^δ on the fixed base B^δ.",
+        "inferred": false
+      },
+      {
+        "id": "logic-homotopy-value",
+        "label": "紧性与连续定向保证两端求值相同",
+        "latex": "\\chi^{\\mathcal B^\\delta,\\mathcal E^\\delta,\\mathcal S_1^\\delta}(\\pi^*\\alpha)\n=\\chi^{\\mathcal B^\\delta,\\mathcal E^\\delta,\\mathcal S_0^\\delta}(\\pi^*\\alpha)",
+        "explanation": "χ 是 Theorem A.4 的欧拉类求值。原文陈述同伦零点集紧，利用复线性 D_s 给出连续定向。",
+        "source_page": {
+          "pdf": [
+            17,
+            47
+          ],
+          "printed": [
+            149,
+            179
+          ]
+        },
+        "evidence": "The zero sets form a compact subset of [0,1]×Bδ; the orientation varies continuously since D_s is complex linear. Apply Cobordism.",
+        "inferred": true
+      },
+      {
+        "id": "logic-normalization",
+        "label": "把长度约束 δ 变成定义 (17) 的 1",
+        "latex": "\\begin{aligned}\n\\widetilde A&=A,\\qquad\n\\widetilde u_\\nu=\\begin{cases}u_\\nu,&\\nu\\in I,\\\\\\delta^{-1/2}u_\\nu,&\\nu\\notin I,\\end{cases}\\\\\n\\sum_{\\nu\\notin I}\\|\\widetilde u_\\nu\\|_{L^2}^2&=\\delta^{-1}r^2(u)=1,\\\\\n\\bar\\partial_A\\widetilde u_\\nu&=0\\qquad(\\nu=1,\\ldots,n).\n\\end{aligned}",
+        "explanation": "常数缩放保持全纯性；s=0 时曲率方程只含墙内分量，所以也不变。这展开了原文保定向态射在解上的作用。",
+        "source_page": {
+          "pdf": [
+            12,
+            17
+          ],
+          "printed": [
+            144,
+            149
+          ]
+        },
+        "evidence": "Equation (17) has norm one; the proof asserts an orientation-preserving morphism from (Bδ,Eδ,S_0^δ) to (B,E0,S0). The displayed scaling is a supplementary derivation.",
+        "inferred": true
+      },
+      {
+        "id": "logic-final-chain",
+        "label": "合并 A 与 B · 得到式 (20)",
+        "latex": "\\Delta\\Phi(\\alpha)\\overset{\\mathrm A}{=}\\int_{\\mathcal M^\\delta/T}\\pi^*\\alpha\n\\overset{\\mathrm B}{=}\\int_{\\mathcal P_0/T}\\pi^*\\alpha",
+        "explanation": "第一个等号来自有向配边，第二个等号来自有向同伦与函子性。",
+        "source_page": {
+          "pdf": [
+            13,
+            17,
+            47
+          ],
+          "printed": [
+            145,
+            149,
+            179
+          ]
+        },
+        "evidence": "Equation (20) follows from (29) after the two integrals are shown to agree.",
+        "inferred": true
+      }
+    ],
+    "goal": {
+      "text": "证明公式 (20)：\\(\\Phi\\) 沿 \\(\\tau_1\\) 方向跨过 \\(\\tau_0\\) 时的跳跃，等于 \\(\\int_{\\mathcal P_0/T}\\pi^*\\alpha\\)。",
+      "source_page": {
+        "pdf": [13],
+        "printed": [145]
+      },
+      "evidence": "The wall crossing number can be expressed in the form shown in equation (20).",
+      "inferred": false
+    },
+    "strategy": {
+      "text": "在两个腔室的模空间之间构造单参数配边，切除墙上具有非有限稳定子群的点集，把新出现的第三个边界解释为跨墙贡献，再将该边界模问题同伦到零点集为 \\(\\mathcal P_0\\) 的辅助问题。",
+      "source_page": {
+        "pdf": [12, 17],
+        "printed": [144, 149]
+      },
+      "evidence": "The authors announce that they cut out a neighborhood of the singular set, obtain a third boundary component \\(\\mathcal M^\\delta\\), and deform it to another \\(T\\)-moduli problem.",
+      "inferred": false
+    },
+    "narrative": {
+      "title": "命题 4.1 的证明解读",
+      "introduction": {
+        "text": "这条证明不是分别算出墙两侧的不变量，而是回答：它们原本应当相等，究竟是什么造成了跳变？作者把障碍定位到墙上具有连续对称性的解，再把这些解附近的贡献转化为辅助模空间 \\(\\mathcal P_0/T\\) 上的欧拉类积分。",
+        "source_page": {
+          "pdf": [
+            12,
+            13,
+            17
+          ],
+          "printed": [
+            144,
+            145,
+            149
+          ]
+        },
+        "evidence": "Section 4.1 describes cutting out a neighbourhood of the singular set and deforming the third boundary component. Proposition 4.1 states (20); the proof derives (29) and compares the two Euler-class integrals.",
+        "inferred": true
+      },
+      "sections": [
+        {
+          "id": "symmetry-obstruction",
+          "title": "为什么两侧本来应该相等，又为什么不能直接这样证明？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "先把证明所用的方程 (6) 写出来。未知量是联络 \\(A\\) 和截面 \\(u_\\nu\\)，\\(w_\\nu\\) 是各分量的权重，\\(\\tau\\) 是将要穿过墙的参数："
+            },
+            {
+              "type": "formula",
+              "formula_id": "vortex-equations-6"
+            },
+            {
+              "type": "paragraph",
+              "text": "第一式要求各截面关于联络 \\(A\\) 全纯；第二式把曲率、截面的大小与参数联系起来。丛的拓扑类型固定，所以 \\(\\lambda(P)\\) 没有随参数改变。这里 \\(*_{\\mathfrak t}\\) 的下标是 Lie 代数，不是接下来引入的实参数 \\(t\\)。"
+            },
+            {
+              "type": "paragraph",
+              "text": "令 \\(\\tau_t=\\tau_0+t\\tau_1\\)，其中 \\(-\\varepsilon\\le t\\le\\varepsilon\\)。把每个 \\(t\\) 对应的解空间放在一起，得到参数化模问题 \\(\\mathcal W\\)。这样做不是为了多引入一个变量，而是为了把命题左侧的两个对象变成同一个问题的两个端点。"
+            },
+            {
+              "type": "paragraph",
+              "text": "论文的欧拉类理论具有配边不变性：如果两个模问题是同一个合格的、有向且紧的参数族的两端，那么对来自这个参数族的同一个上同调类，它们的求值相等。若这个论证能直接用于 \\(\\mathcal W\\)，跨墙差值就应该是零。"
+            },
+            {
+              "type": "paragraph",
+              "text": "但墙上会出现额外的连续对称性。用 \\(I\\) 表示墙内权重的指标，墙的法向 \\(e_1\\) 满足 \\(\\langle w_\\nu,e_1\\rangle=0\\)（\\(\\nu\\in I\\)）。因此，\\(e_1\\) 生成的圆群 \\(T_1\\) 不改变墙内分量。如果墙外分量也全部为零，那么它就固定整个解。论文证明，非有限稳定子恰好发生在 \\(t=0\\) 且所有 \\(u_\\nu=0\\)（\\(\\nu\\notin I\\)）时，这些解组成 \\(\\mathcal M_0\\)。"
+            },
+            {
+              "type": "paragraph",
+              "text": "真正的障碍不是笼统的“参数变了”或“空间奇异了”，而是这些解的连续稳定子破坏了应用配边公理所需的有限稳定子条件。两个条件缺一不可：仅仅位于墙上，并不意味着解属于这个异常集合。"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              6,
+              9,
+              14,
+              15,
+              47
+            ],
+            "printed": [
+              138,
+              141,
+              146,
+              147,
+              179
+            ]
+          },
+          "evidence": "Equation (6) defines the vortex equations. The proof defines \\(\\mathcal W\\) and states that its isotropy is not finite if and only if \\(t=0\\) and \\(u_\\nu=0\\) for \\(\\nu\\notin I\\). Section 3 identifies the trivial \\(T_1\\)-action on \\(\\mathcal M_0\\); Theorem A.4 states Cobordism.",
+          "inferred": true
+        },
+        {
+          "id": "excision-and-boundary",
+          "title": "为什么切掉一个邻域，就能得到两侧之差？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "既然障碍恰好发生在墙外分量全部消失处，最自然的检测量就是 \\(r^2(u)=\\sum_{\\nu\\notin I}\\|u_\\nu\\|_{L^2}^{\\,2}\\)。它为零当且仅当所有这些截面同时消失，而且不依赖规范表示。因此保留 \\(r^2\\ge\\delta\\)，便切掉了异常解附近，并产生一条新边界 \\(r^2=\\delta\\)，其上的解组成 \\(\\mathcal M^\\delta\\)。"
+            },
+            {
+              "type": "paragraph",
+              "text": "这一步把参数族内部、不能直接处理的障碍，转换成必须计入配边关系的边界贡献。这里没有假定异常集合具有光滑法丛；作者是在配置空间上加范数条件，处理其上的模问题。"
+            },
+            {
+              "type": "paragraph",
+              "text": "但是“取一个很小的 \\(\\delta\\)”不是完整论证。新边界会不会碰到 \\(t=\\pm\\varepsilon\\) 的两个端点，形成角点？必须从方程中排除这种情况。"
+            },
+            {
+              "type": "paragraph",
+              "text": "将曲率方程与法向 \\(e_1\\) 配对，并在 \\(\\Sigma\\) 上积分。曲率积分与固定的拓扑项相消；墙内权重及 \\(\\tau_0\\) 都与 \\(e_1\\) 正交，它们的贡献也消失。剩下的等式是 \\(\\pi\\sum_{\\nu\\notin I}\\|u_\\nu\\|^2\\langle w_\\nu,e_1\\rangle=t\\langle\\tau_1,e_1\\rangle\\operatorname{Vol}(\\Sigma)\\)。由此唯一解出："
+            },
+            {
+              "type": "formula",
+              "formula_id": "eliminated-parameter-26"
+            },
+            {
+              "type": "paragraph",
+              "text": "这项计算同时完成两件事：参数 \\(t\\) 已由截面 \\(u\\) 决定，可以不再作为独立未知量；而在新边界上，平方范数之和为 \\(\\delta\\)，所以得到下面的估计。这个明确的常数是对原文“充分小”的补充推导。"
+            },
+            {
+              "type": "formula",
+              "formula_id": "small-cutoff-bound"
+            },
+            {
+              "type": "paragraph",
+              "text": "所以，取足够小的 \\(\\delta\\) 后，新边界不会与区间两端相碰。现在截断后的零点集避开角点，可以在它附近使用带边界的模问题框架。"
+            },
+            {
+              "type": "paragraph",
+              "text": "还不能省略定向。作者为 \\(\\mathcal M^\\delta\\) 规定的方向，与切除后诱导的边界方向相反。因此有向边界贡献是“正端点减负端点减新边界”。配边公理使总贡献为零，把新边界项移到右侧，才得到正号的式 (29)："
+            },
+            {
+              "type": "formula",
+              "formula_id": "equation-29"
+            },
+            {
+              "type": "paragraph",
+              "text": "这个符号由第 16—19 页的行列式线计算核实，不能只凭“挖了一个洞”的直觉决定。到这里，两次独立计算的差已经被换成了一个新边界上的贡献，但它还不是命题中的 \\(\\mathcal P_0\\)。"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              15,
+              16,
+              17,
+              18,
+              19,
+              47
+            ],
+            "printed": [
+              147,
+              148,
+              149,
+              150,
+              151,
+              179
+            ]
+          },
+          "evidence": "The proof cuts out the region with \\(\\sum_{\\nu\\notin I}\\|u_\\nu\\|^2<\\delta\\). Equation (26) eliminates \\(t\\) and excludes the corners. The assigned orientation is opposite to the boundary orientation, as verified in Remark 4.4; the Cobordism axiom then gives (29).",
+          "inferred": true
+        },
+        {
+          "id": "homotopy-and-normalization",
+          "title": "为什么新边界的贡献，恰好等于辅助模空间的贡献？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "新边界上的解仍满足原来的非线性方程：墙外分量还参与曲率方程，反过来影响联络和墙内解。作者要去掉这部分耦合，同时保留它对欧拉类数值的贡献，于是引入一个新的同伦参数 \\(s\\)："
+            },
+            {
+              "type": "formula",
+              "formula_id": "equation-30"
+            },
+            {
+              "type": "paragraph",
+              "text": "全纯条件 \\(\\bar\\partial_Au_\\nu=0\\) 和长度约束 \\(r^2=\\delta\\) 保持不变。当 \\(s=1\\) 时，把右侧求和移回左侧，就恢复新边界的原方程；当 \\(s=0\\) 时，墙外分量不再进入曲率方程，联络与墙内分量便满足墙上的方程。墙外分量没有被设成零，它们仍然全纯，且总平方范数仍为 \\(\\delta\\)。"
+            },
+            {
+              "type": "paragraph",
+              "text": "这里的同伦并不是随意插值：\\(s\\) 必须乘整个括号。根据式 (26)，括号沿法向 \\(e_1\\) 的积分恰好为零，因此整个变形始终落在论文选定的同一个目标空间 \\(\\mathcal V_0\\) 中。如果只给其中一项乘 \\(s\\)，一般连这个条件都不成立。这解释了作者为什么采用式 (30) 的具体形式。"
+            },
+            {
+              "type": "paragraph",
+              "text": "在 \\(s=0\\) 的终点，可以先取一个墙上的解，再选一组墙外的全纯截面，要求总长度为 \\(\\sqrt\\delta\\)。而 \\(\\mathcal P_0\\) 的定义 (17) 要求总长度为 \\(1\\)，所以终点还不能未经说明就等同于 \\(\\mathcal P_0\\)。需要再做归一化："
+            },
+          {
+            "type": "formula",
+            "formula_id": "definition-17"
+          },
+          {
+            "type": "formula",
+            "formula_id": "endpoint-normalization"
+            },
+            {
+              "type": "paragraph",
+              "text": "常数缩放保持全纯性；联络和墙内分量没有改变，而终点的曲率方程只含墙内分量，所以它也不变。同时，墙外平方范数之和变为 \\(\\delta^{-1}\\sum_{\\nu\\notin I}\\|u_\\nu\\|^2=1\\)。这才对应到定义 \\(\\mathcal P_0\\) 的方程。"
+            },
+            {
+              "type": "paragraph",
+              "text": "原文明确断言这里存在保定向的模问题态射；上述缩放是把它在解上的作用具体展开，属于补充推导。仅凭零集之间的对应还不能直接宣布积分相等，仍需要模问题结构与定向的比较。"
+            },
+            {
+              "type": "paragraph",
+              "text": "作者还指出，整条同伦的零点集构成紧集，并利用复线性算子 \\(D_s\\) 使定向随 \\(s\\) 连续变化。紧性防止解在变形中逃向无穷远，连续定向保证比较两端时不额外翻转符号。于是配边公理与函子性给出："
+            },
+            {
+              "type": "formula",
+              "formula_id": "proof-closing-chain"
+            },
+            {
+              "type": "paragraph",
+              "text": "比较的始终是同一个上同调类。\\(\\alpha\\) 来自联络空间的等变上同调，\\(\\pi[A,u]=[A]\\)；所有构造都通过这个忘掉截面的投影拉回它。尤其，最后的归一化不改变联络 \\(A\\)，所以与 \\(\\pi\\) 相容。这是把两端的求值认作同一个不变量比较时不可漏掉的一点。"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              8,
+              12,
+              13,
+              17,
+              47
+            ],
+            "printed": [
+              140,
+              144,
+              145,
+              149,
+              179
+            ]
+          },
+          "evidence": "Equation (30) multiplies the entire parenthesized expression by \\(s\\). The proof states compactness, continuous orientation, and an orientation-preserving morphism at \\(s=0\\), and applies Cobordism and Functoriality. Equation (17) imposes norm one; equation (12) defines the invariant by pulling back \\(\\alpha\\) along \\(\\pi:\\mathcal B\\to\\mathcal A/\\mathcal G_0\\).",
+          "inferred": true
+        },
+        {
+          "id": "meaning-and-limits",
+          "title": "这条证明说明了什么，又没有说明什么？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "命题 4.1 的价值是：它没有计算穿墙后的全部解，而是证明全部跳变量都可以转移到“墙上解，加上归一化的墙外全纯方向”这个辅助问题上。接下来的计算只需处理这个单独的墙贡献，而不必分别求出两个腔室的不变量。"
+            },
+            {
+              "type": "paragraph",
+              "text": "这里有三个不能说得过头的地方。首先，论文中的 regular 模问题要求有限稳定子，不等于截面已经横截。因此上述积分默认是欧拉类求值；只有额外横截时，才能直接当成光滑商模空间上的积分。"
+            },
+            {
+              "type": "paragraph",
+              "text": "其次，第 17 页陈述了整条同伦零集的紧性，但没有在这里展开完整的一致估计。“方程连续变化”本身不是紧性证明，不能拿它替代作者所需的分析结论。"
+            },
+            {
+              "type": "paragraph",
+              "text": "最后，\\(\\mathcal P_0\\to\\mathcal M_0\\) 的纤维是相应全纯截面空间的单位球面，但纤维维数可能变化。不能直接把它当成普通光滑球丛，也不能说同伦证明了 \\(\\mathcal M^\\delta\\) 与 \\(\\mathcal P_0\\) 同胚。作者保留下来的是模问题及其欧拉类数值，而不只是解集的形状。"
+            },
+            {
+              "type": "paragraph",
+              "text": "整条证明的主线，就是解释跳变从哪里来，以及为什么它能被一个更简单的墙上模问题完整地记录。"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              8,
+              12,
+              13,
+              17,
+              45,
+              46,
+              47
+            ],
+            "printed": [
+              140,
+              144,
+              145,
+              149,
+              177,
+              178,
+              179
+            ]
+          },
+          "evidence": "The paper describes the integral notation as heuristic unless the section is transverse; Appendix A defines regularity by finite isotropy. Page 144 explicitly warns that the dimensions of the fibers of \\(\\mathcal P_0\\to\\mathcal M_0\\) can vary. Page 149 states compactness and compares Euler-class values via a homotopy and a morphism.",
+          "inferred": true
+        }
+      ]
+    },
+    "steps": [
+      {
+        "id": "construct-cobordism",
+        "analysis": {
+          "title": "把墙两侧的解连成一个参数族",
+          "summary": "先连接两侧的解空间，再追问：什么障碍使两侧不变量不能保持相同？",
+          "problem": "命题比较的是两个不同参数下的不变量。分别计算它们很困难；证明先把问题改写为：能否在两个解空间之间建立一条可用于比较 Euler 类的配边？",
+          "reasoning": "令参数沿横穿墙的直线变化。对每个参数，取同一组涡旋方程的解，再把参数也作为坐标，便得到整个参数族 \\(\\mathcal W\\)。区间的两个端点正好给出命题左侧涉及的两个模空间。如果这条连接没有奇异障碍，配边不变性就会使两侧贡献相同。因此下一步的关键不是计算全部解，而是找出连接中妨碍配边论证的点。论文在本节开头明确提出了这个思路。",
+          "outcome": "把“两次独立的积分计算”变成“检查一个参数族内部的障碍”。现在要找出 \\(\\mathcal W\\) 在穿过墙时出现了什么特殊的解。",
+          "caution": "此时只构造了参数化的模问题，不能直接把 \\(\\mathcal W\\) 当作光滑流形，也不能立即断言两侧不变量相等。",
+          "source_page": {
+            "pdf": [
+              6,
+              12,
+              14
+            ],
+            "printed": [
+              138,
+              144,
+              146
+            ]
+          },
+          "evidence": "If this cobordism were a manifold the wall crossing number would be zero. However, in general, the cobordism \\(\\mathcal W\\) will have a singular set \\(\\mathcal M_0\\) associated to the value \\(\\tau=\\tau_0\\).",
+          "inferred": true
+        },
+        "formulas": [
+          {
+            "id": "vortex-equations-6",
+            "label": "方程 (6)：每个参数下的涡旋解满足什么",
+            "latex": "\\begin{aligned}\\bar\\partial_Au_\\nu&=0\\quad(\\nu=1,\\ldots,n),\\\\ *F_A+\\pi\\sum_{\\nu=1}^{n}|u_\\nu|^2w_\\nu&=\\frac{*_{\\mathfrak t}\\lambda(P)}{\\operatorname{Vol}(\\Sigma)}+\\tau.\\end{aligned}",
+            "explanation": "第一式要求截面 \\(u_\\nu\\) 关于联络 \\(A\\) 全纯；第二式把曲率、各截面的大小及其权重与参数 \\(\\tau\\) 联系起来。这里 \\(*_{\\mathfrak t}\\) 是由 Lie 代数内积给出的 \\(\\mathfrak t\\to\\mathfrak t^*\\) 同构，下标是 Lie 代数 \\(\\mathfrak t\\)，不是后面沿路径变化的实参数 \\(t\\)。",
+            "source_page": {
+              "pdf": [
+                6
+              ],
+              "printed": [
+                138
+              ]
+            },
+            "evidence": "The symplectic vortex equations (at a parameter \\(\\tau\\in\\mathfrak t^*\\)) have the form (6); \\(*_{\\mathfrak t}\\) denotes the isomorphism induced by the inner product.",
+            "inferred": false
+          },
+          {
+            "id": "crossing-path-and-cobordism",
+            "label": "将路径参数代入方程 (6)",
+            "latex": "\\begin{aligned}\\tau_t&=\\tau_0+t\\tau_1,\\qquad -\\varepsilon\\le t\\le\\varepsilon,\\\\ \\mathcal W&=\\{(t,A,u)\\mid -\\varepsilon\\le t\\le\\varepsilon,\\ \\text{满足 (6)，其中 }\\tau=\\tau_t\\}/\\mathcal G_0.\\end{aligned}",
+            "explanation": "在上面的方程 (6) 中把 \\(\\tau\\) 替换成 \\(\\tau_0+t\\tau_1\\)。这里 \\(t\\) 既指定参数，也成为解空间的一项坐标；它从负值走到正值时，参数从墙的一侧穿到另一侧。",
+            "source_page": {
+              "pdf": [
+                9,
+                14
+              ],
+              "printed": [
+                141,
+                146
+              ]
+            },
+            "evidence": "Denote \\(\\tau_t:=\\tau_0+t\\tau_1\\) and consider the moduli space \\(\\mathcal W\\). This space has boundary \\(\\{ -\\varepsilon\\}\\times\\mathcal M(\\tau_{-\\varepsilon})\\cup\\{\\varepsilon\\}\\times\\mathcal M(\\tau_\\varepsilon)\\).",
+            "inferred": false
+          }
+        ],
+        "prerequisites": [
+          {
+            "label": "曲面、联络与截面",
+            "text": "\\(\\Sigma\\) 是涡旋方程所在的曲面，\\(\\operatorname{Vol}(\\Sigma)\\) 是其面积。\\(A\\) 是主 \\(T\\)-丛 \\(P\\to\\Sigma\\) 上的联络；\\(u_\\nu\\) 是关联复线丛 \\(L_\\nu=P\\times_{\\rho_\\nu}\\mathbb C\\) 的截面。因此未知量是联络与一组截面，并非有限个实数。",
+            "source_page": {
+              "pdf": [
+                6
+              ],
+              "printed": [
+                138
+              ]
+            },
+            "evidence": "Here \\(A\\in\\mathcal A=\\mathcal A(P)\\) is a connection on \\(P\\). The representation \\(\\rho_\\nu\\) determines a complex line bundle \\(L_\\nu:=P\\times_{\\rho_\\nu}\\mathbb C\\to\\Sigma\\); \\(u_\\nu\\) is a section of \\(L_\\nu\\).",
+            "inferred": false
+          },
+          {
+            "label": "权重与拓扑项",
+            "text": "\\(w_\\nu\\) 是描述第 \\(\\nu\\) 个圆周表示 \\(\\rho_\\nu\\) 的权重。\\(\\lambda(P)\\) 是主丛的特征向量，与联络的选择无关。因此沿本证明的参数路径改变的是 \\(\\tau\\)，丛的拓扑类型并没有随之改变。",
+            "source_page": {
+              "pdf": [
+                6,
+                14
+              ],
+              "printed": [
+                138,
+                146
+              ]
+            },
+            "evidence": "\\(\\lambda(P)\\) is independent of the choice of the connection; \\(d_\\nu=\\langle w_\\nu,\\lambda(P)\\rangle\\). Denote \\(\\tau_t:=\\tau_0+t\\tau_1\\).",
+            "inferred": true
+          },
+          {
+            "label": "为什么除以带基点规范群",
+            "text": "规范变换给出同一几何解的不同表示。论文先固定曲面上的一点 \\(z_0\\)，只除以在那里等于恒等元的规范变换 \\(\\mathcal G_0=\\{g\\in C^\\infty(\\Sigma,T)\\mid g(z_0)=1\\}\\)。这样仍保留常值规范变换组成的 \\(T\\)-作用；下一步讨论的稳定子正是这个剩余作用的稳定子。",
+            "source_page": {
+              "pdf": [
+                6
+              ],
+              "printed": [
+                138
+              ]
+            },
+            "evidence": "Here we fix a point \\(z_0\\in\\Sigma\\) and denote the based gauge group by \\(\\mathcal G_0:=\\{g\\in\\mathcal G\\mid g(z_0)=1\\}\\). The group \\(T\\) (of constant gauge transformations) acts contravariantly on \\(\\mathcal B\\).",
+            "inferred": false
+          }
+        ],
+        "type": "construction",
+        "claim": "令 \\(\\tau_t=\\tau_0+t\\tau_1\\)，并把 \\(-\\varepsilon\\le t\\le\\varepsilon\\) 时方程 (6) 的解的带基点规范等价类组成 \\(\\mathcal W\\)。它的两个端点边界分别是 \\(\\{-\\varepsilon\\}\\times\\mathcal M(\\tau_{-\\varepsilon})\\) 与 \\(\\{\\varepsilon\\}\\times\\mathcal M(\\tau_{\\varepsilon})\\)。",
+        "depends_on": [
+          "方程 (6)",
+          "\\(\\mathcal M(\\tau)\\) 的定义",
+          "墙数据 \\(\\tau_0\\) 与 \\(\\tau_1\\)"
+        ],
+        "explanation": "这样就把两个腔室的模空间放到了同一个带参数 \\(T\\)-模问题的两端。",
+        "source_page": {
+          "pdf": [14],
+          "printed": [146]
+        },
+        "evidence": "Denote \\(\\tau_t:=\\tau_0+t\\tau_1\\) and consider the moduli space \\(\\mathcal W\\); the next display gives its two boundary pieces.",
+        "inferred": false
+      },
+      {
+        "id": "identify-singular-locus",
+        "analysis": {
+          "title": "找出墙上重新出现的连续对称性",
+          "summary": "只有墙上且全部墙外分量为零的解，才出现阻碍配边论证的连续稳定子。",
+          "problem": "上一步的连接为什么不能直接证明跳变量为零？问题出在某些解仍被一个连续子群固定：剩余的 \\(T\\)-作用在这些点不再具有有限稳定子。",
+          "reasoning": "墙内权重都与法向 \\(e_1\\) 正交，所以由 \\(e_1\\) 生成的圆环 \\(T_1\\) 不会改变墙内分量。若所有墙外分量也同时为零，那么这个圆环便固定整个解，一整圈不同的群元素都产生相同结果。论文证明，在这里的单一余维一墙及小参数范围内，这恰好发生在 \\(t=0\\) 且所有 \\(\\nu\\notin I\\) 的 \\(u_\\nu\\) 恒为零时；留下的方程正是前文定义 \\(\\mathcal M_0\\) 的方程。",
+          "outcome": "把使直接配边论证失效的解精确定位为 \\(\\mathcal M_0\\)。因此只需处理它附近，而不必重新分析整个参数族。",
+          "caution": "不能把“位于墙上”与“奇异”混为一谈：\\(t=0\\) 还不够，必须同时满足全部墙外分量为零。“恰好”也依赖第 3 节关于墙和横穿路径的假设。",
+          "source_page": {
+            "pdf": [
+              9,
+              15
+            ],
+            "printed": [
+              141,
+              147
+            ]
+          },
+          "evidence": "The isotropy subgroup of an element \\([t,A,u]\\in\\mathcal W\\) is not finite if and only if \\(t=0\\) and \\(u_\\nu=0\\) for \\(\\nu\\notin I\\). This singular set is the moduli space \\(\\mathcal M_0\\) introduced in Section 3.",
+          "inferred": true
+        },
+        "formulas": [
+          {
+            "id": "singular-locus-criterion",
+            "label": "非有限稳定子的准确判据",
+            "latex": "\\operatorname{Stab}_T([t,A,u])\\text{ 非有限}\\quad\\Longleftrightarrow\\quad t=0,\\quad u_\\nu\\equiv0\\ (\\nu\\notin I).",
+            "explanation": "判据的右侧有两个条件，缺一不可。它识别出的就是 \\(\\mathcal M_0\\)，不是整个位于墙上的解空间。",
+            "source_page": {
+              "pdf": [
+                15
+              ],
+              "printed": [
+                147
+              ]
+            },
+            "evidence": "The isotropy subgroup ... is not finite if and only if \\(t=0\\) and \\(u_\\nu=0\\) for \\(\\nu\\notin I\\).",
+            "inferred": false
+          },
+          {
+            "id": "wall-moduli-equations-13",
+            "label": "剩下的正是定义墙上模空间的方程 (13)",
+            "latex": "\\bar\\partial_Au_\\nu=0\\ (\\nu\\in I),\\qquad *F_A+\\pi\\sum_{\\nu\\in I}|u_\\nu|^2w_\\nu=\\frac{*_{\\mathfrak t}\\lambda(P)}{\\operatorname{Vol}(\\Sigma)}+\\tau_0.",
+            "explanation": "将 \\(t=0\\) 与墙外分量为零代入方程 (6)，就只留下墙内分量；前文将这些解的带基点规范等价类记为 \\(\\mathcal M_0\\)。",
+            "source_page": {
+              "pdf": [
+                9,
+                15
+              ],
+              "printed": [
+                141,
+                147
+              ]
+            },
+            "evidence": "The moduli space \\(\\mathcal M_0\\) of based gauge equivalence classes of solutions ... of the equations (13). This singular set is the moduli space \\(\\mathcal M_0\\) introduced in Section 3.",
+            "inferred": false
+          }
+        ],
+        "prerequisites": [
+          {
+            "label": "墙内与墙外的指标",
+            "text": "\\(I\\) 包含权重位于该墙的线性张成空间中的指标；\\(W_I=\\operatorname{span}\\{w_\\nu\\mid\\nu\\in I\\}\\) 的维数是 \\(k-1\\)。论文要求 \\(\\nu\\notin I\\) 的权重都不在 \\(W_I\\) 中，并选择不落在其他余维一墙上的 \\(\\tau_0\\)。",
+            "source_page": {
+              "pdf": [
+                9
+              ],
+              "printed": [
+                141
+              ]
+            },
+            "evidence": "The subspace \\(W_I:=\\operatorname{span}\\{w_\\nu\\mid\\nu\\in I\\}\\) has dimension \\(k-1\\) and \\(w_\\nu\\notin W_I\\) for every \\(\\nu\\notin I\\).",
+            "inferred": false
+          },
+          {
+            "label": "法向与消失的圆环作用",
+            "text": "\\(e_1\\) 是墙的法向本原整数格向量，约定 \\(\\langle\\tau_1,e_1\\rangle>0\\)，且 \\(\\langle w_\\nu,e_1\\rangle=0\\) 对每个 \\(\\nu\\in I\\) 成立。它生成的子环面 \\(T_1\\) 在 \\(\\mathcal M_0\\) 上作用平凡；除掉这部分后，\\(T_0=T/T_1\\) 的作用才具有有限稳定子。",
+            "source_page": {
+              "pdf": [
+                9
+              ],
+              "printed": [
+                141
+              ]
+            },
+            "evidence": "The subgroup \\(T_1\\subset T\\) acts trivially on \\(\\mathcal M_0\\). However, since \\(\\tau_0\\) is a regular value of \\(\\mu|_{\\mathbb C^I}\\), the quotient group \\(T_0=T/T_1\\) acts on \\(\\mathcal M_0\\) with finite isotropy.",
+            "inferred": false
+          }
+        ],
+        "type": "singular_locus",
+        "claim": "\\(\\mathcal W\\) 中的点 \\([t,A,u]\\) 具有非有限稳定子群，当且仅当 \\(t=0\\) 且对每个 \\(\\nu\\notin I\\) 都有 \\(u_\\nu=0\\)；这个点集就是 \\(\\mathcal M_0\\)。",
+        "depends_on": [
+          "construct-cobordism",
+          "\\(\\mathcal M_0\\) 的定义"
+        ],
+        "explanation": "这一步精确找出了必须从配边中切除的非有限稳定子群点集。",
+        "source_page": {
+          "pdf": [15],
+          "printed": [147]
+        },
+        "evidence": "The isotropy subgroup ... is not finite if and only if \\(t=0\\) and \\(u_\\nu=0\\) for \\(\\nu\\notin I\\). This singular set is ... \\(\\mathcal M_0\\).",
+        "inferred": false
+      },
+      {
+        "id": "excise-singular-neighborhood",
+        "analysis": {
+          "title": "把奇异点附近切掉，留下第三条边界",
+          "summary": "以墙外分量的总大小作为切除尺度，把内部的障碍转成新边界。",
+          "problem": "虽然找到了坏点，但整个参数族仍包含这些点。需要构造一个去掉它们的新模问题，才能使用配边性质。",
+          "reasoning": "坏点的共同特征是墙外分量全部为零。因此以这些分量的平方范数之和衡量它们是否接近同时消失，并只保留这个和至少为小正数 \\(\\delta\\) 的配置。这样保留的零点不会满足上一条奇异判据。切除产生的缺口本身是一条新边界 \\(\\mathcal M^\\delta\\)：原来只连接两端的空间，现在还多了一个需要计入的边界贡献。后面的配边恒等式正是用它解释两侧之差。",
+          "outcome": "得到截断后的零点集 \\(\\mathcal W^\\delta\\) 及新增边界 \\(\\mathcal M^\\delta\\)。接下来必须检查新边界不会碰到参数区间的两端，否则仍会出现需要处理的角点。",
+          "caution": "切除以后配置空间有角；论文下一步才证明零点集避开角点。这里也不应把新的零点集直接称作光滑流形：有限稳定子与截面横截是不同条件。新边界的贡献带什么符号，还要由后面的定向论证确定。",
+          "source_page": {
+            "pdf": [
+              12,
+              15
+            ],
+            "printed": [
+              144,
+              147
+            ]
+          },
+          "evidence": "To obtain a regular cobordism we cut out a neighbourhood of the singular set. ... These three boundary strata intersect and so \\((\\mathcal R,\\mathcal F,\\mathcal T)\\) is a \\(T\\)-moduli problem with corners.",
+          "inferred": true
+        },
+        "formulas": [
+          {
+            "id": "excision-condition",
+            "label": "保留区域与切口边界",
+            "latex": "\\begin{aligned}\\mathcal Q&=\\left\\{(t,A,u)\\in[-\\varepsilon,\\varepsilon]\\times\\mathcal C\\;\\middle|\\;\\sum_{\\nu\\notin I}\\|u_\\nu\\|_{L^2}^2\\ge\\delta\\right\\},\\\\ \\mathcal M^\\delta&=\\left\\{[t,A,u]\\in\\mathcal W\\;\\middle|\\;\\sum_{\\nu\\notin I}\\|u_\\nu\\|_{L^2}^2=\\delta\\right\\}.\\end{aligned}",
+            "explanation": "不等式保留墙外分量没有同时消失的区域；等号与涡旋方程一起给出新增边界上的解，最后同样取带基点规范等价类。",
+            "source_page": {
+              "pdf": [
+                15
+              ],
+              "printed": [
+                147
+              ]
+            },
+            "evidence": "\\(\\mathcal Q:=\\{(t,A,u)\\in[-\\varepsilon,\\varepsilon]\\times\\mathcal C\\mid\\sum_{\\nu\\notin I}\\|u_\\nu\\|^2\\ge\\delta\\}\\); \\(\\mathcal M^\\delta\\) is the moduli space of based gauge equivalence classes of solutions of (25).",
+            "inferred": false
+          }
+        ],
+        "prerequisites": [
+          {
+            "label": "范数是整张曲面上的量",
+            "text": "这里 \\(\\|u_\\nu\\|_{L^2}^2=\\int_\\Sigma |u_\\nu|^2\\,d\\mathrm{vol}_\\Sigma\\)，不是某一个点上的 \\( |u_\\nu(z)|^2\\)。非负项之和为零才意味着全部墙外截面恒为零；这解释了该尺度为何适合排除前一步的奇异集。",
+            "source_page": {
+              "pdf": [
+                12,
+                15
+              ],
+              "printed": [
+                144,
+                147
+              ]
+            },
+            "evidence": "where \\(\\|u_\\nu\\|\\) denotes the \\(L^2\\)-norm; the singular set is characterized by \\(u_\\nu=0\\) for \\(\\nu\\notin I\\).",
+            "inferred": true
+          },
+          {
+            "label": "为什么会出现角点",
+            "text": "配置空间同时受到 \\(-\\varepsilon\\le t\\le\\varepsilon\\) 和平方范数之和至少为 \\(\\delta\\) 的限制。两种约束若同时取边界值，就产生角点；因此仅把 \\(\\delta\\) 写成小正数还不够，需要证明实际的解避开这些交点。",
+            "source_page": {
+              "pdf": [
+                15
+              ],
+              "printed": [
+                147
+              ]
+            },
+            "evidence": "These three boundary strata intersect ... if \\(\\delta>0\\) is sufficiently small, the zero set \\(\\mathcal W^\\delta\\) of \\(\\mathcal T\\) does not intersect the corners.",
+            "inferred": true
+          }
+        ],
+        "type": "excision",
+        "claim": "加入条件 \\(\\sum_{\\nu\\notin I}\\lVert u_\\nu\\rVert^2\\ge\\delta\\)。对充分小的 \\(\\delta>0\\)，在零点集附近限制后得到一个配边；其边界由两个端点模空间和新的分支 \\(\\mathcal M^\\delta\\) 组成。",
+        "depends_on": [
+          "identify-singular-locus"
+        ],
+        "explanation": "切掉小范数邻域，会用第三个边界分支替代奇异点集；把 \\(\\delta\\) 取得充分小，则零点集不会碰到角点。",
+        "source_page": {
+          "pdf": [15],
+          "printed": [147]
+        },
+        "evidence": "To obtain a regular cobordism we cut out a neighbourhood of the singular set; the displayed boundary is the union of the two ends and \\(\\mathcal M^\\delta\\).",
+        "inferred": false
+      },
+      {
+        "id": "eliminate-t-on-third-boundary",
+        "analysis": {
+          "title": "沿墙的法向积分，算出参数并排除角点",
+          "summary": "把方程沿法向积分，证明参数由截面决定，且小切口必定远离区间两端。",
+          "problem": "新边界仍同时包含未知量 \\(A,u,t\\)。我们需要证明它不会与 \\(t=\\pm\\varepsilon\\) 相交，并希望去掉已经由其他变量决定的参数。",
+          "reasoning": "用墙的法向 \\(e_1\\) 与曲率方程配对，再在曲面上积分。曲率积分与固定的拓扑项抵消，墙内权重及 \\(\\tau_0\\) 则因与法向正交而消失。留下的只有墙外截面和参数 \\(t\\)，从而直接解出 \\(t\\)。在新边界上，墙外截面的平方范数之和固定为 \\(\\delta\\)，所以这个解满足 \\( |t|\\le C\\delta\\)。选取足够小的 \\(\\delta\\) 后，实际的解就不可能到达区间两端。",
+          "outcome": "一项计算完成两个任务：零点集避开角点，截断后的模问题可以用边界理论处理；同时 \\(t\\) 已由 \\(u\\) 唯一确定，新增边界可以只用 \\((A,u)\\) 表述。用来求出 \\(t\\) 的法向平均方程已经自动成立，这也解释了剩余截面为何取值于余维一的 \\(\\mathcal Z_0\\)。",
+          "caution": "墙外权重与 \\(e_1\\) 的配对可以有正有负，所以结论是绝对值估计，不能据此断言 \\(t>0\\)。下面的明确常数 \\(C\\) 是根据原文 (26) 补出的估计，论文只写了充分小的 \\(\\delta\\) 保证 \\( |t|<\\varepsilon\\)。",
+          "source_page": {
+            "pdf": [
+              9,
+              15,
+              16
+            ],
+            "printed": [
+              141,
+              147,
+              148
+            ]
+          },
+          "evidence": "Take the inner product of the second equation in (25) with \\(e_1\\) and integrate over \\(\\Sigma\\). ... \\(t\\) is determined by \\(u\\) ... formula (26) shows that \\( |t|<\\varepsilon\\) whenever \\(\\delta\\) is sufficiently small.",
+          "inferred": true
+        },
+        "formulas": [
+          {
+            "id": "normal-pairing-integral",
+            "label": "中间计算：先配对，再积分并抵消",
+            "latex": "\\begin{aligned}\\int_\\Sigma\\langle *F_A,e_1\\rangle\\,d\\mathrm{vol}_\\Sigma&=\\langle *_{\\mathfrak t}\\lambda(P),e_1\\rangle,\\\\ \\langle\\tau_0,e_1\\rangle&=0,\\quad\\langle w_\\nu,e_1\\rangle=0\\ (\\nu\\in I),\\\\ \\pi\\sum_{\\nu\\notin I}\\|u_\\nu\\|_{L^2}^2\\langle w_\\nu,e_1\\rangle&=t\\,\\langle\\tau_1,e_1\\rangle\\operatorname{Vol}(\\Sigma).\\end{aligned}",
+            "explanation": "第一行使曲率项与方程右侧的拓扑常数项抵消；第二行使全部墙内项消失，得到第三行。这里将论文所说的“取内积并积分”拆成可检查的中间推导。",
+            "source_page": {
+              "pdf": [
+                9,
+                15
+              ],
+              "printed": [
+                141,
+                147
+              ]
+            },
+            "evidence": "\\(\\langle w_\\nu,e_1\\rangle=0\\) for \\(\\nu\\in I\\). To see this take the inner product of the second equation in (25) with \\(e_1\\) and integrate over \\(\\Sigma\\).",
+            "inferred": true
+          },
+          {
+            "id": "eliminated-parameter-26",
+            "label": "方程 (26)：参数不再独立",
+            "latex": "t=\\frac{\\pi}{\\langle\\tau_1,e_1\\rangle\\operatorname{Vol}(\\Sigma)}\\sum_{\\nu\\notin I}\\|u_\\nu\\|_{L^2}^2\\langle w_\\nu,e_1\\rangle.",
+            "explanation": "因法向约定保证分母为正，上一式可以唯一解出 \\(t\\)。所以在新增边界中，知道截面 \\(u\\) 就知道参数，不必再把它作为独立未知量。",
+            "source_page": {
+              "pdf": [
+                9,
+                15
+              ],
+              "printed": [
+                141,
+                147
+              ]
+            },
+            "evidence": "Every solution of these equations satisfies (26). This shows that the parameter \\(t\\) is determined by \\(u\\) and can therefore be removed in the definition of \\(\\mathcal M^\\delta\\).",
+            "inferred": false
+          },
+          {
+            "id": "small-cutoff-bound",
+            "label": "补出的估计：为什么小切口不会碰到两端",
+            "latex": "\\begin{aligned}|t|&\\le\\frac{\\pi\\max_{\\nu\\notin I}|\\langle w_\\nu,e_1\\rangle|}{\\langle\\tau_1,e_1\\rangle\\operatorname{Vol}(\\Sigma)}\\sum_{\\nu\\notin I}\\|u_\\nu\\|_{L^2}^2=C\\delta,\\\\ C&:=\\frac{\\pi\\max_{\\nu\\notin I}|\\langle w_\\nu,e_1\\rangle|}{\\langle\\tau_1,e_1\\rangle\\operatorname{Vol}(\\Sigma)},\\qquad C\\delta<\\varepsilon\\quad\\Longrightarrow\\quad |t|<\\varepsilon.\\end{aligned}",
+            "explanation": "对 (26) 使用三角不等式，并把各个权重配对的绝对值统一用最大值控制；再代入边界条件平方范数之和为 \\(\\delta\\)。因此选取 \\(C\\delta<\\varepsilon\\) 就足以排除角点。这是对原文“充分小”的具体推导。",
+            "source_page": {
+              "pdf": [
+                15
+              ],
+              "printed": [
+                147
+              ]
+            },
+            "evidence": "Moreover, the formula (26) shows that \\( |t|<\\varepsilon\\) whenever \\(\\delta\\) is sufficiently small.",
+            "inferred": true
+          }
+        ],
+        "prerequisites": [
+          {
+            "label": "为什么选这个法向",
+            "text": "\\(\\tau_0\\) 属于墙内权重生成的锥，而 \\(e_1\\) 与这些权重正交，因此 \\(\\langle\\tau_0,e_1\\rangle=0\\)。横穿方向 \\(\\tau_1\\) 则满足 \\(\\langle\\tau_1,e_1\\rangle>0\\)，正好留下可以解出 \\(t\\) 的非零系数。",
+            "source_page": {
+              "pdf": [
+                9
+              ],
+              "printed": [
+                141
+              ]
+            },
+            "evidence": "\\(\\tau_0\\in\\mu(\\mathbb C^I)\\). Choose \\(\\tau_1\\) transverse to \\(\\mu(\\mathbb C^I)\\); \\(e_1\\) satisfies \\(\\langle\\tau_1,e_1\\rangle>0\\) and \\(\\langle w_\\nu,e_1\\rangle=0\\) for \\(\\nu\\in I\\).",
+            "inferred": true
+          },
+          {
+            "label": "少掉一个方程意味着什么",
+            "text": "\\(\\mathcal Z_0\\) 的曲率分量要求沿 \\(e_1\\) 的平均值为零。代入 (26) 后，这个标量条件已经自动满足，所以剩余截面自然落在 \\(\\mathcal Z_0\\)。这解释了原文为什么同时去掉参数 \\(t\\) 和值域中的一个实方向。",
+            "source_page": {
+              "pdf": [
+                12,
+                13,
+                15,
+                16
+              ],
+              "printed": [
+                144,
+                145,
+                147,
+                148
+              ]
+            },
+            "evidence": "\\(\\mathcal V_0\\) is defined by \\(\\int_\\Sigma\\langle\\xi,e_1\\rangle\\,d\\mathrm{vol}_\\Sigma=0\\); \\(\\mathcal Z_0\\) is defined by (19). The section \\(\\mathcal S^\\delta:\\mathcal C^\\delta\\to\\mathcal Z_0\\) is defined by \\(\\mathcal S^\\delta(A,u):=\\mathcal T(t,A,u)\\), where \\(t\\) is given by (26).",
+            "inferred": true
+          }
+        ],
+        "type": "calculation",
+        "claim": "\\(\\mathcal M^\\delta\\) 上的每个解都满足 \\(t=\\frac{\\pi}{\\langle\\tau_1,e_1\\rangle\\operatorname{Vol}(\\Sigma)}\\sum_{\\nu\\notin I}\\lVert u_\\nu\\rVert^2\\langle w_\\nu,e_1\\rangle\\)。因此 \\(t\\) 由 \\(u\\) 决定，并在 \\(\\delta\\) 充分小时满足 \\(|t|<\\varepsilon\\)。",
+        "depends_on": [
+          "excise-singular-neighborhood",
+          "方程 (25)",
+          "\\(e_1\\) 的定义"
+        ],
+        "explanation": "把 (25) 中的曲率方程与 \\(e_1\\) 配对，并在 \\(\\Sigma\\) 上积分。这样 \\(t\\) 不再是独立变量，边界问题 \\((\\mathcal B^\\delta,\\mathcal E^\\delta,\\mathcal S^\\delta)\\) 可以只用 \\((A,u)\\) 来定义。",
+        "source_page": {
+          "pdf": [15, 16],
+          "printed": [147, 148]
+        },
+        "evidence": "Take the inner product of the second equation in (25) with \\(e_1\\) and integrate over \\(\\Sigma\\). This shows that the parameter \\(t\\) is determined by \\(u\\).",
+        "inferred": false
+      },
+      {
+        "id": "orient-third-boundary",
+        "analysis": {
+          "title": "先确定新边界的方向，避免最后差一个负号",
+          "summary": "新边界的约定方向与配边诱导的方向相反，这决定了跨墙公式的正负号。",
+          "problem": "挖去奇异点附近后，剩余空间有三个边界。只有知道各自带什么符号，才能把两个端点的差换成第三个边界的贡献。",
+          "reasoning": "参数增大的端点与参数减小的端点在有向边界中符号相反。新出现的边界还要单独核准方向：论文通过线性化算子的复定向给它规定方向，并在注 4.4 验证，这个方向恰好与配边诱导的边界方向相反。因此按论文约定记为 \\(\\mathcal M^\\delta\\) 时，它在整个有向边界关系中带负号。",
+          "outcome": "得到的符号关系是“正端点减负端点减新边界”。所以下一步应用配边公理后，跨墙差值等于新边界贡献，而不是它的相反数。",
+          "caution": "这里的负号有实际内容，不能把三个边界都写成无符号的集合并就跳过。论文通过行列式线的定向核对它；下面的有向边界式是对此的教学整理。",
+          "source_page": {
+            "pdf": [
+              16,
+              17,
+              18,
+              19
+            ],
+            "printed": [
+              148,
+              149,
+              150,
+              151
+            ]
+          },
+          "evidence": "The proof states that it uses the opposite boundary orientation; Remark 4.4 verifies that the assigned orientation is opposite to the boundary orientation.",
+          "inferred": true
+        },
+        "formulas": [
+          {
+            "id": "oriented-boundary-balance",
+            "label": "三个边界的符号关系",
+            "latex": "\\partial\\mathcal W^\\delta=\\mathcal M(\\tau_{\\varepsilon})-\\mathcal M(\\tau_{-\\varepsilon})-\\mathcal M^\\delta",
+            "explanation": "这是省略端点参数标记后的有向边界记法；减号表示方向相反，不是集合相减。新增边界 \\(\\mathcal M^\\delta\\) 采用论文为式 (29) 规定的定向。",
+            "source_page": {
+              "pdf": [
+                15,
+                16,
+                17,
+                18,
+                19
+              ],
+              "printed": [
+                147,
+                148,
+                149,
+                150,
+                151
+              ]
+            },
+            "evidence": "The three boundary components are identified on page 147; the proof and Remark 4.4 specify the opposite boundary orientation for the third component.",
+            "inferred": true
+          }
+        ],
+        "prerequisites": [
+          {
+            "label": "注 4.4：新边界的定向",
+            "text": "论文给新边界模问题规定的方向，与挖洞后配边的边界方向相反。这个结论是随后式 (29) 的符号依据。",
+            "source_page": {
+              "pdf": [
+                16,
+                17,
+                18,
+                19
+              ],
+              "printed": [
+                148,
+                149,
+                150,
+                151
+              ]
+            },
+            "evidence": "We prove that the above orientation ... is the opposite of the boundary orientation.",
+            "inferred": false
+          }
+        ],
+        "type": "orientation",
+        "claim": "用复线性算子 \\(D_1\\) 与 \\(\\Phi\\) 为 \\((\\mathcal B^\\delta,\\mathcal E^\\delta,\\mathcal S^\\delta)\\) 定向；所选定向与它的边界定向相反。",
+        "depends_on": [
+          "eliminate-t-on-third-boundary",
+          "引理 B.1",
+          "引理 B.4",
+          "注 4.4"
+        ],
+        "explanation": "\\(\\det(D_1)\\) 的复定向诱导出模问题的定向。注 4.4 验证它确实与边界定向相反，并处理了非满射情形，从而确定配边恒等式中的符号。",
+        "source_page": {
+          "pdf": [16, 17, 18, 19],
+          "printed": [148, 149, 150, 151]
+        },
+        "evidence": "\\(D_1\\) is complex linear ... determines an orientation; the paper states that this is the opposite of the boundary orientation and verifies it in Remark 4.4.",
+        "inferred": false
+      },
+      {
+        "id": "apply-cobordism-axiom",
+        "analysis": {
+          "title": "用配边把墙两侧的差，换成新边界的贡献",
+          "summary": "把两个端点放进同一配边后，它们的不变量之差正好等于新增边界的积分。",
+          "problem": "我们要计算墙两侧的不变量之差，但分别求出这两个不变量可能很难。前面构造并截断配边，就是为了直接比较它们。",
+          "reasoning": "截断后的配边把两个端点和新边界放在同一个有向模问题中。定理 A.4 的配边公理联系其边界上的欧拉类数值；结合上一步的定向，新边界在边界关系中带负号。把它移到等号右侧，就得到式 (29)。",
+          "outcome": "问题从“分别计算墙两侧再相减”化成“计算靠近奇异点的新边界 \\(\\mathcal M^\\delta/T\\) 上的一个积分”。后面的工作只需把这个新边界转成命题中的 \\(\\mathcal P_0/T\\)。",
+          "caution": "这里的积分按论文约定表示模问题的等变欧拉类数值。不能额外假定零集已经是光滑流形，再把这一步说成普通流形上的积分计算。",
+          "source_page": {
+            "pdf": [
+              13,
+              17,
+              47
+            ],
+            "printed": [
+              145,
+              149,
+              179
+            ]
+          },
+          "evidence": "The proof invokes the (Cobordism) axiom in Theorem A.4 and obtains equation (29).",
+          "inferred": true
+        },
+        "formulas": [
+          {
+            "id": "equation-29",
+            "label": "式 (29)：跨墙差值已经变成第三个边界的积分",
+            "latex": "\\Phi_{\\lambda,g}^{\\rho,\\tau_0+\\varepsilon\\tau_1}(\\alpha)-\\Phi_{\\lambda,g}^{\\rho,\\tau_0-\\varepsilon\\tau_1}(\\alpha)=\\int_{\\mathcal M^\\delta/T}\\pi^*\\alpha",
+            "explanation": "左边就是要证明的跨墙差值，右边是前面挖洞产生的新边界。此时还没有得到 \\(\\mathcal P_0\\)，所以证明尚未结束。",
+            "source_page": {
+              "pdf": [
+                17
+              ],
+              "printed": [
+                149
+              ]
+            },
+            "evidence": "Equation (29) expresses the wall crossing number as the integral over \\(\\mathcal M^\\delta/T\\).",
+            "inferred": false
+          }
+        ],
+        "prerequisites": [
+          {
+            "label": "定理 A.4：配边公理",
+            "text": "对于配边的正则群模问题，来自共同配边空间的同一上同调类，在两个有向端点得到相同的欧拉类数值。本证明用它联系截断配边的三块边界。",
+            "source_page": {
+              "pdf": [
+                17,
+                47
+              ],
+              "printed": [
+                149,
+                179
+              ]
+            },
+            "evidence": "Theorem A.4 states the (Cobordism) axiom; the proof explicitly applies it to derive (29).",
+            "inferred": false
+          }
+        ],
+        "type": "cobordism",
+        "claim": "配边公理给出公式 (29)：跨墙差等于 \\(\\int_{\\mathcal M^\\delta/T}\\pi^*\\alpha\\)。",
+        "depends_on": [
+          "excise-singular-neighborhood",
+          "orient-third-boundary",
+          "定理 A.4（配边公理）"
+        ],
+        "explanation": "两个端点边界给出两个涡旋不变量，而带定向的第三个边界给出余下的积分。",
+        "source_page": {
+          "pdf": [17],
+          "printed": [149]
+        },
+        "evidence": "The (Cobordism) axiom in Theorem A.4 implies that the wall crossing number is given by equation (29).",
+        "inferred": false
+      },
+      {
+        "id": "define-homotopy-to-P0",
+        "analysis": {
+          "title": "把新边界的方程连续变成墙上的辅助问题",
+          "summary": "用一个参数逐渐消去耦合项，把难处理的新边界转成墙上方程加长度约束。",
+          "problem": "式 (29) 的积分仍在 \\(\\mathcal M^\\delta/T\\) 上；命题需要的却是 \\(\\mathcal P_0/T\\)。两者方程不同，必须建立保留积分数值的联系。",
+          "reasoning": "在保持全纯条件和外墙分量长度约束不变的同时，引入 \\(0\\le s\\le1\\)，把曲率方程中的外墙耦合项整体乘以 \\(s\\)。当 \\(s=1\\) 时移项即可恢复原来的新边界方程；当 \\(s=0\\) 时，外墙分量不再出现在曲率方程中，曲率方程回到墙上参数 \\(\\tau_0\\)。这些外墙分量并没有被设成零，它们仍是全纯截面且总平方范数为 \\(\\delta\\)。",
+          "outcome": "得到从原新边界模问题到“墙上方程加非零全纯方向”的连续变形。终点已经接近 \\(\\mathcal P_0\\) 的定义，只差把长度约束从 \\(\\delta\\) 归一化到 \\(1\\)。",
+          "caution": "式 (30) 中 \\(s\\) 乘右侧整个括号。它是新引入的同伦参数，不是之前穿墙的参数 \\(t\\)。写出插值本身还不能保证积分不变；下一步必须检查紧性和定向。",
+          "source_page": {
+            "pdf": [
+              12,
+              15,
+              17
+            ],
+            "printed": [
+              144,
+              147,
+              149
+            ]
+          },
+          "evidence": "The proof replaces the second equation of (25) by (30), with \\(S_1^\\delta=S^\\delta\\), and displays the section \\(S_0^\\delta\\).",
+          "inferred": true
+        },
+        "formulas": [
+          {
+            "id": "equation-30",
+            "label": "式 (30)：把耦合项逐渐关掉",
+            "latex": "*F_A+\\pi\\sum_{\\nu\\in I}|u_\\nu|^2w_\\nu-\\frac{*_{\\mathfrak t}\\lambda(P)}{\\operatorname{Vol}(\\Sigma)}-\\tau_0=s\\left(t\\tau_1-\\pi\\sum_{\\nu\\notin I}|u_\\nu|^2w_\\nu\\right),\\qquad 0\\le s\\le1",
+            "explanation": "两侧的分组有目的：左侧只保留墙上分量；右侧收集参数偏离和外墙分量的贡献，再用 \\(s\\) 同时调整它们。",
+            "source_page": {
+              "pdf": [
+                17
+              ],
+              "printed": [
+                149
+              ]
+            },
+            "evidence": "Equation (30) multiplies the entire parenthesized expression by \\(s\\).",
+            "inferred": false
+          },
+          {
+            "id": "homotopy-fixed-constraints",
+            "label": "同伦过程中保留的两个条件",
+            "latex": "\\bar\\partial_Au_\\nu=0\\quad(\\nu=1,\\ldots,n),\\qquad\\sum_{\\nu\\notin I}\\|u_\\nu\\|^2=\\delta",
+            "explanation": "论文只替换 (25) 的曲率方程；全纯条件和定义 \\(\\mathcal B^\\delta\\) 的长度约束保持不变。",
+            "source_page": {
+              "pdf": [
+                15,
+                17
+              ],
+              "printed": [
+                147,
+                149
+              ]
+            },
+            "evidence": "The proof says to replace the second equation in (25), and defines the homotopy on the fixed base \\(\\mathcal B^\\delta\\).",
+            "inferred": false
+          },
+          {
+            "id": "homotopy-start",
+            "label": "代入 \\(s=1\\)：恢复新边界的曲率方程",
+            "latex": "*F_A+\\pi\\sum_{\\nu=1}^{n}|u_\\nu|^2w_\\nu=\\frac{*_{\\mathfrak t}\\lambda(P)}{\\operatorname{Vol}(\\Sigma)}+\\tau_0+t\\tau_1",
+            "explanation": "把右侧的外墙求和移回左侧，内墙与外墙分量合成全体分量的求和；这正是 (25)。",
+            "source_page": {
+              "pdf": [
+                15,
+                17
+              ],
+              "printed": [
+                147,
+                149
+              ]
+            },
+            "evidence": "Equation (25), equation (30), and the explicit statement \\(S_1^\\delta=S^\\delta\\).",
+            "inferred": true
+          },
+          {
+            "id": "homotopy-end",
+            "label": "代入 \\(s=0\\)：留下墙上的曲率方程",
+            "latex": "*F_A+\\pi\\sum_{\\nu\\in I}|u_\\nu|^2w_\\nu=\\frac{*_{\\mathfrak t}\\lambda(P)}{\\operatorname{Vol}(\\Sigma)}+\\tau_0",
+            "explanation": "右侧耦合项归零，但外墙分量仍满足上面的全纯条件和平方范数总和为 \\(\\delta\\) 的约束。",
+            "source_page": {
+              "pdf": [
+                17
+              ],
+              "printed": [
+                149
+              ]
+            },
+            "evidence": "The displayed formula for \\(S_0^\\delta\\) contains exactly this curvature component.",
+            "inferred": true
+          }
+        ],
+        "prerequisites": [
+          {
+            "label": "式 (25) 与式 (17) 的差别",
+            "text": "新边界的曲率方程含全部分量，长度约束为 \\(\\delta\\)；辅助模空间的曲率方程只含 \\(\\nu\\in I\\) 的分量，外墙分量的长度约束为 \\(1\\)。同伦处理前一个差别，最后一步处理后一个差别。",
+            "source_page": {
+              "pdf": [
+                12,
+                15,
+                17
+              ],
+              "printed": [
+                144,
+                147,
+                149
+              ]
+            },
+            "evidence": "Equations (17), (25), and (30) display these different summation ranges and norm constraints.",
+            "inferred": true
+          }
+        ],
+        "type": "homotopy",
+        "claim": "用公式 (30) 替换 (25) 中的第二个方程，其中 \\(s\\in[0,1]\\)，得到截面 \\(\\mathcal S_s^\\delta\\)。\\(s=1\\) 的端点是 \\(\\mathcal S^\\delta\\)；\\(s=0\\) 的端点存在论文所用的、到 \\((\\mathcal B,\\mathcal E_0,\\mathcal S_0)\\) 的保定向态射。",
+        "depends_on": [
+          "eliminate-t-on-third-boundary",
+          "\\((\\mathcal B,\\mathcal E_0,\\mathcal S_0)\\) 的定义",
+          "方程 (30)"
+        ],
+        "explanation": "这是把第三边界问题变形到命题 4.1 中辅助模问题的过程。论文只断言 \\(s=0\\) 时存在上述态射，并没有把 \\(\\mathcal S_0^\\delta\\) 与 \\(\\mathcal S_0\\) 逐字等同。",
+        "source_page": {
+          "pdf": [17],
+          "printed": [149]
+        },
+        "evidence": "This defines a homotopy of sections \\(\\mathcal S_s^\\delta\\), with \\(\\mathcal S_1^\\delta=\\mathcal S^\\delta\\); later the paper gives an orientation preserving morphism at \\(s=0\\).",
+        "inferred": false
+      },
+      {
+        "id": "control-homotopy",
+        "analysis": {
+          "title": "确认变形不会丢解，也不会翻转方向",
+          "summary": "紧性排除解在变形中逃走，连续定向保证比较两端时不会多出负号。",
+          "problem": "一条连续变化的方程，并不自动给出两端积分相等。要把它作为配边使用，还必须控制整段变形的零集和定向。",
+          "reasoning": "论文明确指出，所有同伦截面的零集合起来，在 \\([0,1]\\times\\mathcal B^\\delta\\) 中构成紧集；这保证比较端点时没有解沿无穷远离开。论文同时利用相应线性化算子的复线性，得到沿同伦连续变化的定向，因此整个比较过程保持同一套符号。结合前面得到的群模问题结构，就能应用配边公理比较同伦两端的欧拉类数值。",
+          "outcome": "从 \\(s=1\\) 的新边界模问题变到 \\(s=0\\) 的墙上辅助方程时，我们要计算的欧拉类积分数值不变。下一步只需识别终点与 \\(\\mathcal P_0\\) 的关系。",
+          "caution": "原文在这里陈述紧性，没有展开具体估计。复线性用于定向，不代表线性化可逆，也不代表所有零集都已经是光滑流形。",
+          "source_page": {
+            "pdf": [
+              17,
+              46,
+              47
+            ],
+            "printed": [
+              149,
+              178,
+              179
+            ]
+          },
+          "evidence": "The zero sets form a compact subset of \\([0,1]\\times\\mathcal B^\\delta\\); the proof states that complex linearity makes the orientation vary continuously.",
+          "inferred": true
+        },
+        "formulas": [],
+        "prerequisites": [
+          {
+            "label": "整个同伦的紧性",
+            "text": "不仅各个固定参数下的零集要受控；论文明确断言，全部同伦零集合起来构成 \\([0,1]\\times\\mathcal B^\\delta\\) 中的一个紧子集。",
+            "source_page": {
+              "pdf": [
+                17
+              ],
+              "printed": [
+                149
+              ]
+            },
+            "evidence": "The zero sets of these sections form a compact subset of \\([0,1]\\times\\mathcal B^\\delta\\).",
+            "inferred": false
+          },
+          {
+            "label": "连续定向",
+            "text": "论文用复线性算子的复定向构造模问题的定向，并明确指出该定向在整个同伦中连续变化。",
+            "source_page": {
+              "pdf": [
+                17
+              ],
+              "printed": [
+                149
+              ]
+            },
+            "evidence": "Since the operator is complex linear, the resulting orientation varies continuously in this homotopy.",
+            "inferred": false
+          },
+          {
+            "label": "定义 A.3 与定理 A.4：怎样才能使用配边公理",
+            "text": "配边框架要求带边界的定向 Fredholm 模问题、紧零集及有限稳定子群等条件，并要求在两端限制为要比较的模问题。前面的截断排除了非有限稳定子的奇异点；本步补上同伦紧性和定向的核查。",
+            "source_page": {
+              "pdf": [
+                15,
+                17,
+                46,
+                47
+              ],
+              "printed": [
+                147,
+                149,
+                178,
+                179
+              ]
+            },
+            "evidence": "Definition A.3 requires a compact zero set, an oriented Fredholm section and finite isotropy; Theorem A.4 gives the Cobordism axiom.",
+            "inferred": true
+          }
+        ],
+        "type": "compactness_orientation",
+        "claim": "\\(\\mathcal S_s^\\delta\\) 的零点集在 \\([0,1]\\times\\mathcal B^\\delta\\) 中构成紧子集；又因为 \\(D_s\\) 是复线性的，其行列式线定向随 \\(s\\) 连续变化。",
+        "depends_on": [
+          "define-homotopy-to-P0",
+          "引理 B.1"
+        ],
+        "explanation": "这些正是沿该同伦使用配边不变性所需要的紧性与定向条件。",
+        "source_page": {
+          "pdf": [17],
+          "printed": [149]
+        },
+        "evidence": "The zero sets ... form a compact subset of \\([0,1]\\times\\mathcal B^\\delta\\); since \\(D_s\\) is complex linear, the orientation varies continuously.",
+        "inferred": false
+      },
+      {
+        "id": "identify-endpoint-and-conclude",
+        "analysis": {
+          "title": "归一化辅助方向，闭合跨墙公式",
+          "summary": "归一化墙外分量的长度，再用函子性把终点积分识别为命题右侧。",
+          "problem": "同伦终点已经满足墙上的曲率方程，但长度约束仍是 \\(\\sum_{\\nu\\notin I}\\|u_\\nu\\|^2=\\delta\\)。而 \\(\\mathcal P_0\\) 的定义 (17) 要求这个总和为 \\(1\\)，所以两者不能未经说明就当作同一个对象。",
+          "reasoning": "保持联络和墙内分量不变，只把每个墙外分量乘以 \\(\\delta^{-1/2}\\)。它们的平方范数总和便从 \\(\\delta\\) 变成 \\(1\\)。常数缩放保留全纯条件；在同伦终点，曲率方程仅含墙内分量，因此也不受影响。这个计算解释了论文所说的保定向态射：它把同伦终点对应到定义 \\(\\mathcal P_0\\) 的模问题，再由定理 A.4 的函子性识别二者的欧拉类数值。",
+          "outcome": "式 (29) 先把跨墙差值变成新边界积分；同伦保持这个数值；归一化与函子性再把终点识别为 \\(\\mathcal P_0/T\\) 上的积分，得到命题 4.1 的式 (20)。",
+          "caution": "论文明确断言存在保定向态射，但没有逐项写出这里的缩放公式。缩放及其对方程的检查是依据 (17) 和同伦终点方程展开的教学推导，因此标为推导。",
+          "source_page": {
+            "pdf": [
+              12,
+              13,
+              17,
+              47
+            ],
+            "printed": [
+              144,
+              145,
+              149,
+              179
+            ]
+          },
+          "evidence": "Equation (17) uses norm one; the proof states an orientation-preserving morphism from the homotopy endpoint and invokes Cobordism and Functoriality to prove (20).",
+          "inferred": true
+        },
+        "formulas": [
+          {
+            "id": "endpoint-normalization",
+            "label": "从半径 \\(\\sqrt\\delta\\) 归一化到半径 \\(1\\)",
+            "latex": "\\widetilde A=A,\\qquad\\widetilde u_\\nu=\\begin{cases}u_\\nu,&\\nu\\in I,\\\\\\delta^{-1/2}u_\\nu,&\\nu\\notin I,\\end{cases}",
+            "explanation": "只改变墙外方向的尺度。墙内分量和联络保持不变，所以同伦终点的曲率方程保持不变。",
+            "source_page": {
+              "pdf": [
+                12,
+                17
+              ],
+              "printed": [
+                144,
+                149
+              ]
+            },
+            "evidence": "Equation (17) imposes norm one, while the homotopy remains on the base with norm squared equal to \\(\\delta\\); the proof asserts an orientation-preserving morphism.",
+            "inferred": true
+          },
+          {
+            "id": "normalization-check",
+            "label": "直接检查长度约束与全纯条件",
+            "latex": "\\sum_{\\nu\\notin I}\\|\\widetilde u_\\nu\\|^2=\\delta^{-1}\\sum_{\\nu\\notin I}\\|u_\\nu\\|^2=1,\\qquad\\bar\\partial_A\\widetilde u_\\nu=\\delta^{-1/2}\\bar\\partial_Au_\\nu=0\\quad(\\nu\\notin I)",
+            "explanation": "缩放把长度约束变为 (17) 的单位长度约束，并保留墙外分量的全纯条件；墙内分量未改变。",
+            "source_page": {
+              "pdf": [
+                12,
+                15,
+                17
+              ],
+              "printed": [
+                144,
+                147,
+                149
+              ]
+            },
+            "evidence": "This is a direct substitution into the norm constraint in (25), the holomorphicity equations, and the endpoint equations displayed on page 149.",
+            "inferred": true
+          },
+          {
+            "id": "proof-closing-chain",
+            "label": "整段证明如何闭合",
+            "latex": "\\begin{aligned}\\Phi_{\\lambda,g}^{\\rho,\\tau_0+\\varepsilon\\tau_1}(\\alpha)-\\Phi_{\\lambda,g}^{\\rho,\\tau_0-\\varepsilon\\tau_1}(\\alpha)&\\overset{(29)}{=}\\int_{\\mathcal M^\\delta/T}\\pi^*\\alpha\\\\&\\overset{\\text{同伦与函子性}}{=}\\int_{\\mathcal P_0/T}\\pi^*\\alpha.\\end{aligned}",
+            "explanation": "第一次相等来自截断配边及其定向；第二次相等来自紧的有向同伦，以及同伦终点到辅助模问题的保定向态射。",
+            "source_page": {
+              "pdf": [
+                13,
+                17,
+                47
+              ],
+              "printed": [
+                145,
+                149,
+                179
+              ]
+            },
+            "evidence": "The proof concludes that the integrals over \\(\\mathcal M^\\delta/T\\) and \\(\\mathcal P_0/T\\) agree, so (20) follows from (29).",
+            "inferred": true
+          }
+        ],
+        "prerequisites": [
+          {
+            "label": "式 (17)：辅助模空间的单位长度约束",
+            "text": "定义 \\(\\mathcal P_0\\) 时，墙外分量的平方范数总和为 \\(1\\)，而不是截断时使用的小参数 \\(\\delta\\)。",
+            "source_page": {
+              "pdf": [
+                12
+              ],
+              "printed": [
+                144
+              ]
+            },
+            "evidence": "Equation (17) includes \\(\\sum_{\\nu\\notin I}\\|u_\\nu\\|^2=1\\).",
+            "inferred": false
+          },
+          {
+            "label": "定理 A.4：函子性",
+            "text": "模问题之间的态射保留相应欧拉类的取值。论文明确断言从同伦终点到定义 \\(\\mathcal P_0\\) 的模问题存在保定向态射，并用函子性完成比较。",
+            "source_page": {
+              "pdf": [
+                17,
+                46,
+                47
+              ],
+              "printed": [
+                149,
+                178,
+                179
+              ]
+            },
+            "evidence": "The proof states an orientation-preserving morphism; Definition A.2 defines morphisms and Theorem A.4 states Functoriality.",
+            "inferred": false
+          }
+        ],
+        "type": "functoriality_conclusion",
+        "claim": "从 \\(s=0\\) 问题到 \\((\\mathcal B,\\mathcal E_0,\\mathcal S_0)\\) 的保定向态射，结合配边公理与函子性，给出 \\(\\int_{\\mathcal M^\\delta/T}\\pi^*\\alpha=\\int_{\\mathcal P_0/T}\\pi^*\\alpha\\)。代入 (29) 即得 (20)。",
+        "depends_on": [
+          "apply-cobordism-axiom",
+          "control-homotopy",
+          "定理 A.4（配边公理）",
+          "定理 A.4（函子性）"
+        ],
+        "explanation": "同伦端点计算的正是与 \\(\\mathcal P_0\\) 对应的欧拉类积分，因此第三边界项恰好等于命题 4.1 的右端。",
+        "source_page": {
+          "pdf": [17],
+          "printed": [149]
+        },
+        "evidence": "The paper states that the integrals over \\(\\mathcal M^\\delta/T\\) and \\(\\mathcal P_0/T\\) agree, and so equation (20) follows from (29).",
+        "inferred": false
+      }
+    ]
+  },
+  "relations": [
+    {
+      "target": "注 4.2（定向）",
+      "relation": "orientation_dependency",
+      "explanation": "它定义了解释命题 4.1 右端时所用 \\(T\\)-模问题 \\((\\mathcal B,\\mathcal E_0,\\mathcal S_0)\\) 的定向，因此确定了公式 (20) 的符号。",
+      "source_page": {
+        "pdf": [13, 14],
+        "printed": [145, 146]
+      },
+      "evidence": "Immediately before Proposition 4.1, the paper says that the orientation is as in Remark 4.2 below.",
+      "inferred": false
+    },
+    {
+      "target": "注 4.4（边界定向）",
+      "relation": "sign_justification",
+      "explanation": "它验证了 \\((\\mathcal B^\\delta,\\mathcal E^\\delta,\\mathcal S^\\delta)\\) 的所选定向与边界定向相反，从而说明配边公式 (29) 中的符号。",
+      "source_page": {
+        "pdf": [16, 17, 18, 19],
+        "printed": [148, 149, 150, 151]
+      },
+      "evidence": "The proof says that the orientation is the opposite of the boundary orientation and refers to Remark 4.4 for the verification.",
+      "inferred": false
+    },
+    {
+      "target": "定理 A.4",
+      "relation": "proof_dependency",
+      "explanation": "其中的配边公理给出公式 (29)；随后，配边公理与函子性共同认同 \\(\\mathcal M^\\delta/T\\) 和 \\(\\mathcal P_0/T\\) 上的欧拉类积分。",
+      "source_page": {
+        "pdf": [17, 47],
+        "printed": [149, 179]
+      },
+      "evidence": "The proof explicitly invokes the (Cobordism) axiom and then the (Cobordism) and (Functoriality) axioms in Theorem A.4.",
+      "inferred": false
+    },
+    {
+      "target": "定理 4.10",
+      "relation": "downstream_localization",
+      "explanation": "它与注 4.11 合用，把 \\(\\mathcal P_0/T\\) 上的积分局部化，并改写为公式 (39) 中的留数积分。",
+      "source_page": {
+        "pdf": [26, 31],
+        "printed": [158, 163]
+      },
+      "evidence": "Hence, by Theorem 4.10 and Remark 4.11, we have ... followed by equation (39).",
+      "inferred": false
+    },
+    {
+      "target": "注 4.11",
+      "relation": "applicability_extension",
+      "explanation": "它把定理 4.10 从普通基空间推广到 \\(T_0\\)-模问题与 Hilbert 丛，使局部化定理可以用于公式 (39) 所需的 \\(\\mathcal M_0\\) 场景。",
+      "source_page": {
+        "pdf": [29, 31],
+        "printed": [161, 163]
+      },
+      "evidence": "Theorem 4.10 continues to hold if we replace \\(X\\) by a \\(T_0\\)-moduli problem; page 163 applies Theorem 4.10 and Remark 4.11 together.",
+      "inferred": false
+    },
+    {
+      "target": "公式 (39)",
+      "relation": "downstream_rewrite",
+      "explanation": "它把 \\(\\int_{\\mathcal P_0/T}\\pi^*\\alpha\\) 改写为 \\(\\mathcal M_0/T_0\\) 上的留数积分，这是证明定理 3.1 所需的下一种形式。",
+      "source_page": {
+        "pdf": [31],
+        "printed": [163]
+      },
+      "evidence": "The paper displays the equality as (39) and then begins: By Proposition 4.1 and (39) we have....",
+      "inferred": false
+    },
+    {
+      "target": "引理 4.12",
+      "relation": "downstream_evaluation",
+      "explanation": "它计算公式 (39) 中留数分母里的等变欧拉类，从而把该留数认同为定理 3.1 中出现的类。",
+      "source_page": {
+        "pdf": [31],
+        "printed": [163]
+      },
+      "evidence": "Theorem 3.1 now follows from Lemma 4.12; the proof then cites Lemma 4.12 when rewriting the residue.",
+      "inferred": false
+    },
+    {
+      "target": "定理 3.1（跨墙公式）",
+      "relation": "main_consequence",
+      "explanation": "定理 3.1 的证明从命题 4.1 出发，结合公式 (39)，再使用引理 4.12 得到论文的跨墙公式。",
+      "source_page": {
+        "pdf": [10, 31],
+        "printed": [142, 163]
+      },
+      "evidence": "Proof of Theorem 3.1. By Proposition 4.1 and (39) we have ...; after applying Lemma 4.12, the paper concludes: This proves Theorem 3.1.",
+      "inferred": false
+    }
+  ],
+  "relation_analysis": {
+    "main_consequence": {
+      "title": "命题 4.1 离定理 3.1 还差哪一步？",
+      "lead": "二者算的是同一个跨墙差值，但右端还不是同一个积分。命题 4.1 把差值放到辅助模空间 \\(\\mathcal P_0/T\\) 上；定理 3.1 则把墙外方向的贡献写进一个明确的类 \\(\\alpha_0\\)，只留下墙上模问题 \\(\\mathcal M_0/T_0\\) 的积分。真正需要解释的是：前一个积分为什么能变成后一个，\\(\\alpha_0\\) 的公式又是怎样算出来的。",
+      "source_page": {
+        "pdf": [
+          9,
+          10,
+          11,
+          12,
+          13,
+          23,
+          24,
+          26,
+          29,
+          30,
+          31
+        ],
+        "printed": [
+          141,
+          142,
+          143,
+          144,
+          145,
+          155,
+          156,
+          158,
+          161,
+          162,
+          163
+        ]
+      },
+      "evidence": "Proposition 4.1 gives the integral over P_0/T. Equation (39) replaces it by a residue over M_0/T_0, and the proof of Theorem 3.1 substitutes Lemma 4.12 and obtains alpha_0. Section 4.1 describes the fibers of P_0 over M_0; Section 4.2 defines the residue at infinity.",
+      "inferred": true,
+      "sections": [
+        {
+          "title": "先比较右端：为什么多出来一个模空间？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "把墙两侧不变量之差暂记为 \\(\\Delta\\Phi(\\alpha)\\)。对照公式 (20) 与 (16)，左端完全相同；变化的是积分空间，以及被积类："
+            },
+            {
+              "type": "formula",
+              "label": "已知的命题与要得到的定理，差别在哪里",
+              "latex": "\\begin{aligned}\\text{命题 4.1:}\\quad\\Delta\\Phi(\\alpha)&=\\int_{\\mathcal P_0/T}\\pi^*\\alpha,\\\\\\text{定理 3.1:}\\quad\\Delta\\Phi(\\alpha)&=\\int_{\\mathcal M_0/T_0}\\pi_0^*\\alpha_0.\\end{aligned}"
+            },
+            {
+              "type": "paragraph",
+              "text": "\\(\\mathcal M_0\\) 只记录墙上的联络和墙内截面 \\((A,u_I)\\)。\\(\\mathcal P_0\\) 在此之外，还保留墙外的截面 \\(u_\\nu\\)（\\(\\nu\\notin I\\)）：它们满足 \\(\\bar\\partial_Au_\\nu=0\\)，并且总平方范数为 \\(1\\)。所以忘掉这些墙外截面时，留下的纤维是墙外 Cauchy–Riemann 算子核中的单位球面。命题 4.1 已经证明穿墙差值等于这个辅助问题的贡献，却还没有计算这些额外方向的贡献。"
+            },
+            {
+              "type": "paragraph",
+              "text": "因此，不能把 \\(\\mathcal P_0\\) 的名字直接换成 \\(\\mathcal M_0\\)。必须把墙外方向的贡献转移到被积类中；定理 3.1 的 \\(\\alpha_0\\) 正是这样产生的。这里也不能套用普通定秩球丛的纤维积分：原文特意指出这些核的维数可能变化。定理 4.10 与注 4.11 提供的，是模问题及其欧拉类层面的局部化公式 (39)。"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              10,
+              12,
+              13,
+              26,
+              29,
+              31
+            ],
+            "printed": [
+              142,
+              144,
+              145,
+              158,
+              161,
+              163
+            ]
+          },
+          "evidence": "Equation (17) imposes holomorphicity in all components and norm one in the outside components. The paragraph following it identifies each fiber of P_0 over M_0 with a unit sphere in a Cauchy–Riemann kernel and explicitly allows varying fiber dimensions. Compare (20), (16), and (39).",
+          "inferred": true
+        },
+        {
+          "title": "再算分母：α₀ 中的幂次和指数项从哪里来？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "公式 (39) 先把积分改写成一个留数，但分母中还有抽象的指数欧拉类。引理 4.12 才把每个墙外方向的因子写成可计算的表达式。为看清代数，令 \\(r_\\nu=d_\\nu+1-g\\)、\\(q_\\nu(\\xi,z)=\\langle w_\\nu,\\xi+ze_1\\rangle\\)，并用 \\(E_\\nu\\) 记引理 4.12 中被 \\(\\pi_0^*\\) 拉回之前的那个类。则该因子及其倒数分别是："
+            },
+            {
+              "type": "formula",
+              "label": "为什么定理 3.1 的指数项是正号",
+              "latex": "\\begin{aligned}E_\\nu(\\xi+ze_1)&=q_\\nu(\\xi,z)^{r_\\nu}\\exp\\!\\left(-\\frac{\\Omega_\\nu}{q_\\nu(\\xi,z)}\\right),\\\\E_\\nu(\\xi+ze_1)^{-1}&=q_\\nu(\\xi,z)^{-r_\\nu}\\exp\\!\\left(+\\frac{\\Omega_\\nu}{q_\\nu(\\xi,z)}\\right).\\end{aligned}"
+            },
+            {
+              "type": "paragraph",
+              "text": "注意两件事。第一，公式 (39) 用的是欧拉类的倒数，所以引理中的负指数变成正指数；不是更换了定向。第二，\\(r_\\nu\\) 是这个算子族的复 Fredholm 指数，即核维数减去余核维数，并不等于每一点的全纯截面个数。用指数类，才能把核维跳跃和方程的障碍一起纳入计算，而不假装核组成一个定秩向量丛。"
+            },
+            {
+              "type": "paragraph",
+              "text": "这里的取逆和取留数有适用条件：墙外权重满足 \\(\\langle w_\\nu,e_1\\rangle\\ne0\\)，所以 \\(q_\\nu\\) 关于 \\(z\\) 的最高次系数不为零，可以在无穷远按 \\(z^{-1}\\) 展开。另一个容易误读的地方是指数函数：\\(\\Omega_\\nu\\) 是普通上同调中的正次数类，由这些一次类构成的乘积具有幂零性，所以指数实际按有限级数展开。它不是在极点处产生本性奇点的普通数值指数函数。"
+            },
+            {
+              "type": "paragraph",
+              "text": "把所有 \\(\\nu\\notin I\\) 的倒数相乘，再乘原来的插入类 \\(\\alpha\\)。幂因子形成分母的乘积，指数函数的乘积则把指数相加，得到留数要作用的表达式："
+            },
+            {
+              "type": "formula",
+              "label": "把引理 4.12 逐项代入公式 (39)",
+              "latex": "\\begin{aligned}F(\\xi,z)&:=\\alpha(\\xi+ze_1)\\prod_{\\nu\\notin I}E_\\nu(\\xi+ze_1)^{-1}\\\\&=\\frac{\\alpha(\\xi+ze_1)}{\\prod_{\\nu\\notin I}q_\\nu(\\xi,z)^{r_\\nu}}\\\\&\\qquad\\cdot\\exp\\!\\left(\\sum_{\\nu\\notin I}\\frac{\\Omega_\\nu}{q_\\nu(\\xi,z)}\\right).\\end{aligned}"
+            },
+            {
+              "type": "paragraph",
+              "text": "这正是定理 3.1 定义 \\(\\alpha_0\\) 时的被积式：每个权重、幂次、\\(\\Omega_\\nu\\) 因子都能从分母中的一个墙外指数类对应过来。这里要区分类所在的空间：\\(E_\\nu\\) 和 \\(F\\) 先写在 \\(\\mathcal A/\\mathcal G_0\\) 上，真正代入公式 (39) 的是 \\(e_T(\\operatorname{IND}(\\bar\\partial^\\nu))=\\pi_0^*E_\\nu\\) 以及 \\(\\pi_0^*F\\)。拉回逐项作用于 Laurent 系数，所以 \\(\\operatorname{Res}_{\\infty}(\\pi_0^*F)=\\pi_0^*(\\operatorname{Res}_{\\infty}F)\\)；这才允许在最后一步把拉回统一写到外面。"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              9,
+              10,
+              11,
+              23,
+              24,
+              30,
+              31
+            ],
+            "printed": [
+              141,
+              142,
+              143,
+              155,
+              156,
+              162,
+              163
+            ]
+          },
+          "evidence": "Lemma 4.12 gives each index Euler class as the pullback of a weight to the power d_nu+1-g times an exponential with a negative two-form term. Equation (39) divides by the product of these classes. The proof of Theorem 3.1 on the same page displays the resulting positive exponential in alpha_0.",
+          "inferred": true
+        },
+        {
+          "title": "最后取留数：为什么恰好得到定理 3.1，而不是另一个公式？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "\\(z\\) 是沿圆子群 \\(T_1\\) 的等变方向：把变量写成 \\(\\xi+ze_1\\)，就是把穿墙法向与剩余方向分开。它不是曲面 \\(\\Sigma\\) 上的一个坐标。论文把无穷远留数定义为 Laurent 展开中 \\(z^{-1}\\) 系数的负数；因此公式 (39) 前面的负号与这一定义中的负号正好消去："
+            },
+            {
+              "type": "formula",
+              "label": "留数定义把 F 变成 α₀",
+              "latex": "-\\operatorname{Res}_{\\infty}F(\\xi,z)=\\frac{1}{2\\pi i}\\oint F(\\xi,z)\\,dz=\\alpha_0(\\xi)."
+            },
+            {
+              "type": "paragraph",
+              "text": "围道须正向包围所有有限极点，而不是只在任意一个极点取留数。为什么得到的类只依赖商环面方向？因为 \\(F(\\xi+te_1,z)=F(\\xi,z+t)\\)：改变 \\(\\xi\\) 的法向分量，只相当于平移留数变量。这个平移不改变无穷远展开的 \\(z^{-1}\\) 系数，所以结果只依赖 \\(\\xi\\bmod\\mathbb R e_1\\)，能成为 \\(T_0\\) 的等变类并在 \\(\\mathcal M_0/T_0\\) 上积分。把全部等式连写，就能逐个检查定理 3.1 是怎样由命题 4.1 得出的："
+            },
+            {
+              "type": "formula",
+              "label": "同一个差值的三种表达：每一次等号各负责什么",
+              "latex": "\\begin{aligned}\\Delta\\Phi(\\alpha)&\\overset{\\text{命题 4.1}}{=}\\int_{\\mathcal P_0/T}\\pi^*\\alpha\\\\&\\overset{(39),\\,\\text{引理 4.12}}{=}-\\int_{\\mathcal M_0/T_0}\\pi_0^*\\!\\left(\\operatorname{Res}_{\\infty}F\\right)\\\\&=\\int_{\\mathcal M_0/T_0}\\pi_0^*\\alpha_0.\\end{aligned}"
+            },
+            {
+              "type": "paragraph",
+              "text": "所以三者分工并不重复：命题 4.1 证明“穿墙差值确由辅助模问题给出”；公式 (39) 把墙外方向的贡献化为指数欧拉类的留数；引理 4.12 算出留数中的具体因子。缺了最后一步，就只得到含有抽象指数类的恒等式，尚未得到定理 3.1 那个由权重、次数、亏格和二形式明确写出的跨墙公式。作为检验，当 \\(g=0\\) 时 \\(\\Omega_\\nu\\) 的定义是空和，指数因子变为 \\(1\\)；但权重与 \\(d_\\nu+1\\) 的幂次仍然保留。"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              10,
+              11,
+              23,
+              31
+            ],
+            "printed": [
+              142,
+              143,
+              155,
+              163
+            ]
+          },
+          "evidence": "Remark 3.2 relates the contour around all poles to minus the residue at infinity. Section 4.2 states that the z^-1 coefficient descends to G_0-equivariant cohomology. The proof of Theorem 3.1 on page 163 displays the chain from Proposition 4.1 and (39) to the integral of pi_0^* alpha_0. The definition of Omega_jj' sums over i=1,...,g.",
+          "inferred": true
+        }
+      ]
+    },
+    "downstream_localization": {
+      "title": "4.10怎样计算命题4.1留下的单位球面模问题？",
+      "lead": "命题4.1把穿墙差写成 \\(\\mathcal P_0/T\\) 上的 Euler 类求值，但 \\(\\mathcal P_0\\to\\mathcal M_0\\) 的纤维维数可能跳跃，不能直接套用普通球丛积分。4.10处理的正是这种由 Fredholm 方程定义的单位球面：它用包含核与余核信息的指数类，代替对每一个纤维分别求积分。",
+      "sections": [
+        {
+          "title": "为什么出现的是指数类，而不只是全纯截面的空间？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "固定一个墙上解 \\(b=[A,u_I]\\) 后，式 (17) 已经约束了连接与墙内分量。还可以变化的墙外分量 \\(u_\\perp=(u_\\nu)_{\\nu\\notin I}\\)，必须满足 \\(\\bar\\partial_Au_\\perp=0\\) 和 \\(\\|u_\\perp\\|^2=1\\)。因此4.10中的向量 \\(e\\) 对应 \\(u_\\perp\\)，算子 \\(D_b\\) 对应墙外的 Cauchy–Riemann 算子直和；基底则要由墙上模问题承担，这一步由4.11正式处理。"
+            },
+            {
+              "type": "formula",
+              "label": "把一般算子族对应到墙外方程",
+              "latex": "\\begin{aligned}\nD_b=\\bar\\partial_A^\\perp&:\n\\bigoplus_{\\nu\\notin I}\\Omega^0(\\Sigma,L_\\nu)\n\\longrightarrow\n\\bigoplus_{\\nu\\notin I}\\Omega^{0,1}(\\Sigma,L_\\nu),\\\\\n(\\mathcal P_0)_b&=\\{e\\in\\ker D_b:\\|e\\|^2=1\\}.\n\\end{aligned}"
+            },
+            {
+              "type": "paragraph",
+              "text": "第二行只描述每个点上的纤维，不能据此断言 \\(\\ker D\\) 是向量丛。随着 \\(A\\) 变化，核与余核的维数都可能跳跃；原文在定义 \\(\\mathcal P_0\\) 时就明确提醒这一点。全纯方程没有自动消失，其未满射部分仍影响 Euler 类求值。4.10保留的是稳定定义的虚类 \\(\\operatorname{IND}(D)\\)。若用有限维虚丛表示 \\(\\operatorname{IND}(D)=[V^+]-[V^-]\\)，则 \\(e_T(\\operatorname{IND}(D))^{-1}=e_T(V^-)/e_T(V^+)\\)：余核所代表的方程障碍仍在计算中，不能只保留某个点的全纯截面数。"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              12,
+              24,
+              25,
+              26
+            ],
+            "printed": [
+              144,
+              156,
+              157,
+              158
+            ]
+          },
+          "evidence": "PDF12：“the dimensions of these preimages can vary”；PDF25将 IND(D) 明确作为等变 K 理论类；PDF26的式(36)分母为 e_T(IND(D))。",
+          "inferred": true
+        },
+        {
+          "title": "为什么墙外方向满足定理的群作用条件？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "墙的定义保证 \\(\\langle w_\\nu,e_1\\rangle=0\\) 对 \\(\\nu\\in I\\) 成立，而对每个 \\(\\nu\\notin I\\) 都不为零。因此 \\(T_1\\) 固定墙上基底，却以非零权重作用于墙外截面及其方程值域；任何非零墙外向量在这个圆群下都只有有限稳定子。另一方面，\\(T_0=T/T_1\\) 在墙上解的稳定子有限。于是加入范数为一的墙外向量后，原来固定墙上解的连续圆稳定子被去掉了；这正是4.10要求的作用形态。"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              9,
+              24,
+              30
+            ],
+            "printed": [
+              141,
+              156,
+              162
+            ]
+          },
+          "evidence": "PDF9墙假设(i)及 e₁ 的定义；PDF30：“This circle acts trivially on the base ... and with finite isotropy outside of the zero sections”，且 T₀ 在 M₀ 上稳定子有限。",
+          "inferred": true
+        },
+        {
+          "title": "留数究竟替代了哪一部分积分？",
+          "blocks": [
+            {
+              "type": "formula",
+              "label": "4.10把单位球面方向的贡献写成留数",
+              "latex": "\\int_{\\mathbb M/T}\\pi^*\\alpha\n=\n-\\int_{X/T_0}\\operatorname{Res}_{\\infty}\n\\left(\\frac{\\alpha}{e_T(\\operatorname{IND}(D))}\\right)."
+            },
+            {
+              "type": "paragraph",
+              "text": "将等变参数写成 \\(\\xi+ze_1\\)，变量 \\(z\\) 记录 \\(T_1\\) 的作用。除以指数 Euler 类后取无穷远留数，结果下降为 \\(T_0\\) 等变类；原先还要处理的墙外单位向量及圆群方向，就被这个基底上的特征类表达出来。次数也吻合：复指数为 \\(r\\) 时，单位范数与圆群商共减少两个实维度；分母降低 \\(2r\\) 次，留数再提高两次，恰好把总空间的积分次数变成基底的积分次数。这里说的是模问题的指标次数，不是声称每个纤维都具有同一维数。"
+            },
+            {
+              "type": "paragraph",
+              "text": "符号也不能重新猜测：4.10的定向由 Remark 4.9 指定，而原文明确说明它与命题4.1使用的 Remark 4.2 一致。因此新得到的负留数可以接续4.1的正号 Euler 积分。没有这一步，4.1虽然已把穿墙差集中到 \\(\\mathcal P_0\\)，却仍没有办法消去这些可能跳维的墙外全纯方向，也尚未得到只在墙上模问题求值的表达式。"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              23,
+              26,
+              31
+            ],
+            "printed": [
+              155,
+              158,
+              163
+            ]
+          },
+          "evidence": "PDF23留数把次数提高2并下降为商群等变类；PDF26 Remark4.9末句明确与Remark4.2定向一致，随后给出式(36)；PDF31将其应用于P₀。",
+          "inferred": true
+        }
+      ],
+      "source_page": {
+        "pdf": [
+          9,
+          12,
+          13,
+          23,
+          24,
+          25,
+          26,
+          30,
+          31
+        ],
+        "printed": [
+          141,
+          144,
+          145,
+          155,
+          156,
+          157,
+          158,
+          162,
+          163
+        ]
+      },
+      "evidence": "依据命题4.1、式(17)、第4.3节算子族设定及式(36)解释其适用机制；关于核维跳跃、指数类与定向的对应均在这些原文段落中有直接依据，具体数学说明为教学展开。",
+      "inferred": true
+    },
+    "applicability_extension": {
+      "title": "为什么还需要4.11，不能直接把墙上解空间代入4.10？",
+      "lead": "4.10首先以光滑流形 \\(X\\) 为基底；命题4.1留下的基底却是墙上 vortex 方程的零集 \\(\\mathcal M_0\\)，它没有被证明处处横截。4.11的作用是保留墙上方程及其障碍，把整个墙上模问题作为基底来应用局部化公式。",
+      "sections": [
+        {
+          "title": "把基底直接写成墙上解空间，会漏掉什么？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "这里存在两个不同的非满射问题。墙外的 \\(D_b=\\bar\\partial_A^\\perp\\) 可能有余核，这由4.10的指数类处理；墙内的 vortex 方程本身也可能没有横截零截面，这时 \\(\\mathcal M_0\\) 不能直接当作光滑流形。仅仅把4.10中的 \\(X\\) 改写为 \\(\\mathcal M_0\\)，会跳过第二个问题。论文所说的 regular 只要求零集上的稳定子有限，并不等于方程横截。"
+            },
+            {
+              "type": "paragraph",
+              "text": "另一个看似可行的替换是 \\(X=\\mathcal B_I\\)，即所有连接和墙内截面的配置空间。但这样会把“满足墙上方程”的条件丢掉：\\(\\mathcal B_I\\) 的点远多于墙上解。4.11恰好允许同时保留光滑配置空间与定义墙上解的截面，因此既不需要把零集假定为流形，也不需要删除它的方程。"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              24,
+              29,
+              30,
+              45
+            ],
+            "printed": [
+              156,
+              161,
+              162,
+              177
+            ]
+          },
+          "evidence": "PDF24中X为orientable smooth manifold；PDF29将X替换为T₀-moduli problem；PDF45 Definition A.1明确regular指有限稳定子。",
+          "inferred": true
+        },
+        {
+          "title": "推广后的截面怎样重现命题4.1的全部方程？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "为避免和命题4.1的截面符号混淆，将墙上模问题暂记为 \\((\\mathcal B_I,\\mathcal E_{\\rm wall},S_{\\rm wall})\\)，其零集是 \\(\\mathcal M_0\\)。在它之上取墙外截面丛 \\(\\mathcal E_\\perp\\) 的单位球面，值域同时容纳墙上方程与墙外 Cauchy–Riemann 方程。于是4.11所构造的总截面就是下面的形式；其零集恰好满足式 (17)，也就是 \\(\\mathcal P_0\\)。"
+            },
+            {
+              "type": "formula",
+              "label": "墙上方程与墙外方程被同一个截面保留",
+              "latex": "\\begin{aligned}\n\\widehat{\\mathcal B}\n&=\\{(b,e):b\\in\\mathcal B_I,\\ e\\in(\\mathcal E_\\perp)_b,\\ \\|e\\|^2=1\\},\\\\\n\\widehat{\\mathcal H}_{b,e}\n&=(\\mathcal E_{\\rm wall})_b\\oplus(\\mathcal F_\\perp)_b,\\\\\n\\widehat S(b,e)\n&=(S_{\\rm wall}(b),D_be),\\qquad\n\\widehat S^{-1}(0)=\\mathcal P_0.\n\\end{aligned}"
+            },
+            {
+              "type": "paragraph",
+              "text": "这个构造并没有把两组方程假定为互不影响。\\(D_b\\) 随连接 \\(A\\) 变化，在局部丛平凡化中，总截面的第二分量线性化是 \\(D_b\\hat e+(\\mathrm dD_b[\\hat b])e\\)，其中后一项记录墙上数据改变时全纯方程的变化。因此一般不能用“每个纤维的积分乘以基底的体积”代替它；需要对这个总模问题取 Euler 类。"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              12,
+              25,
+              29,
+              30
+            ],
+            "printed": [
+              144,
+              157,
+              161,
+              162
+            ]
+          },
+          "evidence": "PDF29 Remark4.11明确 H_{b,e}=E_{0b}⊕F_b、S(b,e)=(S₀(b),D_be)；PDF25给出 DS(x,e)(x̂,ê)=Dₓê+Ḋ(x̂)e；PDF12式(17)规定P₀。",
+          "inferred": true
+        },
+        {
+          "title": "这一推广怎样保留墙上方程的贡献？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "4.11要求式 (36) 右侧仍按墙上模问题的 Euler 类求值。原文的论证方法是对墙上模问题作有限维约化，再用适用于非紧基底与紧支撑形式的局部化公式；约化中保留下来的方程值域继续参与 Euler 类计算。因而“消去墙外方向”以后，墙上方程的障碍并未被忽略，只是求值对象变成了留数得到的 \\(T_0\\) 等变类。如果省掉4.11，就必须额外证明墙上方程横截，或者另行证明同样的模问题推广；论文并没有预先作出这样的横截假设。"
+            },
+            {
+              "type": "formula",
+              "label": "推广后右侧的严格含义",
+              "latex": "\\int_{\\mathcal P_0/T}\\pi^*\\alpha\n=\n\\chi^{\\mathcal B_I,\\mathcal E_{\\rm wall},S_{\\rm wall}}\n\\left(\n-\\operatorname{Res}_{\\infty}\n\\frac{\\pi_0^*\\alpha}{e_T(\\operatorname{IND}(\\bar\\partial^\\perp))}\n\\right)."
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              29,
+              30,
+              31
+            ],
+            "printed": [
+              161,
+              162,
+              163
+            ]
+          },
+          "evidence": "PDF29：“the right hand side of (36) is understood in terms of the Euler class”，并要求选择finite dimensional reduction；PDF31在式(39)前同时援引Theorem4.10与Remark4.11。",
+          "inferred": true
+        }
+      ],
+      "source_page": {
+        "pdf": [
+          12,
+          24,
+          25,
+          29,
+          30,
+          31,
+          45
+        ],
+        "printed": [
+          144,
+          156,
+          157,
+          161,
+          162,
+          163,
+          177
+        ]
+      },
+      "evidence": "Remark4.11明确用T₀模问题替代光滑基底，并保留总截面(S₀(b),D_be)及基底Euler类求值。这里将其各项与式(17)逐一对应，并解释为何不能假定M₀光滑。",
+      "inferred": true
+    },
+    "downstream_rewrite": {
+      "title": "式(39)把命题4.1的积分具体改写成了什么？",
+      "lead": "4.1给出的穿墙差仍是在 \\(\\mathcal P_0/T\\) 上求值。式(39)完成两项具体改变：把求值位置移到墙上模问题 \\(\\mathcal M_0/T_0\\)，并把全部墙外方程的贡献整理为各分量指数 Euler 类的乘积。它已经消去了墙外截面变量，但尚未算出这些特征类。",
+      "sections": [
+        {
+          "title": "怎样把式(39)接在命题4.1之后？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "记 \\(\\tau_\\pm=\\tau_0\\pm\\varepsilon\\tau_1\\)，并把对应的不变量之差记为 \\(\\Delta_\\alpha\\)。4.1的右侧之所以能代入4.10与4.11，不只是因为两边都有一个球面：\\(\\mathcal P_0\\) 的墙上部分恰好解方程 (13)，墙外部分恰好是 \\(\\bar\\partial^\\perp\\) 核中的单位向量，定向也已经由 Remark 4.9 与 Remark 4.2 对齐。因此得到的是同一个 Euler 类求值的改写。"
+            },
+            {
+              "type": "formula",
+              "label": "把几何切除所得的差值写到墙上",
+              "latex": "\\begin{aligned}\n\\Delta_\\alpha\n&:=\\Phi_{\\lambda,g}^{\\rho,\\tau_+}(\\alpha)\n-\\Phi_{\\lambda,g}^{\\rho,\\tau_-}(\\alpha)\\\\\n&=\\int_{\\mathcal P_0/T}\\pi^*\\alpha\\\\\n&=-\\int_{\\mathcal M_0/T_0}\n\\operatorname{Res}_{\\infty}\n\\left(\n\\frac{\\pi_0^*\\alpha}\n{e_T(\\operatorname{IND}(\\bar\\partial^\\perp))}\n\\right).\n\\end{aligned}"
+            },
+            {
+              "type": "paragraph",
+              "text": "这里显式补写了式 (39) 在分子处省略的 \\(\\pi_0^*\\)。原来的 \\(\\alpha\\) 来自连接商空间 \\(\\mathcal A/\\mathcal G_0\\)；\\(\\pi\\) 与 \\(\\pi_0\\) 都保留连接而忘掉截面，所以仍是同一个上同调类被用于计算。改变的是求值模问题和插入其中的特征类，而不是把 \\(\\alpha\\) 换成一个无关的类。"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              8,
+              12,
+              13,
+              26,
+              31
+            ],
+            "printed": [
+              140,
+              144,
+              145,
+              158,
+              163
+            ]
+          },
+          "evidence": "PDF13式(20)给出Δα；PDF26说明定向一致；PDF31式(39)及其后的Proof of Theorem3.1将这些等式连续使用，Lemma4.12指定π₀拉回。",
+          "inferred": true
+        },
+        {
+          "title": "为什么总算子的分母能拆成每个墙外分量？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "对固定的连接，墙外全纯方程按线丛 \\(L_\\nu\\) 分量分开，故算子族本身就是直和。家族指数对直和可加，等变 Euler 类对虚类的直和可乘，因此得到式 (39) 的第二行。这个步骤在等变 \\(K\\) 理论中成立，不要求每个 \\(\\ker\\bar\\partial^\\nu\\) 或 \\(\\operatorname{coker}\\bar\\partial^\\nu\\) 单独成为定秩向量丛；每个因子仍保留该分量的核与余核之差。"
+            },
+            {
+              "type": "formula",
+              "label": "直和的方程变为特征类的乘积",
+              "latex": "\\begin{aligned}\n\\bar\\partial^\\perp\n&=\\bigoplus_{\\nu\\notin I}\\bar\\partial^\\nu,\n&\n\\operatorname{IND}(\\bar\\partial^\\perp)\n&=\\sum_{\\nu\\notin I}\\operatorname{IND}(\\bar\\partial^\\nu),\\\\\ne_T(\\operatorname{IND}(\\bar\\partial^\\perp))\n&=\\prod_{\\nu\\notin I}\ne_T(\\operatorname{IND}(\\bar\\partial^\\nu)).\n\\end{aligned}"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              24,
+              30,
+              31
+            ],
+            "printed": [
+              156,
+              162,
+              163
+            ]
+          },
+          "evidence": "PDF30定义E为墙外泛线丛的直和及相应∂̄族；PDF24把虚类Euler类定义为Euler类之商；PDF31式(39)明确分母的乘积分解。",
+          "inferred": true
+        },
+        {
+          "title": "这时消去了什么，又还有什么没有算出来？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "每个墙外权重满足 \\(\\langle w_\\nu,e_1\\rangle\\ne0\\)，所以相应 Euler 类能在 \\(T_1\\) 有理等变上同调中求逆。沿 \\(\\xi+ze_1\\) 取留数后得到 \\(T_0\\) 等变类，原先作用在墙外单位向量上的圆群参数不再是待积分的自由变量。这也解释了为何右侧的商群是 \\(T_0\\)，而不继续写 \\(T\\)：墙上的 \\(T_1\\) 本来就作用平凡，局部化已经把它在墙外方向的贡献记录在留数里。"
+            },
+            {
+              "type": "paragraph",
+              "text": "但式 (39) 的分母仍写着抽象符号 \\(e_T(\\operatorname{IND}(\\bar\\partial^\\nu))\\)。只知道数值指标 \\(d_\\nu+1-g\\)，还不能知道这些类随连接变化所含的高次项，也不能写出定理3.1的显式被积式。式 (39) 的作用到这里为止：它把待处理的问题分解成逐个线丛的家族特征类计算。若跳过它，4.12即使算出了各分量的 Euler 类，也还没有等式说明这些类为何应以该乘积、该负留数出现在穿墙差里。"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              9,
+              23,
+              24,
+              30,
+              31
+            ],
+            "printed": [
+              141,
+              155,
+              156,
+              162,
+              163
+            ]
+          },
+          "evidence": "PDF23定义留数并说明其下降到商群等变上同调；PDF24说明非零权重Euler类可逆；PDF31先给式(39)，紧接着说Theorem3.1 follows from Lemma4.12。",
+          "inferred": true
+        }
+      ],
+      "source_page": {
+        "pdf": [
+          8,
+          9,
+          12,
+          13,
+          23,
+          24,
+          26,
+          30,
+          31
+        ],
+        "printed": [
+          140,
+          141,
+          144,
+          145,
+          155,
+          156,
+          158,
+          162,
+          163
+        ]
+      },
+      "evidence": "式(39)的两行分别用总家族指数及各墙外分量指数的乘积表示P₀上的积分；随后原文把它接在Proposition4.1之后，再代入Lemma4.12。本文将省略的π₀拉回及群变量的消去作显式说明。",
+      "inferred": true
+    },
+    "downstream_evaluation": {
+      "title": "4.12为什么不能只用Riemann–Roch的数值指标代替？",
+      "lead": "式(39)需要整个家族指数的 Euler 类，而不只需要每个算子的指标数 \\(d_\\nu+1-g\\)。4.12算出其随连接变化的特征类：权重的幂记录核减余核的净维数，指数修正项 \\(\\exp(-\\Omega_\\nu/\\langle w_\\nu,\\xi\\rangle)\\) 记录这个家族在连接空间上的变化。",
+      "sections": [
+        {
+          "title": "未知的指数类为什么能在连接空间上计算？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "对一个墙外指标 \\(\\nu\\notin I\\)，算子 \\(\\bar\\partial_A^\\nu\\) 依赖连接 \\(A\\)，不额外依赖墙内截面 \\(u_I\\)。因此第4.4节在 \\(\\mathcal B_I\\) 上构造的泛线丛，实际上从 \\(\\mathcal A/\\mathcal G_0\\times\\Sigma\\) 拉回；对应的家族指数和 Euler 类也按 \\(\\pi_0\\) 拉回。这使4.12能够先在连接商空间上计算一个普适公式，再将它用于满足墙上方程的基底，而不必逐点求出墙上解的全纯截面。"
+            },
+            {
+              "type": "paragraph",
+              "text": "数值Riemann–Roch只给出 \\(\\dim_{\\mathbb C}\\ker\\bar\\partial_A^\\nu-\\dim_{\\mathbb C}\\operatorname{coker}\\bar\\partial_A^\\nu=d_\\nu+1-g\\)。这个差值不能告诉我们：当 \\(A\\) 在基底上移动时，这些空间怎样组成一个具有非平凡特征类的家族。尤其核维可能跳跃，不能把指标数当作实际核丛的秩，再直接写一个权重的幂作为全部答案。"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              12,
+              30,
+              31
+            ],
+            "printed": [
+              144,
+              162,
+              163
+            ]
+          },
+          "evidence": "PDF31证明首段说明泛线丛与家族指数都是经π₀拉回；PDF30给出数值index(∂̄)，PDF12明确核中单位球面纤维维数可变。",
+          "inferred": true
+        },
+        {
+          "title": "指数函数中的二形式从哪里来？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "将连接空间上的家族指数记作 \\(\\mathscr I_\\nu\\)。原文用家族指标定理计算 \\(\\operatorname{ch}(\\mathscr I_\\nu)=\\int_\\Sigma\\operatorname{td}(T\\Sigma)\\operatorname{ch}(\\mathcal L^\\nu)\\)。泛线丛的第一 Chern 类除沿曲面的次数项 \\(d_\\nu\\sigma\\) 外，还含混合项：一部分沿 \\(\\Sigma\\) 的一维上同调，另一部分沿连接商空间的一维上同调。把混合项记作 \\(M\\)，指数展开中的二次项 \\(\\tfrac12 M^2\\) 沿 \\(\\Sigma\\) 积分，留下 \\(-\\Omega_\\nu\\)。因此 \\(\\Omega_\\nu\\) 是这族全纯结构随连接改变的特征类信息，并非从范数球面的大小产生的修正。"
+            },
+            {
+              "type": "formula",
+              "label": "家族指标提供的不止净维数",
+              "latex": "\\begin{aligned}\n\\operatorname{ch}(\\mathscr I_\\nu)\n&=(d_\\nu+1-g)-\\Omega_\\nu,\\\\\nc_j(\\mathscr I_\\nu)&=\\frac{(-\\Omega_\\nu)^j}{j!}.\n\\end{aligned}"
+            },
+            {
+              "type": "paragraph",
+              "text": "接着使用权重 \\(q_\\nu=\\langle w_\\nu,\\xi\\rangle\\) 的等变作用：Euler 类由各阶 Chern 类按 \\(q_\\nu^{\\,d_\\nu+1-g-j}\\) 加权求和。把上一式代入后，恰好把级数重新合成为指数函数，得到4.12。整个运算针对虚指标类，故余核的影响已经包含在内；不需要假定 \\(\\bar\\partial_A^\\nu\\) 满射，也不需要把负指标排除。"
+            },
+            {
+              "type": "formula",
+              "label": "将全部Chern类重新合成为4.12的表达式",
+              "latex": "\\begin{aligned}\ne_T(\\operatorname{IND}(\\bar\\partial^\\nu))\n&=\\pi_0^*\\!\\left[\n\\sum_{j\\ge0}\nq_\\nu^{\\,d_\\nu+1-g-j}\\frac{(-\\Omega_\\nu)^j}{j!}\n\\right]\\\\\n&=\\pi_0^*\\!\\left[\nq_\\nu^{\\,d_\\nu+1-g}\n\\exp\\!\\left(-\\frac{\\Omega_\\nu}{q_\\nu}\\right)\n\\right],\n\\qquad q_\\nu=\\langle w_\\nu,\\xi\\rangle .\n\\end{aligned}"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              31,
+              32,
+              33
+            ],
+            "printed": [
+              163,
+              164,
+              165
+            ]
+          },
+          "evidence": "PDF31式(40)给出按权重加权的Chern类之和；PDF32计算ch(IND)=dν+1−g−Ων及c_j=(-Ων)^j/j!；PDF33把级数合成为指数函数。",
+          "inferred": true
+        },
+        {
+          "title": "代回式(39)后，穿墙公式新增了哪些可计算的信息？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "式 (39) 的抽象指数类现在全部被 \\(w_\\nu\\)、\\(d_\\nu\\)、\\(g\\) 和显式二形式 \\(\\Omega_\\nu\\) 取代。由于那里使用 Euler 类的倒数，指数函数的负号变成正号；各分量的指数修正相乘，又合成为对 \\(\\nu\\notin I\\) 求和的指数，这正是定理3.1中原先尚未解释的修正项。若只保留数值指标，就会把这部分族信息整体漏掉。例如在 \\(g=0\\) 时 \\(\\Omega_\\nu=0\\)，公式确实退化为纯权重幂；一般情形不能预先删去指数修正。至此，4.1留下的全纯方程信息才被转成可以直接展开并取留数的上同调表达式。"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              10,
+              11,
+              31,
+              32,
+              33
+            ],
+            "printed": [
+              142,
+              143,
+              163,
+              164,
+              165
+            ]
+          },
+          "evidence": "PDF31在Lemma4.12后立即代回式(39)，给出α₀的正号指数求和表达式；PDF10–11定义Ων；PDF32–33证明其来自家族指标的高次特征类。",
+          "inferred": true
+        }
+      ],
+      "source_page": {
+        "pdf": [
+          10,
+          11,
+          12,
+          30,
+          31,
+          32,
+          33
+        ],
+        "printed": [
+          142,
+          143,
+          144,
+          162,
+          163,
+          164,
+          165
+        ]
+      },
+      "evidence": "Lemma4.12及其证明从泛线丛的拉回开始，使用家族指标定理得到ch=dν+1−g−Ων，再以式(40)恢复Euler类；本解读说明这些计算补足数值指标所缺的信息，并追踪在式(39)取倒数时的符号。",
+      "inferred": true
+    },
+    "proof_dependency": {
+      "title": "定理 A.4 如何把几何变形变成三次有依据的数值比较",
+      "lead": "证明先用配边公理得到式 (29)，再用一次配边比较同伦两端，最后用函子性识别辅助模问题；这三次比较始终使用从联络空间拉回的同一个类。",
+      "source_page": {
+        "pdf": [
+          8,
+          12,
+          13,
+          15,
+          16,
+          17,
+          46,
+          47
+        ],
+        "printed": [
+          140,
+          144,
+          145,
+          147,
+          148,
+          149,
+          178,
+          179
+        ]
+      },
+      "evidence": "Equation (12) identifies the invariant with the Euler class evaluated on the connection projection's pullback. The proof on PDF page 17 invokes Cobordism for (29), then Cobordism and Functoriality for the homotopy and endpoint morphism. Definitions A.2–A.3 and Theorem A.4 give the relevant hypotheses and axioms.",
+      "inferred": true,
+      "sections": [
+        {
+          "title": "已经把墙两侧连起来了，为什么还需要配边公理？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "命题左边的不变量，在式 (12) 中定义为欧拉类同态对 \\(\\pi^*\\alpha\\) 的取值，其中 \\(\\pi:\\mathcal B\\to\\mathcal A/\\mathcal G_0\\) 只保留联络，\\(\\alpha\\in H_T^*(\\mathcal A/\\mathcal G_0)\\)。跨墙参数改变的是涡旋方程的截面，不是这个类的来源。可是未经截断的参数族 \\(\\mathcal W\\) 包含具有非有限稳定子的奇异集，不能直接当作定理 A.4 所要求的正则配边，更不能据此断言两端不变量相等。"
+            },
+            {
+              "type": "paragraph",
+              "text": "挖去奇异集附近并确认零集避开角点后，证明得到可应用配边公理的模问题：其三块边界分别是两端的涡旋模问题和新增的 \\(\\mathcal M^\\delta\\)。把联络投影扩展为 \\((t,[A,u])\\mapsto[A]\\)，同一个类就能限制到三块边界。配合注 4.4 核准的方向，第一次使用配边公理得到下面的式 (29)。这一步比较的是等变欧拉类数值，并不要求把零集额外假定成光滑流形。"
+            },
+            {
+              "type": "formula",
+              "label": "第一次配边：两个端点的差等于第三个边界的贡献",
+              "latex": "\\begin{aligned}\\Phi_{\\lambda,g}^{\\rho,\\tau_0+\\varepsilon\\tau_1}(\\alpha)-\\Phi_{\\lambda,g}^{\\rho,\\tau_0-\\varepsilon\\tau_1}(\\alpha)&=\\chi^{\\mathcal B^\\delta,\\mathcal E^\\delta,\\mathcal S^\\delta}(\\pi_\\delta^*\\alpha)\\\\&=\\int_{\\mathcal M^\\delta/T}\\pi^*\\alpha,\\end{aligned}"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              8,
+              15,
+              16,
+              17,
+              46,
+              47
+            ],
+            "printed": [
+              140,
+              147,
+              148,
+              149,
+              178,
+              179
+            ]
+          },
+          "evidence": "Equation (12) defines the invariant by evaluating the Euler class on the pullback under the connection projection. The proof constructs the cut-off moduli problem and invokes Cobordism to obtain (29). Definition A.3 and Theorem A.4 specify the cobordism framework and axiom.",
+          "inferred": true
+        },
+        {
+          "title": "同伦和归一化都改变了问题，为什么还能比较同一个类？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "式 (30) 接着在固定的 \\(\\mathcal B^\\delta\\) 上改变截面 \\(\\mathcal S_s^\\delta\\)，把 \\(s=1\\) 的新边界方程变成 \\(s=0\\) 的墙上辅助方程。记 \\(\\pi_\\delta:\\mathcal B^\\delta\\to\\mathcal A/\\mathcal G_0\\) 为同样的联络投影；在整个同伦上只需忽略参数 \\(s\\)，就得到同一个 \\(\\pi_\\delta^*\\alpha\\)。原文确认全部零集合起来是紧的，并且定向沿同伦连续，所以第二次配边应用保留它的欧拉类取值。没有这两项核查，仅有连续插值公式不足以证明积分不变。"
+            },
+            {
+              "type": "paragraph",
+              "text": "终点的墙外分量仍满足平方范数总和为 \\(\\delta\\)，而 \\(\\mathcal P_0\\) 使用单位归一化。把墙外截面乘以 \\(\\delta^{-1/2}\\)，同时保持联络 \\(A\\) 和墙内分量不变，可具体看出原文所述保定向态射 \\(\\psi\\) 的作用。因为联络未变，\\(\\pi\\circ\\psi=\\pi_\\delta\\)，所以函子性需要的拉回关系确实是 \\(\\psi^*(\\pi^*\\alpha)=\\pi_\\delta^*\\alpha\\)。这就把同伦终点的数值识别为命题右侧。若只说“两个零集对应”，却不核对模问题态射、定向和这个拉回关系，仍不能推出要比较的两个数相等。"
+            },
+            {
+              "type": "formula",
+              "label": "第二次配边后，再使用函子性；每一步都保留同一上同调类",
+              "latex": "\\begin{aligned}\\chi^{\\mathcal B^\\delta,\\mathcal E^\\delta,\\mathcal S_1^\\delta}(\\pi_\\delta^*\\alpha)&=\\chi^{\\mathcal B^\\delta,\\mathcal E^\\delta,\\mathcal S_0^\\delta}(\\pi_\\delta^*\\alpha)\\\\&=\\chi^{\\mathcal B^\\delta,\\mathcal E^\\delta,\\mathcal S_0^\\delta}(\\psi^*\\pi^*\\alpha)\\\\&=\\chi^{\\mathcal B,\\mathcal E_0,\\mathcal S_0}(\\pi^*\\alpha).\\end{aligned}"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              8,
+              12,
+              13,
+              17,
+              46,
+              47
+            ],
+            "printed": [
+              140,
+              144,
+              145,
+              149,
+              178,
+              179
+            ]
+          },
+          "evidence": "The connection projection is defined on PDF page 8. Equation (17) uses norm one. On PDF page 17 the proof states compactness, continuous orientations and an orientation-preserving morphism, then invokes Cobordism and Functoriality to identify the two integrals. The explicit scaling and pullback identity here unpack that morphism.",
+          "inferred": true
+        }
+      ]
+    },
+    "orientation_dependency": {
+      "title": "注 4.2 为命题右侧规定了要与左侧比较的方向",
+      "lead": "命题 4.1 右侧的欧拉类积分会随定向反转而变号。注 4.2 指定辅助模问题的定向，使它既能接上证明中的同伦，又与穿墙方向的选择相容。",
+      "source_page": {
+        "pdf": [
+          8,
+          9,
+          12,
+          13,
+          14,
+          17,
+          46,
+          47
+        ],
+        "printed": [
+          140,
+          141,
+          144,
+          145,
+          146,
+          149,
+          178,
+          179
+        ]
+      },
+      "evidence": "The original invariant uses the complex orientation specified in Section 2. Proposition 4.1 explicitly adopts Remark 4.2's orientation for its right-hand integral. The remark constructs that orientation and records its dependence on the normal; the proof verifies continuous orientations and an orientation-preserving endpoint morphism.",
+      "inferred": true,
+      "sections": [
+        {
+          "title": "右端明明写成积分，为什么还要另作定向约定？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "式 (12) 定义墙两侧的涡旋不变量时，已经使用原涡旋模问题的复线性线性化来定向。命题右边却换成了另一组方程：只在曲率方程中保留墙内分量，并给墙外分量加上单位平方范数约束。即使已经写出它的零集 \\(\\mathcal P_0\\)，也不能仅凭相同的积分符号，就断定它的方向与左侧的差值匹配。论文在命题前特意说明，右端按 \\(\\chi^{\\mathcal B,\\mathcal E_0,\\mathcal S_0}(\\pi^*\\alpha)\\) 理解，且方向采用注 4.2 的约定。"
+            },
+            {
+              "type": "paragraph",
+              "text": "注 4.2 具体把这份方向交给 \\(\\mathcal D_0\\oplus\\Phi\\)：\\(\\mathcal D_0\\) 的复结构提供自然复定向，\\(\\Phi\\) 补上两个实方向，一个对应墙外截面的归一化约束，另一个对应剩余圆环作用的局部截面条件。借助行列式线的同构，这个方向传给辅助模问题。因而约定决定的是欧拉类取值的符号，不只是画图或写坐标时的习惯；若把它任意反向，右端数值也会反号。"
+            },
+            {
+              "type": "formula",
+              "label": "同一个模问题反向后，欧拉类数值改变符号",
+              "latex": "\\chi_{-o}^{\\mathcal B,\\mathcal E_0,\\mathcal S_0}(\\pi^*\\alpha)=-\\chi_o^{\\mathcal B,\\mathcal E_0,\\mathcal S_0}(\\pi^*\\alpha),\\qquad o=\\text{注 4.2 的定向}."
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              8,
+              12,
+              13,
+              14,
+              46,
+              47
+            ],
+            "printed": [
+              140,
+              144,
+              145,
+              146,
+              178,
+              179
+            ]
+          },
+          "evidence": "The original vortex orientation is specified on PDF page 8. The paragraph preceding Proposition 4.1 explicitly assigns Remark 4.2's orientation to its right-hand Euler-class integral. Remark 4.2 transfers the complex orientation through the augmented operator and elliptic complex (21).",
+          "inferred": true
+        },
+        {
+          "title": "这套方向怎样接上同伦，而不是在最后凭答案选正负号？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "证明先把第三个边界的截面连续变为 \\(\\mathcal S_0^\\delta\\)。对应的 \\(\\mathcal D_s\\) 始终是复线性算子，因此由它们诱导的定向随 \\(s\\) 连续变化；不能在某一端随意翻转。到达 \\(s=0\\) 并将墙外分量归一化后，原文还明确要求通向 \\((\\mathcal B,\\mathcal E_0,\\mathcal S_0)\\) 的态射保持方向。注 4.2 正是该目标模问题的定向定义，没有它，“保持方向”就缺少一个明确的比较对象，最后的函子性步骤也可能差一个负号。"
+            },
+            {
+              "type": "paragraph",
+              "text": "法向 \\(e_1\\) 的选择进一步说明这不是任意安排。在 \\(\\langle\\tau_1,e_1\\rangle>0\\) 的约定下，同时反转穿墙方向与相应法向，左侧两个不变量交换先后次序，差值变号；注 4.2 也指出定向随法向反转而反转，右侧作出同样变化。这里始终是在模问题的行列式线上讨论方向，不能据此额外假定 \\(\\mathcal P_0/T\\) 已经是光滑流形。"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              9,
+              13,
+              14,
+              17
+            ],
+            "printed": [
+              141,
+              145,
+              146,
+              149
+            ]
+          },
+          "evidence": "The crossing direction and normal convention are set on PDF page 9. Remark 4.2 states that reversing the normal reverses the moduli-problem orientation. The proof on PDF page 17 establishes continuous orientations during the homotopy and an orientation-preserving morphism to the auxiliary moduli problem.",
+          "inferred": true
+        }
+      ]
+    },
+    "sign_justification": {
+      "title": "注 4.4 解释了为什么新增边界最终以正号出现在跨墙公式右侧",
+      "lead": "挖洞产生的边界有一套由配边诱导的方向，而证明为后续同伦使用了另一套方向。注 4.4 核准二者相反；正是这个负号，移项后给出式 (29) 的正号。",
+      "source_page": {
+        "pdf": [
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          47
+        ],
+        "printed": [
+          145,
+          147,
+          148,
+          149,
+          150,
+          151,
+          179
+        ]
+      },
+      "evidence": "The proof constructs and orients the third boundary on PDF pages 15–16, applies Cobordism to obtain (29), and uses an orientation-preserving homotopy comparison. Remark 4.4 proves that the assigned third-boundary orientation is opposite to the induced boundary orientation.",
+      "inferred": true,
+      "sections": [
+        {
+          "title": "同一个第三边界，为什么会有两套方向？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "截断条件 \\(\\sum_{\\nu\\notin I}\\|u_\\nu\\|^2\\ge\\delta\\) 产生第三个边界 \\(\\mathcal M^\\delta\\)。作为整个配边的一部分，它有由配边定向诱导的边界方向；但要把它沿式 (30) 变成辅助模问题，证明又通过复线性算子 \\(\\mathcal D_1\\) 及实约束 \\(\\Phi\\) 为它指定了一套便于延续的方向。这两种定义的出发点不同，不能因为底层解相同就默认方向相同。"
+            },
+            {
+              "type": "paragraph",
+              "text": "注 4.4 做的正是这项比较：先在适当线性化满射时用基底检查符号，再用行列式线的同构处理一般情形，结论是证明中指定的方向恰好与诱导边界方向相反。下面的记号只是把这句结论写成等式；在可能不光滑的情形，方向仍应理解为相应模问题行列式线的方向，而不是未经证明存在的普通切空间定向。"
+            },
+            {
+              "type": "formula",
+              "label": "同一个边界的两套方向相差一个负号",
+              "latex": "\\operatorname{or}_{\\partial\\mathcal W^\\delta}(\\mathcal M^\\delta)=-\\operatorname{or}_{\\mathrm{proof}}(\\mathcal M^\\delta)"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "printed": [
+              147,
+              148,
+              149,
+              150,
+              151
+            ]
+          },
+          "evidence": "The third boundary is constructed on PDF page 15 and oriented through the augmented operator on page 16. Remark 4.4 explicitly compares this orientation with the induced boundary orientation, proves the comparison in a surjective case and extends it through determinant-line arguments.",
+          "inferred": true
+        },
+        {
+          "title": "这个负号怎样变成式 (29) 右侧的正号？",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "把截断配边的三块边界一起代入配边恒等式时，参数正端点带正号，负端点带负号。如果将 \\(I_\\delta\\) 定义为采用证明中指定方向的 \\(\\mathcal M^\\delta/T\\) 上的欧拉类积分，那么实际诱导边界贡献是 \\(-I_\\delta\\)，不是 \\(I_\\delta\\)。三块贡献合起来为零，便得到下面的等式；把第三项移到右边，正好是式 (29)。"
+            },
+            {
+              "type": "formula",
+              "label": "三块边界的贡献与移项后的跨墙差值",
+              "latex": "\\begin{aligned}0&=\\Phi_{\\lambda,g}^{\\rho,\\tau_0+\\varepsilon\\tau_1}(\\alpha)-\\Phi_{\\lambda,g}^{\\rho,\\tau_0-\\varepsilon\\tau_1}(\\alpha)-I_\\delta,\\\\ I_\\delta&:=\\int_{\\mathcal M^\\delta/T}\\pi^*\\alpha.\\end{aligned}"
+            },
+            {
+              "type": "paragraph",
+              "text": "如果跳过注 4.4、把新增边界的两套方向误当成相同，就会把上式最后一项写成正号，从而错误地得到“跨墙差值等于 \\(-I_\\delta\\)”。后面的同伦和保定向态射只能保留已经选定的符号，无法自动修正这个错误，它会一直传到命题右侧的 \\(\\mathcal P_0/T\\) 积分。这也说明注 4.4 与注 4.2 的分工：前者负责新边界与配边之间的负号，后者固定最终辅助模问题的方向。"
+            }
+          ],
+          "source_page": {
+            "pdf": [
+              13,
+              16,
+              17,
+              18,
+              19,
+              47
+            ],
+            "printed": [
+              145,
+              148,
+              149,
+              150,
+              151,
+              179
+            ]
+          },
+          "evidence": "The proof uses the opposite boundary orientation, derives the positive right-hand side in (29) by Cobordism, and then identifies that integral with the auxiliary one by a homotopy and an orientation-preserving morphism. Remark 4.4 supplies the sign verification.",
+          "inferred": true
+        }
+      ]
+    }
+  },
+  "related_statements": {
+    "downstream_localization": {
+      "scope": "完整陈述（中文转述）；第4.3节的前提与定义见“符号定义与适用前提”",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "令 \\(m=\\dim X-\\dim T_0\\)、\\(n=\\operatorname{index}_{\\mathbb C}(D)\\)。任取 \\(X/T_0\\) 的定向，以 \\(e_1\\) 定向 \\(T_1\\)，并按 Remark 4.9 定向 \\(\\mathbb M/T\\)。则对每个 \\(\\alpha\\in H_T^{m+2n-2}(X)\\)，有"
+        },
+        {
+          "type": "formula",
+          "label": "Theorem 4.10 · 式 (36)",
+          "latex": "\\int_{\\mathbb M/T}\\pi^*\\alpha\n=-\\int_{X/T_0}\\operatorname{Res}_{\\infty}\\!\\left(\n\\frac{\\alpha}{e_T(\\operatorname{IND}(D))}\n\\right)."
+        },
+        {
+          "type": "paragraph",
+          "text": "左侧按模问题 \\((\\mathbb B,\\mathbb H,S)\\) 的 Euler 类在 \\(\\pi^*\\alpha\\) 上的求值理解。右侧的留数属于 \\(H_{T_0}^{m}(X)\\)，由于 \\(T_0\\) 在 \\(X\\) 上的稳定子有限，可以在 \\(X/T_0\\) 上积分。"
+        }
+      ],
+      "context": [
+        {
+          "label": "基底与群作用",
+          "text": "原文规定 \\(X\\) 是可定向光滑流形（orientable smooth manifold），环面 \\(T\\) 作用于 \\(X\\)。定向圆子群 \\(T_1\\subset T\\) 在 \\(X\\) 上作用平凡，商群 \\(T_0=T/T_1\\) 在 \\(X\\) 上的稳定子有限；\\(e_1\\) 是 \\(\\mathfrak t_1\\cap\\Lambda\\) 的正生成元。",
+          "source_page": {
+            "pdf": [
+              24
+            ],
+            "printed": [
+              156
+            ]
+          }
+        },
+        {
+          "label": "算子族与指数",
+          "text": "\\(\\mathcal E,\\mathcal F\\to X\\) 是带复线性 \\(T\\) 作用、投影等变的复 Hilbert 空间丛；\\(T_1\\) 在两丛零截面之外的稳定子有限。\\(D_x:\\mathcal E_x\\to\\mathcal F_x\\) 是光滑的 \\(T\\) 等变复线性 Fredholm 算子族。这里 \\(n=\\dim_{\\mathbb C}\\ker D_x-\\dim_{\\mathbb C}\\operatorname{coker}D_x\\) 是复指数。",
+          "source_page": {
+            "pdf": [
+              24
+            ],
+            "printed": [
+              156
+            ]
+          }
+        },
+        {
+          "label": "单位球面模问题",
+          "text": "\\(\\mathbb B=\\{(x,e):e\\in\\mathcal E_x,\\ \\|e\\|^2=1\\}\\)，\\(\\mathbb H_{x,e}=\\mathcal F_x\\)，\\(S(x,e)=D_xe\\)，\\(\\mathbb M=S^{-1}(0)\\)，\\(\\pi:\\mathbb B\\to X\\) 是投影。\\(\\operatorname{IND}(D)\\in K_T(X)\\) 是等变拓扑指数虚类。",
+          "source_page": {
+            "pdf": [
+              25
+            ],
+            "printed": [
+              157
+            ]
+          }
+        },
+        {
+          "label": "定向约定",
+          "text": "Remark 4.9 由 \\(X/T_0\\) 与 \\(T_1\\) 的定向规定模问题的定向；当 \\(D_x\\) 不满射时，使用适当增广算子的核作同样构造。原文明确说明该定向与 Remark 4.2 的约定一致。",
+          "source_page": {
+            "pdf": [
+              25,
+              26
+            ],
+            "printed": [
+              157,
+              158
+            ]
+          }
+        },
+        {
+          "label": "有理类与留数",
+          "text": "\\(\\alpha/e_T(\\operatorname{IND}(D))\\in H_{T,T_1}^{m-2}(X)\\)。\\(\\operatorname{Res}_{\\infty}\\) 是沿 \\(\\xi+ze_1\\) 展开的 Laurent 级数中 \\(z^{-1}\\) 系数的负数，并将次数提高 \\(2\\)。",
+          "source_page": {
+            "pdf": [
+              23,
+              26
+            ],
+            "printed": [
+              155,
+              158
+            ]
+          }
+        }
+      ],
+      "source_page": {
+        "pdf": [
+          26
+        ],
+        "printed": [
+          158
+        ]
+      },
+      "evidence": "Theorem 4.10 states formula (36) for equivariant classes of the specified degree, with the orientations fixed in Remark 4.9. The following paragraph specifies Euler-class evaluation on the left and the degree of the residue on the right.",
+      "inferred": false
+    },
+    "applicability_extension": {
+      "scope": "完整陈述（中文转述）；继承的适用条件见“符号定义与适用前提”",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Theorem 4.10 在以下替换后仍成立：把 \\(X\\) 换成 Appendix A 中的 \\(T_0\\) 模问题 \\((\\mathcal B_0,\\mathcal E_0,S_0)\\)，把 \\(\\mathcal E\\)、\\(\\mathcal F\\) 换成 \\(\\mathcal B_0\\) 上的 Hilbert 空间丛。此时 \\(\\mathbb B\\) 是 \\(\\mathcal E\\) 的单位球面丛，且"
+        },
+        {
+          "type": "formula",
+          "label": "Remark 4.11 · 推广后的丛与截面",
+          "latex": "\\begin{aligned}\n\\mathbb H_{b,e}&=\\mathcal E_{0b}\\oplus\\mathcal F_b,\\\\\nS(b,e)&=(S_0(b),D_be).\n\\end{aligned}"
+        },
+        {
+          "type": "paragraph",
+          "text": "式 (36) 的右侧按 \\((\\mathcal B_0,\\mathcal E_0,S_0)\\) 的 Euler 类理解。证明可取该模问题的有限维约化，并利用式 (36) 对非紧流形 \\(X\\) 与紧支撑的 \\(T\\) 等变微分形式 \\(\\alpha\\) 仍然成立。"
+        }
+      ],
+      "context": [
+        {
+          "label": "继承的适用条件",
+          "text": "这是对 Theorem 4.10 的推广，仍沿用其中的 \\(T\\) 等变复线性 Fredholm 算子族、\\(T_1\\) 作用及定向约定；基底换为 Appendix A 中的 \\(T_0\\) 模问题。",
+          "source_page": {
+            "pdf": [
+              24,
+              25,
+              26,
+              29
+            ],
+            "printed": [
+              156,
+              157,
+              158,
+              161
+            ]
+          }
+        },
+        {
+          "label": "右侧积分的含义",
+          "text": "原文表述为式 (36) 的右侧 “is understood in terms of the Euler class”。因此不能把基底模问题的零集直接当成光滑有限维流形作普通积分。",
+          "source_page": {
+            "pdf": [
+              29
+            ],
+            "printed": [
+              161
+            ]
+          }
+        },
+        {
+          "label": "在穿墙问题中的应用",
+          "text": "第4.4节在墙上方程 (13) 的 \\(T_0\\) 模问题上应用此推广；随后由 Theorem 4.10 和 Remark 4.11 得到式 (39)。",
+          "source_page": {
+            "pdf": [
+              30,
+              31
+            ],
+            "printed": [
+              162,
+              163
+            ]
+          }
+        }
+      ],
+      "source_page": {
+        "pdf": [
+          29
+        ],
+        "printed": [
+          161
+        ]
+      },
+      "evidence": "Theorem 4.10 continues to hold if we replace X by a T₀-moduli problem. Remark 4.11 gives the new bundle and section, then explicitly invokes noncompact manifolds and compactly supported equivariant differential forms.",
+      "inferred": false
+    },
+    "downstream_rewrite": {
+      "scope": "本文应用的公式（完整式 (39)）；算子族与模问题前提见“符号定义与适用前提”",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "在第3节的穿墙设定中，墙外 Cauchy–Riemann 算子族 \\(\\bar\\partial\\) 在墙上模问题之上的核中单位球面模问题，正是式 (17) 定义的 \\(\\mathcal P_0\\)。由 Theorem 4.10 和 Remark 4.11，有"
+        },
+        {
+          "type": "formula",
+          "label": "式 (39) · 将 P₀ 上的积分改写为留数",
+          "latex": "\\begin{aligned}\n\\int_{\\mathcal P_0/T}\\pi^*\\alpha\n&=-\\int_{\\mathcal M_0/T_0}\n\\operatorname{Res}_{\\infty}\\!\\left(\n\\frac{\\alpha}{e_T(\\operatorname{IND}(\\bar\\partial))}\n\\right)\\\\\n&=-\\int_{\\mathcal M_0/T_0}\n\\operatorname{Res}_{\\infty}\\!\\left(\n\\frac{\\alpha}{\\displaystyle\\prod_{\\nu\\notin I}\ne_T(\\operatorname{IND}(\\bar\\partial^\\nu))}\n\\right).\n\\end{aligned}"
+        }
+      ],
+      "context": [
+        {
+          "label": "基底与算子族",
+          "text": "\\(\\mathcal B_I=(\\mathcal A(P)\\times\\bigoplus_{\\nu\\in I}\\Omega^0(\\Sigma,L_\\nu))/\\mathcal G_0\\)。对 \\(\\nu\\notin I\\)，\\(\\mathcal L^\\nu\\to\\mathcal B_I\\times\\Sigma\\) 是相应的泛线丛，\\(\\bar\\partial^\\nu\\) 是沿 \\(\\Sigma\\) 的 Cauchy–Riemann 算子族；\\(\\bar\\partial=\\bigoplus_{\\nu\\notin I}\\bar\\partial^\\nu\\)。",
+          "source_page": {
+            "pdf": [
+              29,
+              30
+            ],
+            "printed": [
+              161,
+              162
+            ]
+          }
+        },
+        {
+          "label": "群作用条件",
+          "text": "\\(T_1\\) 是子空间 \\(\\mathbb C^I\\) 的稳定子群的单位分支，并假设它是圆群。它在 \\(\\mathcal B_I\\) 上作用平凡，在算子族定义域、值域丛的零截面之外稳定子有限。\\(T_0=T/T_1\\) 在墙上方程 (13) 的解模空间 \\(\\mathcal M_0\\) 上稳定子有限。",
+          "source_page": {
+            "pdf": [
+              30
+            ],
+            "printed": [
+              162
+            ]
+          }
+        },
+        {
+          "label": "指数与次数",
+          "text": "\\(\\operatorname{index}_{\\mathbb C}(\\bar\\partial)=\\sum_{\\nu\\notin I}(d_\\nu+1-g)\\)，其中 \\(d_\\nu\\) 是 \\(L_\\nu\\to\\Sigma\\) 的第一 Chern 数。",
+          "source_page": {
+            "pdf": [
+              30,
+              31
+            ],
+            "printed": [
+              162,
+              163
+            ]
+          }
+        },
+        {
+          "label": "式 (17) 的辅助模问题",
+          "text": "\\(\\mathcal P_0\\) 由全部方程 \\(\\bar\\partial_Au_\\nu=0\\)、只含 \\(\\nu\\in I\\) 的墙上曲率方程以及 \\(\\sum_{\\nu\\notin I}\\|u_\\nu\\|^2=1\\) 定义。它在 \\(\\mathcal M_0\\) 之上的纤维是墙外 Cauchy–Riemann 算子核中的单位球面，纤维维数允许变化。",
+          "source_page": {
+            "pdf": [
+              12
+            ],
+            "printed": [
+              144
+            ]
+          }
+        },
+        {
+          "label": "原文的 α 简写",
+          "text": "式 (39) 右侧保留了原文分子 \\(\\alpha\\) 的简写。\\(\\alpha\\) 原来来自 \\(H_T^*(\\mathcal A/\\mathcal G_0)\\)，在 \\(\\mathcal B_I\\) 上使用时按投影 \\(\\pi_0:\\mathcal B_I\\to\\mathcal A/\\mathcal G_0\\) 拉回。",
+          "source_page": {
+            "pdf": [
+              8,
+              31
+            ],
+            "printed": [
+              140,
+              163
+            ]
+          }
+        },
+        {
+          "label": "积分与命名",
+          "text": "积分按相关模问题的 Euler 类解释。原文式 (39) 前一句把式 (17) 的解空间记作 \\(\\mathcal S_0\\)，但式 (39) 及第4.1节定义使用 \\(\\mathcal P_0\\)；这里统一写作 \\(\\mathcal P_0\\)。",
+          "source_page": {
+            "pdf": [
+              12,
+              13,
+              29,
+              31
+            ],
+            "printed": [
+              144,
+              145,
+              161,
+              163
+            ]
+          }
+        }
+      ],
+      "source_page": {
+        "pdf": [
+          31
+        ],
+        "printed": [
+          163
+        ]
+      },
+      "evidence": "Hence, by Theorem 4.10 and Remark 4.11, we have: equation (39) displays the negative residue integral, first using the index Euler class of the direct sum and then the product of the individual index Euler classes.",
+      "inferred": false
+    },
+    "downstream_evaluation": {
+      "scope": "完整陈述（中文转述）；已定义符号及适用设定见“符号定义与适用前提”",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "令以下拉回同态由投影 \\(\\pi_0:\\mathcal B_I\\to\\mathcal A/\\mathcal G_0\\) 诱导："
+        },
+        {
+          "type": "formula",
+          "label": "Lemma 4.12 · 拉回同态",
+          "latex": "\\pi_0^*:H_{T,T_1}^*(\\mathcal A/\\mathcal G_0)\n\\longrightarrow H_{T,T_1}^*(\\mathcal B_I)."
+        },
+        {
+          "type": "paragraph",
+          "text": "则对每个 \\(\\nu\\notin I\\)，有"
+        },
+        {
+          "type": "formula",
+          "label": "Lemma 4.12 · 指数 Euler 类",
+          "latex": "\\begin{aligned}\ne_T\\!\\left(\\operatorname{IND}(\\bar\\partial^\\nu)\\right)\n&=\\pi_0^*\\!\\left[\n\\langle w_\\nu,\\xi\\rangle^{d_\\nu+1-g}\n\\exp\\!\\left(-\\frac{\\Omega_\\nu}{\\langle w_\\nu,\\xi\\rangle}\\right)\n\\right]\\\\\n&\\hspace{1em}\\in H_{T,T_1}^*(\\mathcal B_I).\n\\end{aligned}"
+        }
+      ],
+      "context": [
+        {
+          "label": "适用设定与算子族",
+          "text": "处于第3节及第4.4节的设定；\\(\\nu\\notin I\\) 为墙外指标，\\(\\bar\\partial^\\nu\\) 是泛线丛 \\(\\mathcal L^\\nu\\to\\mathcal B_I\\times\\Sigma\\) 沿 \\(\\Sigma\\) 的 Cauchy–Riemann 算子族。",
+          "source_page": {
+            "pdf": [
+              29,
+              30,
+              31
+            ],
+            "printed": [
+              161,
+              162,
+              163
+            ]
+          }
+        },
+        {
+          "label": "次数与亏格",
+          "text": "\\(d_\\nu\\) 是 \\(L_\\nu\\to\\Sigma\\) 的第一 Chern 数，\\(d_\\nu=\\langle w_\\nu,\\lambda(P)\\rangle\\)；\\(g\\) 是 \\(\\Sigma\\) 的亏格。",
+          "source_page": {
+            "pdf": [
+              6,
+              30,
+              31
+            ],
+            "printed": [
+              138,
+              162,
+              163
+            ]
+          }
+        },
+        {
+          "label": "闭二形式 Ων",
+          "text": "\\(\\Omega_\\nu=\\sum_{j,j'=1}^{k}\\Omega_{jj'}w_{\\nu j}w_{\\nu j'}\\)，其中 \\(\\Omega_{jj'}=\\sum_{i=1}^{g}\\tau_{ij}\\wedge\\tau_{i+g,j'}\\)，\\(w_{\\nu j}=\\langle w_\\nu,e_j\\rangle\\)。",
+          "source_page": {
+            "pdf": [
+              10,
+              11
+            ],
+            "printed": [
+              142,
+              143
+            ]
+          }
+        },
+        {
+          "label": "基的选择",
+          "text": "\\(e_1,\\ldots,e_k\\) 是 \\(\\mathfrak t\\) 的一组基；\\(\\alpha_1,\\ldots,\\alpha_{2g}\\) 是 \\(H^1(\\Sigma;\\mathbb Z)\\) 的辛基。这两组基诱导 \\(H^1(\\mathcal A/\\mathcal G_0;\\mathbb Z)\\) 中的基 \\(\\tau_{ij}\\)。\\(\\Omega_\\nu\\) 不依赖这两组基的选择。",
+          "source_page": {
+            "pdf": [
+              11
+            ],
+            "printed": [
+              143
+            ]
+          }
+        },
+        {
+          "label": "有理等变上同调",
+          "text": "公式成立于 \\(T_1\\) 有理的 \\(T\\) 等变上同调 \\(H_{T,T_1}^*(\\mathcal B_I)\\) 中；这一框架允许非零 \\(T_1\\) 权重对应的等变 Euler 类可逆。",
+          "source_page": {
+            "pdf": [
+              22,
+              23,
+              24,
+              31
+            ],
+            "printed": [
+              154,
+              155,
+              156,
+              163
+            ]
+          }
+        },
+        {
+          "label": "代入穿墙公式时的符号",
+          "text": "本引理中的指数函数是 \\(\\exp(-\\Omega_\\nu/\\langle w_\\nu,\\xi\\rangle)\\)。在式 (39) 的分母中代入该类并取倒数，原文随后给出的 \\(\\alpha_0\\) 被积式中的指数函数变为正号。",
+          "source_page": {
+            "pdf": [
+              31
+            ],
+            "printed": [
+              163
+            ]
+          }
+        }
+      ],
+      "source_page": {
+        "pdf": [
+          31
+        ],
+        "printed": [
+          163
+        ]
+      },
+      "evidence": "Lemma 4.12 gives the index Euler class for every index outside I. Its displayed formula has the power d_nu+1-g, a negative Omega_nu term in the exponential, and the pullback by pi_0. The stated equality is in T₁-rational equivariant cohomology.",
+      "inferred": false
+    },
+    "orientation_dependency": {
+      "scope": "所用定向约定（中文转述，非注记全文）",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "对于辅助方程 (17) 的解，模问题 \\( (\\mathcal B,\\mathcal E_0,\\mathcal S_0) \\) 的定向按以下方式规定：利用复线性算子 \\(\\mathcal D_0\\) 的自然复定向，经引理 B.1 给增广算子 \\(\\mathcal D_0\\oplus\\Phi\\) 的行列式线定向，再通过与椭圆复形 (21) 的行列式线的识别，得到模问题的定向。"
+        },
+        {
+          "type": "formula",
+          "label": "用于定向的增广算子与两个实约束（式 24）",
+          "latex": "\\begin{aligned}\\mathcal D_0\\oplus\\Phi&:\\mathcal X\\longrightarrow\\mathcal Y_0\\oplus\\mathbb R^2,\\\\ \\Phi(\\alpha,\\widehat u)&=\\left(\\sum_{\\nu\\notin I}\\int_\\Sigma\\langle u_\\nu,\\widehat u_\\nu\\rangle\\,d\\mathrm{vol}_\\Sigma,\\;\\operatorname{Im}\\Psi(\\widehat u)\\right).\\end{aligned}"
+        },
+        {
+          "type": "paragraph",
+          "text": "这一定向依赖墙的法向 \\(e_1\\)。论文指出，在其穿墙方向约定下反转法向时，\\(\\operatorname{Im}\\Psi\\) 变号；由引理 B.3，整个模问题的定向随之反转。命题 4.1 的右端积分采用的正是这一套定向。"
+        }
+      ],
+      "context": [
+        {
+          "label": "两个实约束分别是什么",
+          "text": "\\(\\Phi\\) 的第一分量与墙外截面的平方范数归一化有关；第二分量 \\(\\operatorname{Im}\\Psi\\) 对应 \\(T_1\\)-作用的局部截面条件。这里的 \\(\\alpha\\) 是联络的无穷小变化，\\(\\widehat u\\) 是截面的无穷小变化，不是命题积分中同名的上同调类。",
+          "source_page": {
+            "pdf": [
+              13,
+              14
+            ],
+            "printed": [
+              145,
+              146
+            ]
+          }
+        },
+        {
+          "label": "式 (22) 中的复线性泛函",
+          "text": "\\(\\Psi(\\widehat u)=\\frac{2\\pi}{\\langle\\tau_1,e_1\\rangle\\operatorname{Vol}(\\Sigma)}\\sum_{\\nu\\notin I}\\langle w_\\nu,e_1\\rangle\\int_\\Sigma(\\langle u_\\nu,\\widehat u_\\nu\\rangle+i\\langle iu_\\nu,\\widehat u_\\nu\\rangle)\\,d\\mathrm{vol}_\\Sigma\\)。\\(e_1\\) 生成穿墙问题中的子环面 \\(T_1\\)，\\(\\tau_1\\) 是穿墙方向，二者按 \\(\\langle\\tau_1,e_1\\rangle>0\\) 的约定配合选取。",
+          "source_page": {
+            "pdf": [
+              13,
+              14
+            ],
+            "printed": [
+              145,
+              146
+            ]
+          }
+        },
+        {
+          "label": "复线性算子的含义与适用范围",
+          "text": "\\(\\mathcal D_0\\) 是原文为这套方程构造的复线性线性化算子，\\(\\mathcal X\\) 是联络与截面的变化空间，\\(\\mathcal Y_0\\) 是式 (23) 中沿墙法向平均值为零的复值域。注 4.2 用行列式线规定定向，没有要求零集已经是光滑流形；零集光滑及切空间描述另见注 4.3 的满射条件。",
+          "source_page": {
+            "pdf": [
+              13,
+              14
+            ],
+            "printed": [
+              145,
+              146
+            ]
+          }
+        }
+      ],
+      "source_page": {
+        "pdf": [
+          13,
+          14
+        ],
+        "printed": [
+          145,
+          146
+        ]
+      },
+      "evidence": "Remark 4.2 states that the complex orientation of \\(\\det(\\mathcal D_0)\\) induces an orientation of \\(\\det(\\mathcal D_0\\oplus\\Phi)\\) and the elliptic complex (21). It explicitly states that reversing \\(e_1\\) reverses the orientation of the moduli problem. The paragraph before Proposition 4.1 specifies this orientation for its integral.",
+      "inferred": false
+    },
+    "sign_justification": {
+      "scope": "所用边界定向结论（中文转述，非注记全文）",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "截去奇异集附近后，第三个边界模问题 \\( (\\mathcal B^\\delta,\\mathcal E^\\delta,\\mathcal S^\\delta) \\) 采用证明中由复线性算子给出的定向。注 4.4 证明：这一定向与截断配边在该边界上诱导的边界定向相反。"
+        },
+        {
+          "type": "formula",
+          "label": "定向关系的简记（减号表示反向）",
+          "latex": "\\operatorname{or}_{\\mathrm{proof}}(\\mathcal M^\\delta)=-\\operatorname{or}_{\\partial\\mathcal W^\\delta}(\\mathcal M^\\delta)"
+        },
+        {
+          "type": "paragraph",
+          "text": "这一结论并不只在零集光滑时成立。原文先在相关线性化满射时，用切空间基底检查符号；再通过行列式线的同构与定向比较处理非满射情形。"
+        }
+      ],
+      "context": [
+        {
+          "label": "这里比较的是哪一个边界",
+          "text": "\\(\\mathcal W^\\delta\\) 是只保留 \\(\\sum_{\\nu\\notin I}\\|u_\\nu\\|^2\\ge\\delta\\) 后的解集；\\(\\mathcal M^\\delta\\) 是其中满足等号的第三个边界。它不属于参数区间的两个端点。",
+          "source_page": {
+            "pdf": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "printed": [
+              147,
+              148,
+              149,
+              150,
+              151
+            ]
+          }
+        },
+        {
+          "label": "两套方向从哪里来",
+          "text": "\\(\\operatorname{or}_{\\mathrm{proof}}\\) 指由证明中增广算子 \\(\\mathcal D_1\\oplus\\Phi\\) 的行列式线给出的方向；\\(\\operatorname{or}_{\\partial\\mathcal W^\\delta}\\) 指配边的诱导边界方向。上式只是注 4.4 文字结论的记号化转述，不是原文编号公式；在非光滑情形，方向应理解为相应模问题行列式线的方向。",
+          "source_page": {
+            "pdf": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "printed": [
+              147,
+              148,
+              149,
+              150,
+              151
+            ]
+          }
+        }
+      ],
+      "source_page": {
+        "pdf": [
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "printed": [
+          147,
+          148,
+          149,
+          150,
+          151
+        ]
+      },
+      "evidence": "Remark 4.4 begins on PDF page 17: the assigned orientation is the opposite of the boundary orientation. Pages 18–19 prove the assertion, first in a surjective case and then with determinant-line isomorphisms. The third boundary and its assigned orientation are defined on PDF pages 15–16.",
+      "inferred": false
+    },
+    "proof_dependency": {
+      "scope": "命题 4.1 所用部分：配边与函子性（中文转述，非完整定理）",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "对每个紧 Lie 群 \\(G\\) 和正则 \\(G\\)-模问题 \\((\\mathcal B,\\mathcal E,\\mathcal S)\\)，定理 A.4 给出一个欧拉类同态 \\(\\chi^{\\mathcal B,\\mathcal E,\\mathcal S}:H_G^*(\\mathcal B)\\to\\mathbb R\\)。命题 4.1 使用其中以下两条性质。"
+        },
+        {
+          "type": "paragraph",
+          "text": "配边：若两个正则 \\(G\\)-模问题 \\((\\mathcal B_i,\\mathcal E_i,\\mathcal S_i)\\)（\\(i=0,1\\)）按定义 A.3 配边，则同一个配边空间上的上同调类，限制到两端后得到相同的欧拉类数值。"
+        },
+        {
+          "type": "formula",
+          "label": "配边公理（用两端的欧拉类记号统一转述）",
+          "latex": "\\begin{aligned}\\chi_0(\\iota_0^*\\alpha)&=\\chi_1(\\iota_1^*\\alpha),\\qquad\\alpha\\in H_G^*(\\widetilde{\\mathcal B}),\\\\ \\chi_i&:=\\chi^{\\mathcal B_i,\\mathcal E_i,\\mathcal S_i},\\qquad i=0,1.\\end{aligned}"
+        },
+        {
+          "type": "paragraph",
+          "text": "函子性：若 \\((\\psi,\\Psi)\\) 是从 \\((\\mathcal B,\\mathcal E,\\mathcal S)\\) 到 \\((\\mathcal B',\\mathcal E',\\mathcal S')\\) 的模问题态射，那么先将目标上的上同调类拉回源，再取源的欧拉类数值，与直接在目标上取值相同。"
+        },
+        {
+          "type": "formula",
+          "label": "函子性公理（注意上同调类需要拉回）",
+          "latex": "\\chi^{\\mathcal B,\\mathcal E,\\mathcal S}(\\psi^*\\alpha)=\\chi^{\\mathcal B',\\mathcal E',\\mathcal S'}(\\alpha),\\qquad\\alpha\\in H_G^*(\\mathcal B')."
+        }
+      ],
+      "context": [
+        {
+          "label": "配边空间与端点的记号",
+          "text": "\\(\\widetilde{\\mathcal B}\\) 是带边界的配边基底，\\(\\iota_i:\\mathcal B_i\\hookrightarrow\\widetilde{\\mathcal B}\\) 是两个端点的包含映射。\\(H_G^*\\) 表示实系数等变上同调。配边定义要求共同的定向 Fredholm 模问题、紧零集、有限稳定子群，以及与端点相容的定向。",
+          "source_page": {
+            "pdf": [
+              46,
+              47
+            ],
+            "printed": [
+              178,
+              179
+            ]
+          }
+        },
+        {
+          "label": "这里的态射不是任意映射",
+          "text": "定义 A.2 要求 \\(\\psi\\) 是零集附近的 \\(G\\)-等变嵌入，\\(\\Psi\\) 是相应的单射丛同态；它们须与截面相容、识别零集，并在零点处诱导核与余核的同构，同时保持行列式线的定向。这里的 \\(\\Psi\\) 是丛映射，与注 4.2 中同名的复线性泛函不同。",
+          "source_page": {
+            "pdf": [
+              46,
+              47
+            ],
+            "printed": [
+              178,
+              179
+            ]
+          }
+        },
+        {
+          "label": "摘录范围与记号",
+          "text": "这里只展示命题 4.1 证明明确调用的配边与函子性两条。定理 A.4 还包含 Thom 类性质、横截性性质及唯一性结论，本卡片不将这两条性质冒充完整定理。配边式使用 \\(\\chi_0,\\chi_1\\) 统一表示两端各自的欧拉类，避免原文该式右侧基底下标与其正文端点记号不一致。",
+          "source_page": {
+            "pdf": [
+              46,
+              47
+            ],
+            "printed": [
+              178,
+              179
+            ]
+          }
+        }
+      ],
+      "source_page": {
+        "pdf": [
+          46,
+          47
+        ],
+        "printed": [
+          178,
+          179
+        ]
+      },
+      "evidence": "Theorem A.4 states the Functoriality and Cobordism axioms on PDF page 47. Definitions A.2 and A.3 on PDF page 46 specify morphisms and cobordisms; the boundary-orientation convention continues at the top of page 47. The proof of Proposition 4.1 explicitly invokes these two axioms on PDF page 17.",
+      "inferred": false
+    },
+    "main_consequence": {
+      "scope": "完整结论（中文转述；第 3 节的前置设定见下方）",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "在第 3 节的余维一跨墙设定下，令 \\(\\alpha\\in S^*(\\mathfrak t^*)\\otimes H^*(\\mathcal A/\\mathcal G_0)\\)、\\(\\lambda\\in\\Lambda\\)，并记 \\(d_\\nu=\\langle w_\\nu,\\lambda\\rangle\\)。对所有充分小的 \\(\\varepsilon>0\\)，有："
+        },
+        {
+          "type": "formula",
+          "label": "公式 (16)：墙两侧不变量之差",
+          "latex": "\\Phi_{\\lambda,g}^{\\rho,\\tau_0+\\varepsilon\\tau_1}(\\alpha)-\\Phi_{\\lambda,g}^{\\rho,\\tau_0-\\varepsilon\\tau_1}(\\alpha)=\\int_{\\mathcal M_0/T_0}\\pi_0^*\\alpha_0."
+        },
+        {
+          "type": "paragraph",
+          "text": "这里 \\(\\alpha_0\\in S^*(\\mathfrak t_0^*)\\otimes H^*(\\mathcal A/\\mathcal G_0)\\) 不是一个待定的量，而是由下面的公式定义："
+        },
+        {
+          "type": "formula",
+          "label": "右端的类如何计算：α₀ 的留数公式",
+          "latex": "\\begin{aligned}\\alpha_0(\\xi):={}&\\frac{1}{2\\pi i}\\oint\\frac{\\alpha(\\xi+ze_1)}{\\prod_{\\nu\\notin I}\\langle w_\\nu,\\xi+ze_1\\rangle^{d_\\nu+1-g}}\\\\&\\qquad\\cdot\\exp\\!\\left(\\sum_{\\nu\\notin I}\\frac{\\Omega_\\nu}{\\langle w_\\nu,\\xi+ze_1\\rangle}\\right)\\,dz.\\end{aligned}"
+        },
+        {
+          "type": "paragraph",
+          "text": "对每个 \\(\\xi\\)，积分路径是复平面中围住被积式全部极点的圆。式 (16) 右端的积分按相应 \\(T_0\\)-模问题的欧拉类求值来理解，并不预设商模空间光滑。"
+        }
+      ],
+      "context": [
+        {
+          "label": "论文的整体设定",
+          "source_page": { "pdf": [1, 2, 5, 6], "printed": [133, 134, 137, 138] },
+          "text": "\\(T\\) 是 \\(k\\) 维环面，对角作用在 \\(\\mathbb C^n\\) 上，权重为 \\(w_\\nu\\)。矩映射 \\(\\mu(x)=\\pi\\sum_\\nu|x_\\nu|^2w_\\nu\\) 为 proper 映射（紧集的原像紧），且权重张成 \\(\\mathfrak t^*\\)。\\(\\Sigma\\) 是亏格为 \\(g\\) 的闭黎曼曲面，\\(\\lambda=\\lambda(P)\\) 是主丛 \\(P\\to\\Sigma\\) 的特征向量；\\(\\mathcal A\\) 是联络空间，\\(\\mathcal G_0\\) 是带基点规范群。"
+        },
+        {
+          "label": "跨过哪一面墙",
+          "source_page": { "pdf": [9], "printed": [141] },
+          "text": "取 \\(I\\subset\\{1,\\ldots,n\\}\\)，使 \\(W_I=\\operatorname{span}\\{w_\\nu:\\nu\\in I\\}\\) 的维数为 \\(k-1\\)，且 \\(\\nu\\notin I\\) 时 \\(w_\\nu\\notin W_I\\)。令 \\(\\mathbb C^I=\\{x:x_\\nu=0\\ (\\nu\\notin I)\\}\\)。要求 \\(\\tau_0\\in\\mu(\\mathbb C^I)\\)，并且对满足同样权重条件的其他指标集 \\(J\\)，有 \\(\\tau_0\\notin\\mu(\\mathbb C^J)\\)。\\(\\tau_1\\) 横截这面墙；\\(e_1\\in\\Lambda\\) 是满足 \\(\\langle w_\\nu,e_1\\rangle=0\\ (\\nu\\in I)\\) 和 \\(\\langle\\tau_1,e_1\\rangle>0\\) 的本原格向量。"
+        },
+        {
+          "label": "T₀、M₀ 与 π₀",
+          "source_page": { "pdf": [9, 10], "printed": [141, 142] },
+          "text": "\\(T_1\\) 由 \\(e_1\\) 生成，\\(T_0=T/T_1\\)。\\(\\mathcal M_0\\) 是墙上方程 (13) 的带基点规范等价类空间：\\(\\bar\\partial_Au_\\nu=0\\ (\\nu\\in I)\\)，且 \\(*F_A+\\pi\\sum_{\\nu\\in I}|u_\\nu|^2w_\\nu=*_{\\mathfrak t}\\lambda(P)/\\operatorname{Vol}(\\Sigma)+\\tau_0\\)。\\(\\pi_0\\) 忘掉截面，只保留联络的等价类 \\([A]\\)。"
+        },
+        {
+          "label": "指数中的 Ων",
+          "source_page": { "pdf": [10, 11], "printed": [142, 143] },
+          "text": "\\(\\Omega_\\nu=\\sum_{j,j'=1}^k\\Omega_{jj'}w_{\\nu j}w_{\\nu j'}\\)，其中 \\(w_{\\nu j}=\\langle w_\\nu,e_j\\rangle\\)，\\(\\Omega_{jj'}=\\sum_{i=1}^g\\tau_{ij}\\wedge\\tau_{i+g,j'}\\)。这里 \\(e_1,\\ldots,e_k\\) 是 \\(\\mathfrak t\\) 的基，与 \\(H^1(\\Sigma;\\mathbb Z)\\) 的辛基一起诱导 \\(H^1(\\mathcal A/\\mathcal G_0;\\mathbb Z)\\) 中的基 \\(\\tau_{ij}\\)。\\(\\Omega_\\nu\\) 与这些基的选择无关。"
+        }
+      ],
+      "source_page": { "pdf": [10, 11], "printed": [142, 143] },
+      "evidence": "Theorem 3.1 on printed page 142 states equation (16) and defines alpha_0 by a contour integral with exponents d_nu+1-g and the Omega_nu exponential. Its continuation on page 143 defines Omega_jj' and specifies a circle enclosing all poles. Section 3, page 141, gives the wall assumptions and equation (13); the paragraph immediately before Theorem 3.1 explains Euler-class evaluation. Pages 133–134 and 137–138 give the standing action, properness, curve, bundle, and gauge-group assumptions.",
+      "inferred": false
+    }
+  },
+  "relations_reading": {
+    "title": "它把两侧的差值，变成一个墙上积分",
+    "summary": {
+      "text": "命题 4.1 不直接算出最终的跨墙公式，而是把墙两侧涡旋不变量之差，写成辅助模空间 \\(\\mathcal P_0/T\\) 上的欧拉类积分。接下来的局部化与欧拉类计算，才把这个积分变成定理 3.1 的公式。",
+      "source_page": {
+        "pdf": [13, 31],
+        "printed": [145, 163]
+      },
+      "evidence": "Proposition 4.1 gives equation (20). On page 163, Theorem 4.10 and Remark 4.11 yield equation (39); the proof of Theorem 3.1 combines Proposition 4.1, (39), and Lemma 4.12.",
+      "inferred": true
+    },
+    "groups": [
+      {
+        "id": "main-result",
+        "title": "最终用在哪里",
+        "relations": ["main_consequence"]
+      },
+      {
+        "id": "next-calculations",
+        "title": "后面还要做什么：计算这个积分",
+        "relations": ["downstream_localization", "applicability_extension", "downstream_rewrite", "downstream_evaluation"]
+      },
+      {
+        "id": "proof-foundations",
+        "title": "命题本身靠什么成立：配边与定向",
+        "relations": ["proof_dependency", "orientation_dependency", "sign_justification"]
+      }
+    ]
+  },
+  "importance_reading": {
+    "lead": {
+      "text": "命题 4.1 的价值是把“比较墙两侧的两个不变量”改成“计算一个由墙上数据组织起来的贡献”。它确定了跳跃由什么承载，却还没有给出最终可计算的跨墙公式。",
+      "source_page": {
+        "pdf": [
+          12,
+          13,
+          31
+        ],
+        "printed": [
+          144,
+          145,
+          163
+        ]
+      },
+      "evidence": "The wall crossing number can be expressed in the form (20). By Proposition 4.1 and (39) we have ...",
+      "inferred": true
+    },
+    "comparison": {
+      "title": "它完成了什么：把差值归约成一个积分",
+      "notation": {
+        "label": "这里把待求的跨墙差值记为",
+        "latex": "\\Delta\\Phi(\\alpha):=\\Phi_{\\lambda,g}^{\\rho,\\tau_0+\\varepsilon\\tau_1}(\\alpha)-\\Phi_{\\lambda,g}^{\\rho,\\tau_0-\\varepsilon\\tau_1}(\\alpha)",
+        "text": "固定同一个 \\(\\alpha\\)、拓扑类型 \\(\\lambda\\) 和亏格 \\(g\\)，只让参数从墙的一侧移到另一侧；\\(\\varepsilon>0\\) 充分小。\\(\\Delta\\Phi\\) 是此处为便于阅读使用的简写。",
+        "source_page": {
+          "pdf": [
+            10,
+            13
+          ],
+          "printed": [
+            142,
+            145
+          ]
+        },
+        "evidence": "Then, for every sufficiently small positive number ε, we have ... (16). Proposition 4.1 gives (20).",
+        "inferred": true
+      },
+      "before": {
+        "label": "起点：两个不同腔室",
+        "latex": "\\mathcal M(\\tau_0-\\varepsilon\\tau_1)/T,\\qquad \\mathcal M(\\tau_0+\\varepsilon\\tau_1)/T",
+        "text": "若分别求出两侧不变量再相减，需要处理两套随参数变化的涡旋解。仅知道“参数变了一点”不能推出积分不变，因为路径经过了奇异点集。",
+        "source_page": {
+          "pdf": [
+            12,
+            15
+          ],
+          "printed": [
+            144,
+            147
+          ]
+        },
+        "evidence": "If this cobordism were a manifold the wall crossing number would be zero. However ... W will have a singular set M0.",
+        "inferred": true
+      },
+      "after": {
+        "label": "命题 4.1：一个辅助模问题",
+        "latex": "\\Delta\\Phi(\\alpha)=\\int_{\\mathcal P_0/T}\\pi^*\\alpha",
+        "text": "无需先分别算出两侧的值。只需计算 \\(\\mathcal P_0/T\\) 的欧拉类贡献，就能得到差值。注意：这是归约，不是说 \\(\\mathcal P_0\\) 已经容易计算，也不是说差值必然非零。",
+        "source_page": {
+          "pdf": [
+            13,
+            31
+          ],
+          "printed": [
+            145,
+            163
+          ]
+        },
+        "evidence": "The wall crossing number can be expressed in the form ... (20).",
+        "inferred": true
+      }
+    },
+    "geometry": {
+      "title": "跳跃从哪里来：切除后多出的第三个边界",
+      "introduction": {
+        "text": "把参数 \\(\\tau_t=\\tau_0+t\\tau_1\\) 对应的解放在一起，得到 \\(\\mathcal W\\)。障碍集中在 \\(t=0\\)、所有墙外分量 \\(u_\\nu\\)（\\(\\nu\\notin I\\)）都为零的点；它们组成 \\(\\mathcal M_0\\)，稳定子群不是有限群，不能直接把整段路径当成没有奇异问题的配边。",
+        "source_page": {
+          "pdf": [
+            12,
+            15
+          ],
+          "printed": [
+            144,
+            147
+          ]
+        },
+        "evidence": "The isotropy subgroup ... is not finite if and only if t = 0 and uν = 0 for ν not in I.",
+        "inferred": true
+      },
+      "panels": [
+        {
+          "title": "切除前",
+          "space": "\\mathcal W",
+          "top": "\\mathcal M(\\tau_{+\\varepsilon})",
+          "bottom": "\\mathcal M(\\tau_{-\\varepsilon})",
+          "center": "\\mathcal M_0",
+          "center_label": "奇异点集",
+          "caption": "两端来自墙两侧；中间的奇异点集阻碍直接使用配边不变性。"
+        },
+        {
+          "title": "切除后",
+          "space": "\\mathcal W^\\delta",
+          "top": "\\mathcal M(\\tau_{+\\varepsilon})",
+          "bottom": "\\mathcal M(\\tau_{-\\varepsilon})",
+          "center": "\\mathcal M^\\delta",
+          "center_label": "切口的边界",
+          "caption": "挖去奇异点集附近后，除了原来两端，还留下一个必须计入的边界。"
+        }
+      ],
+      "condition": {
+        "label": "实际切除条件，不是按图中的半径切圆",
+        "latex": "\\sum_{\\nu\\notin I}\\|u_\\nu\\|_{L^2}^{\\,2}\\geq\\delta,\\qquad \\mathcal M^\\delta:\\ \\sum_{\\nu\\notin I}\\|u_\\nu\\|_{L^2}^{\\,2}=\\delta",
+        "text": "取足够小的 \\(\\delta>0\\)，剩余零点集避开角点。这才得到可用于论证的带边界 \\(T\\)-模问题。新增边界的贡献，正是两端不变量无法互相抵消的部分。",
+        "source_page": {
+          "pdf": [
+            15,
+            17
+          ],
+          "printed": [
+            147,
+            149
+          ]
+        },
+        "evidence": "The boundary of this moduli problem has three parts ... the zero set Wδ of T does not intersect the corners.",
+        "inferred": true
+      },
+      "identity": {
+        "label": "配边给出第一个等号，同伦给出第二个等号",
+        "latex": "\\Delta\\Phi(\\alpha)=\\underbrace{\\int_{\\mathcal M^\\delta/T}\\pi^*\\alpha}_{\\text{式 (29)}}=\\underbrace{\\int_{\\mathcal P_0/T}\\pi^*\\alpha}_{\\text{式 (20)}}",
+        "text": "先把差值识别为切口的贡献，再通过保持定向的同伦和规范化，把难处理的切口换成更适合局部化计算的 \\(\\mathcal P_0\\)。两个积分相等，不是在断言两个空间相同。",
+        "source_page": {
+          "pdf": [
+            17
+          ],
+          "printed": [
+            149
+          ]
+        },
+        "evidence": "It remains to prove that the integrals over Mδ/T and P0/T agree. We prove this by a homotopy argument.",
+        "inferred": true
+      },
+      "caution": {
+        "text": "这是根据证明绘制的拓扑直觉示意，不表示实际维数、形状或光滑性；\\(\\mathcal M_0\\) 也不必是一个点，切口 \\(\\mathcal M^\\delta\\) 不必落在 \\(t=0\\)。公式中的积分按模问题的欧拉类求值解释。正负号由原文的定向约定和注 4.4 决定，不能从这幅图猜。",
+        "source_page": {
+          "pdf": [
+            13,
+            15,
+            17
+          ],
+          "printed": [
+            145,
+            147,
+            149
+          ]
+        },
+        "evidence": "The integral is understood as χ...; Remark 4.4: the above orientation ... is the opposite of the boundary orientation.",
+        "inferred": true
+      }
+    },
+    "calculation": {
+      "title": "它还没完成什么：把辅助积分真正算出来",
+      "introduction": {
+        "text": "\\(\\mathcal P_0\\) 除了墙上数据，还保留墙外全纯截面，并要求它们的总范数为 1。投影到墙上数据后，每个原像是 Cauchy–Riemann 算子核里的单位球面；核的维数可能变化。因此不能直接把 \\(\\mathcal P_0\\) 换成 \\(\\mathcal M_0\\)，也不能当作普通定秩球面束随意做纤维积分。",
+        "source_page": {
+          "pdf": [
+            12,
+            31
+          ],
+          "printed": [
+            144,
+            163
+          ]
+        },
+        "evidence": "We emphasize that the dimensions of these preimages can vary even if P0 is a manifold.",
+        "inferred": true
+      },
+      "rows": [
+        {
+          "label": "命题 4.1 · 式 (20)",
+          "latex": "\\Delta\\Phi(\\alpha)=\\int_{\\mathcal P_0/T}\\pi^*\\alpha",
+          "text": "把两侧的变化识别为一个辅助模问题的贡献。至此还保留着墙外方向，尚未消去它们。",
+          "source_page": {
+            "pdf": [
+              13,
+              17
+            ],
+            "printed": [
+              145,
+              149
+            ]
+          },
+          "evidence": "The wall crossing number can be expressed in the form ... (20).",
+          "inferred": true
+        },
+        {
+          "label": "定理 4.10、注 4.11 · 式 (39)",
+          "latex": "\\int_{\\mathcal P_0/T}\\pi^*\\alpha=-\\int_{\\mathcal M_0/T_0}\\operatorname{Res}_{\\infty}\\!\\left(\\frac{\\alpha}{e_T(\\operatorname{IND}(\\bar\\partial))}\\right)",
+          "text": "把积分基底换成墙上的 \\(\\mathcal M_0/T_0\\)。墙外方向没有被丢掉，而是转移进分母的等变指标欧拉类；此时还要计算这个因子。右侧的 \\(\\alpha\\) 沿用原文对拉回类的简写。",
+          "source_page": {
+            "pdf": [
+              31
+            ],
+            "printed": [
+              163
+            ]
+          },
+          "evidence": "Hence, by Theorem 4.10 and Remark 4.11, we have ... (39).",
+          "inferred": true
+        },
+        {
+          "label": "引理 4.12 · 算出每个墙外方向的因子",
+          "latex": "e_T(\\operatorname{IND}(\\bar\\partial^\\nu))=\\pi_0^*\\!\\left[\\langle w_\\nu,\\xi\\rangle^{d_\\nu+1-g}\\exp\\!\\left(-\\frac{\\Omega_\\nu}{\\langle w_\\nu,\\xi\\rangle}\\right)\\right]",
+          "text": "其中 \\(\\nu\\notin I\\)、\\(d_\\nu=\\langle w_\\nu,\\lambda\\rangle\\)。指数 \\(d_\\nu+1-g\\) 和类 \\(\\Omega_\\nu\\) 把权重、拓扑次数和曲面的亏格带入计算；代入式 (39) 时要取这些因子的倒数。",
+          "source_page": {
+            "pdf": [
+              10,
+              31
+            ],
+            "printed": [
+              142,
+              163
+            ]
+          },
+          "evidence": "Lemma 4.12 ... for every ν not in I, eT(IND(∂ν)) = ...",
+          "inferred": true
+        },
+        {
+          "label": "定理 3.1 · 式 (16)",
+          "latex": "\\Delta\\Phi(\\alpha)=\\int_{\\mathcal M_0/T_0}\\pi_0^*\\alpha_0",
+          "text": "最后得到在墙上模问题上的跨墙公式。\\(\\alpha_0\\) 不是任意新记号，而是把墙外方向的留数贡献汇总后的、由权重与特征类明确决定的类。",
+          "source_page": {
+            "pdf": [
+              10,
+              31
+            ],
+            "printed": [
+              142,
+              163
+            ]
+          },
+          "evidence": "By Proposition 4.1 and (39) we have ... (by Lemma 4.12). This proves Theorem 3.1.",
+          "inferred": true
+        }
+      ],
+      "conclusion": {
+        "text": "所以，命题 4.1 提供的是这条证明中“为什么可以这样算”的几何依据；后面的局部化和指标计算提供“具体怎么算”。即使先看到了留数公式，没有命题 4.1 的归约，也还没有在这条证明中把那个留数和原来的跨墙差值联系起来。",
+        "source_page": {
+          "pdf": [
+            12,
+            17,
+            31
+          ],
+          "printed": [
+            144,
+            149,
+            163
+          ]
+        },
+        "evidence": "We shall prove the wall crossing formula by cutting out a neighbourhood ... By Proposition 4.1 and (39) we have ...",
+        "inferred": true
+      }
+    },
+    "limits": {
+      "text": "适用范围仍是论文第 3 节的余维一跨墙设定，\\(\\varepsilon\\) 必须充分小。此命题不分别给出两侧不变量的值，不保证跳跃非零，也不免除后续积分的计算。上述“归约的价值”和图示属于阅读解读，不是新增定理。",
+      "source_page": {
+        "pdf": [
+          9,
+          10,
+          13,
+          31
+        ],
+        "printed": [
+          141,
+          142,
+          145,
+          163
+        ]
+      },
+      "evidence": "Theorem 3.1: for every sufficiently small positive number ε ... Proposition 4.1: The wall crossing number can be expressed in the form ...",
+      "inferred": true
+    }
+  },
+  "importance": {
+    "role_in_paper": {
+      "text": "命题 4.1 是第 4 节配边论证与后续局部化、族指标计算之间的桥梁：它把腔室间的跳跃化为 \\(\\mathcal P_0/T\\) 上的积分，后续第 4 节正是对这一积分求值。",
+      "source_page": {
+        "pdf": [12, 31],
+        "printed": [144, 163]
+      },
+      "evidence": "Section 4.1 announces the cobordism argument; page 163 then rewrites its \\(\\mathcal P_0/T\\) integral via Theorem 4.10, Remark 4.11, and equation (39).",
+      "inferred": true
+    },
+    "conceptual_importance": {
+      "text": "若两个腔室模空间之间存在光滑配边，跳跃应为零；墙上的非有限稳定子群点集产生第三个边界贡献，命题 4.1 把这一奇异墙贡献封装成一个几何欧拉类积分。",
+      "source_page": {
+        "pdf": [12, 15, 17],
+        "printed": [144, 147, 149]
+      },
+      "evidence": "The paper says that a manifold cobordism would make the wall-crossing number zero, but \\(\\mathcal W\\) has the singular set \\(\\mathcal M_0\\); excision produces \\(\\mathcal M^\\delta\\) and equation (29).",
+      "inferred": true
+    },
+    "what_problem_it_reduces": {
+      "text": "它把墙两侧两个涡旋不变量之差，化为辅助规范化墙上模空间 \\(\\mathcal P_0/T\\) 上的一个欧拉类积分。",
+      "source_page": {
+        "pdf": [13],
+        "printed": [145]
+      },
+      "evidence": "This is exactly equation (20) in Proposition 4.1.",
+      "inferred": false
+    },
+    "downstream_use": {
+      "text": "它被直接用于证明定理 3.1：命题 4.1 先把跳跃写成 \\(\\mathcal P_0/T\\) 上的积分，公式 (39) 再把该积分改写为 \\(\\mathcal M_0/T_0\\) 上的留数，最后由引理 4.12 计算欧拉类因子并得到定理中的公式。",
+      "source_page": {
+        "pdf": [31],
+        "printed": [163]
+      },
+      "evidence": "The proof of Theorem 3.1 begins with By Proposition 4.1 and (39) we have, uses Lemma 4.12, and ends with This proves Theorem 3.1.",
+      "inferred": false
+    }
+  }
+}

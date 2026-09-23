@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "paperreaded-api"
+version = "0.1.0"
+description = "FastAPI backend for PaperREADed"
+license = "MIT"
+authors = [{ name = "xmk0127" }]
+requires-python = ">=3.9"
+dependencies = [
+  "fastapi>=0.116,<1.0",
+  "uvicorn[standard]>=0.35,<1.0",
+  "pypdf>=5.9,<7.0",
+  "fonttools>=4.59,<5.0",
+  "python-multipart>=0.0.20,<1.0",
+]
+
+[project.urls]
+Repository = "https://github.com/xmk0127/PaperREADed"
+
+[project.optional-dependencies]
+dev = [
+  "httpx>=0.28,<1.0",
+  "pytest>=8.4,<9.0",
+  "pytest-cov>=6.2,<8.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

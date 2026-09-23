@@ -1,0 +1,8 @@
+PaperREADed — source preview / 源码预览包
+
+This archive is not proof of a verified AI analysis or a production release.
+真实 AI 分析需要在普通终端使用你自己的 Codex ChatGPT 登录单独验收。
+No paper PDF, imported paper, AI result, environment file, or login state is included.
+不包含论文 PDF、导入文件、分析结果、环境配置或登录凭据。
+Read README.md and docs before installation.
+Consult LICENSE for the code's license and NOTICE.md for third-party content.
