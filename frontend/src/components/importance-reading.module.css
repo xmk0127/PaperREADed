@@ -1,0 +1,58 @@
+.article { width: min(100%, 64rem); color: var(--ink-soft); font-size: .93rem; line-height: 1.85; }
+.article h2 { margin: 0 0 .6rem; color: var(--ink); font-size: 1.2rem; line-height: 1.6; }
+.article h3 { margin: 0 0 .7rem; color: var(--ink); font-size: 1.02rem; line-height: 1.65; }
+.article h4 { margin: 0 0 .45rem; color: var(--ink); font-size: .85rem; line-height: 1.7; font-weight: 650; }
+.article p { margin: .55rem 0; }
+.article > section { margin-top: 2rem; }
+.header { border-bottom: 1px solid var(--line); padding-bottom: 1rem; }
+.lead { max-width: 53rem; }
+.source { margin: .4rem 0 0; color: var(--muted); font-size: .69rem; line-height: 1.9; }
+.source summary { cursor: pointer; }
+.source summary > span { margin-right: .5rem; }
+.source summary > span:last-child { text-decoration: underline; text-underline-offset: .2em; }
+.source blockquote { margin: .7rem 0; padding: .5rem 1rem; border-left: 2px solid var(--line-strong); color: var(--ink-soft); overflow-wrap: anywhere; }
+.formula { min-width: 0; max-width: 100%; overflow-x: auto; padding: .3rem 0; color: var(--ink); }
+.formula :global(.katex-display) { margin: .3em 0; text-align: left; }
+.formula :global(.katex-display > .katex) { text-align: left; }
+.formula :global(.katex) { font-size: 1.12em; }
+.notation { margin-bottom: 1rem; }
+.notation > span { color: var(--muted); font-size: .76rem; }
+.notation > p { font-size: .82rem; }
+.comparison { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.2rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.start, .result { min-width: 0; padding: 1rem .75rem; }
+.result { background: var(--green-soft); }
+.result h4 { color: var(--green); }
+.comparison p { font-size: .86rem; }
+.geometry { margin: 1.1rem 0 1.25rem; }
+.geometryPanels { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem; }
+.geometryPanel { min-width: 0; }
+.geometryPanel h4 { display: flex; align-items: baseline; justify-content: space-between; gap: .8rem; }
+.geometryPanel p { font-size: .8rem; line-height: 1.75; }
+.drawing { position: relative; height: 12rem; margin: .6rem 0; }
+.drawing svg { display: block; width: 100%; height: 100%; }
+.region { fill: var(--paper); stroke: var(--line-strong); stroke-width: 1.5; }
+.ends { stroke: var(--green); stroke-width: 3; }
+.singular { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 3 4; }
+.cut { fill: var(--surface); stroke: var(--accent); stroke-width: 2.5; }
+.top, .bottom { position: absolute; left: 50%; transform: translate(-50%, -50%); padding: 0 .55rem; background: var(--surface); color: var(--green); white-space: nowrap; font-size: .85rem; }
+.top { top: 12.5%; }
+.bottom { top: 87.5%; }
+.middle { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: grid; gap: .05rem; text-align: center; color: var(--accent); line-height: 1.35; white-space: nowrap; }
+.middle small { font-size: .68rem; }
+.geometry figcaption { margin-top: .8rem; color: var(--muted); font-size: .75rem; line-height: 1.8; }
+.identity { margin-top: 1.2rem; padding: 1rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.calculation { margin-top: 1rem; }
+.calculationRow { display: grid; grid-template-columns: minmax(8rem, .24fr) minmax(0, 1fr); gap: 1.2rem; padding: 1.05rem 0; border-top: 1px solid var(--line); }
+.calculationRow > h4 { color: var(--accent); padding-top: .55rem; }
+.calculationRow p { font-size: .85rem; }
+.calculationRow > div { min-width: 0; }
+.residue { font-size: .83rem; margin: .6rem 0 1rem; }
+.residue > summary { cursor: pointer; color: var(--accent); }
+.conclusion { max-width: 53rem; }
+.limits { margin-top: 1.8rem; border-top: 1px solid var(--line); padding-top: 1rem; font-size: .82rem; }
+@media (max-width: 760px) {
+  .comparison, .geometryPanels { grid-template-columns: minmax(0, 1fr); gap: .8rem; }
+  .calculationRow { grid-template-columns: minmax(0, 1fr); gap: .2rem; }
+  .drawing { height: 11rem; }
+  .start, .result { padding: .85rem .65rem; }
+}

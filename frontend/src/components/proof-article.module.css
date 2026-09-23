@@ -1,0 +1,86 @@
+.article {
+  width: min(100%, 64rem);
+  min-width: 0;
+  color: var(--ink-soft);
+  font-size: .9rem;
+  line-height: 1.8;
+}
+
+.article h2 {
+  margin: 0 0 .55rem;
+  color: var(--ink);
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.article h3 {
+  margin: 0 0 .8rem;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.article h4 { margin: 0; font-size: .83rem; font-weight: 650; }
+.article p { margin: .55rem 0; }
+.article .kicker { margin: 0 0 .35rem; color: var(--muted); font-size: .69rem; letter-spacing: .06em; }
+.header { padding-bottom: .7rem; }
+.article .notation { margin-bottom: .9rem; color: var(--ink-soft); font-size: .82rem; }
+.goal { border-left: 3px solid var(--green); padding: .4rem 1rem .55rem; background: var(--green-soft); }
+.goal .formula { margin: 0; }
+
+.formula { min-width: 0; max-width: 100%; margin: .4rem 0 .75rem; }
+.formula figcaption { margin-bottom: .3rem; color: var(--muted); font-size: .72rem; line-height: 1.7; }
+.math { max-width: 100%; min-width: 0; overflow-x: auto; padding: .35rem .1rem; color: var(--ink); }
+.math:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+.math :global(.katex) { font-size: 1.13em; }
+.math :global(.katex-display) { margin: .35em 0; text-align: left; }
+.math :global(.katex-display > .katex) { text-align: left; }
+
+.article .evidence { margin: .4rem 0 0; color: var(--muted); font-size: .67rem; line-height: 1.85; }
+.article .evidence > summary { cursor: pointer; }
+.article .evidence > summary > span { margin-right: .4rem; }
+.article .evidence > summary > :global(.evidence-badge) { margin-left: .1rem; font-size: .64rem; padding: .15rem .45rem; }
+.article .evidence > p { margin: .65rem 0; padding-left: .7rem; border-left: 2px solid var(--line-strong); color: var(--ink-soft); font-size: .78rem; overflow-wrap: anywhere; }
+
+.backbone, .setup { margin-top: 1.35rem; }
+.backboneRows { border-top: 1px solid var(--line); }
+.backboneRow { display: grid; grid-template-columns: minmax(7rem, .22fr) minmax(0, 1fr); gap: 1rem; padding: .85rem 0; border-bottom: 1px solid var(--line); }
+.backboneRow > h4 { color: var(--accent); padding-top: .35rem; }
+.backboneRow > div { min-width: 0; }
+.backboneRow .formula { margin-top: 0; }
+.article .backboneReason { margin: .3rem 0 0; font-size: .82rem; }
+.setup { border-bottom: 1px solid var(--line); padding-bottom: 1rem; }
+.setup > p { font-size: .82rem; max-width: 57rem; }
+
+.arguments { min-width: 0; }
+.argument { min-width: 0; padding: 1.4rem 0; border-bottom: 1px solid var(--line); }
+.argument h3 { display: flex; align-items: baseline; gap: .65rem; }
+.number { flex: 0 0 auto; color: var(--accent); font-size: .77rem; font-variant-numeric: tabular-nums; }
+.argumentFormulas { min-width: 0; padding: .3rem .8rem; background: var(--paper); }
+.reasoning { margin: .9rem 0 .55rem; font-size: .83rem; }
+.reasoning > div { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: .55rem; padding: .35rem 0; }
+.reasoning dt { color: var(--muted); font-size: .74rem; padding-top: .06rem; }
+.reasoning dd { min-width: 0; margin: 0; }
+.reasoning ul { margin: 0; padding-left: 1.2em; }
+.reasoning li + li { margin-top: .15rem; }
+.reasoning .result { border-top: 1px solid var(--line); margin-top: .3rem; padding-top: .65rem; }
+.result dt { color: var(--green); font-weight: 650; }
+.result dd { color: var(--ink); font-weight: 550; }
+.conclusion { margin: 1.3rem 0; font-size: .87rem; }
+
+.fullNarrative { border-top: 1px solid var(--line); margin-top: 1.5rem; padding-top: .8rem; }
+.fullNarrative > summary { cursor: pointer; color: var(--accent); font-size: .81rem; }
+.fullNarrativeBody { padding-top: .75rem; font-size: .85rem; line-height: 1.9; }
+.fullNarrativeBody > section { margin-top: 1.6rem; }
+.fullNarrativeBody p { max-width: 58rem; }
+.fullNarrativeBody .formula { margin: .9rem 0; border-left: 2px solid var(--line); padding-left: .8rem; }
+
+@media (max-width: 760px) {
+  .backboneRow { grid-template-columns: minmax(0, 1fr); gap: .5rem; }
+  .backboneRow > h4 { padding-top: 0; }
+  .goal { padding-left: .7rem; padding-right: .6rem; }
+  .argumentFormulas { padding-left: .55rem; padding-right: .55rem; }
+  .reasoning > div { grid-template-columns: minmax(0, 1fr); gap: .15rem; }
+  .reasoning > div + div { margin-top: .3rem; }
+  .math :global(.katex) { font-size: 1.07em; }
+}
