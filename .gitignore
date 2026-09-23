@@ -1,0 +1,59 @@
+# macOS and editors
+.DS_Store
+.idea/
+.vscode/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Credentials — never upload
+.codex/
+.ssh/
+credentials*
+auth.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/coverage/
+*.tsbuildinfo
+
+# Backend
+backend/.venv/
+backend/.pytest_cache/
+backend/.coverage
+backend/htmlcov/
+backend/**/__pycache__/
+backend/**/*.py[cod]
+backend/*.egg-info/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Private papers and analysis results
+.local/
+
+# Python cache
+scripts/**/__pycache__/
+scripts/**/*.py[cod]
+
+# Generated files
+dist/
+*.zip
+*.pdf
+*.PDF
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+node_modules/
+coverage/
+.coverage
