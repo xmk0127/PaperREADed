@@ -2,6 +2,8 @@
 
 import json
 import os
+import shutil
+import stat
 import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
@@ -22,6 +24,13 @@ def valid_id(value: str) -> str:
     except (ValueError, TypeError, AttributeError) as exc:
         raise ValueError("Invalid identifier") from exc
     return value
+
+
+def _remove_work_directory(path: Path) -> None:
+    # rmtree refuses a top-level symlink and unlinks any nested symlinks rather
+    # than following them. Keep this portable to supported Python 3.9 builds
+    # on macOS where descriptor-relative os operations are unavailable.
+    shutil.rmtree(path)
 
 
 class Storage:
@@ -126,6 +135,31 @@ class Storage:
             except (FileNotFoundError, ValueError, OSError):
                 continue
         return sorted(jobs, key=lambda item: item.created_at, reverse=True)
+
+    def delete_job(self, job_id: str) -> None:
+        """Remove one job and its work artifacts, never the imported paper.
+
+        The job JSON contains its result and is unlinked last. If artifact
+        cleanup fails partway through, the record remains visible for retry.
+        The caller must hold the JobManager lock and reject active jobs.
+        """
+        identifier = valid_id(job_id)
+        for directory in (self.root, self.jobs_dir, self.work_dir):
+            if directory.is_symlink() or not directory.is_dir():
+                raise ValueError("Storage directories must not be symlinks")
+        record = self.jobs_dir / (identifier + ".json")
+        if not stat.S_ISREG(record.lstat().st_mode):
+            raise ValueError("Analysis record must be a regular file")
+        work = self.work_dir / identifier
+        try:
+            artifact = work.lstat()
+        except FileNotFoundError:
+            artifact = None
+        if artifact is not None:
+            if not stat.S_ISDIR(artifact.st_mode):
+                raise ValueError("Work directory must not be a symlink or file")
+            _remove_work_directory(work)
+        record.unlink()
 
     def job_workdir(self, job_id: str) -> Path:
         directory = self.work_dir / valid_id(job_id)

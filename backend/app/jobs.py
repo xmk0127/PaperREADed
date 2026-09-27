@@ -176,3 +176,22 @@ class JobManager:
         self._closed = True
         if self._active_id and self._task and not self._task.done():
             await self.cancel(self._active_id)
+
+    async def delete(self, job_id: str) -> None:
+        async with self._running_lock():
+            try:
+                job = self.storage.get_job(job_id)
+            except (ValueError, FileNotFoundError):
+                raise JobError("未找到该分析任务。", 404)
+            if (job.status in {"queued", "running"}
+                    or (job_id == self._active_id and self._task and not self._task.done())):
+                raise JobError("该任务仍在分析中，请先取消或等待完成后再删除。", 409)
+            try:
+                self.storage.delete_job(job_id)
+            except (ValueError, FileNotFoundError):
+                raise JobError("未找到可安全删除的分析记录。", 404)
+            except OSError:
+                raise JobError("删除未完成，记录仍保留，请稍后重试；导入的论文不会删除。", 500)
+            if job_id == self._active_id:
+                self._active_id = None
+                self._task = None

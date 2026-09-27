@@ -34,6 +34,15 @@
 .workspace { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(15rem, 1fr); gap: 2.5rem; margin: 1.8rem 0 2rem; }
 .form h2, .history h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 .9rem; }
 .label { display: block; font-size: .85rem; font-weight: 550; margin: .9rem 0 .35rem; }
+.importModes { min-width: 0; margin: 0; padding: 0; border: 0; }
+.importOptions { display: flex; flex-wrap: wrap; gap: .5rem; }
+.importOption { display: inline-flex; align-items: center; gap: .45rem; padding: .45rem .75rem; border: 1px solid #cfd2c7; border-radius: 5px; background: #fff; font-size: .84rem; cursor: pointer; }
+.importOption:has(input:checked) { color: #314f3f; border-color: #66826c; background: #edf1e9; }
+.importOption input { margin: 0; accent-color: #416b59; }
+.importModes:disabled .importOption { opacity: .5; cursor: not-allowed; }
+.arxivImport { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem; padding: .2rem 0 .4rem; }
+.arxivImport .input { flex: 1 1 16rem; width: auto; }
+.arxivImport .button { flex: none; }
 .input { width: 100%; min-width: 0; padding: .55rem .65rem; border: 1px solid #cfd2c7; background: #fff; border-radius: 5px; color: inherit; }
 textarea.input { min-height: 5.2rem; resize: vertical; }
 .upload { display: flex; gap: .6rem; align-items: center; flex-wrap: wrap; padding: .2rem 0 .4rem; }
@@ -52,6 +61,8 @@ textarea.input { min-height: 5.2rem; resize: vertical; }
 .historyButton[aria-pressed="true"] { border-left-color: #40674f; background: #edf1e9; }
 .historyButton strong { display: block; font-size: .86rem; font-weight: 550; overflow-wrap: anywhere; }
 .historyButton span { display: block; font-size: .74rem; color: #7c8278; overflow-wrap: anywhere; }
+.historyActions { display: flex; align-items: baseline; flex-wrap: wrap; gap: .35rem .65rem; padding: 0 .5rem .6rem; }
+.deleteButton { color: #903c2b; }
 .job { border-top: 1px solid #dce0d5; padding-top: 1.4rem; scroll-margin-top: 1rem; }
 .jobHeading { display: flex; justify-content: space-between; align-items: baseline; gap: .6rem 1.5rem; flex-wrap: wrap; margin-bottom: .7rem; }
 .jobHeading p { margin: 0; font-size: .8rem; color: #747a70; }
@@ -99,6 +110,7 @@ textarea.input { min-height: 5.2rem; resize: vertical; }
   .header a { white-space: nowrap; font-size: .76rem; }
   .main { width: calc(100% - 2rem); padding-top: 1rem; }
   .workspace { grid-template-columns: minmax(0, 1fr); gap: 1.8rem; }
+  .arxivImport .input { flex-basis: 100%; }
   .history { border-left: 0; border-top: 1px solid #e0e2d9; padding: 1rem 0 0; }
   .historyList { max-height: 13rem; }
   .readingBody { font-size: 1rem; }

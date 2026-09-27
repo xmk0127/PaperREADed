@@ -52,7 +52,7 @@ def create_app(storage_root: Optional[Path] = None) -> FastAPI:
         CORSMiddleware,
         allow_origins=allowed_origins(),
         allow_credentials=True,
-        allow_methods=["GET", "POST"],
+        allow_methods=["GET", "POST", "DELETE"],
         allow_headers=["Content-Type", "X-Reader-Token"],
     )
     application.add_middleware(LocalAccessMiddleware)

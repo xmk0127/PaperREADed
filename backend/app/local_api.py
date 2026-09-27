@@ -1,14 +1,15 @@
 """Local-only API routes, protected by the application launch-token middleware."""
 
-from typing import List
+from typing import Dict, List
 
 from fastapi import APIRouter, File, HTTPException, Request, UploadFile
 from fastapi.responses import FileResponse
 from starlette.concurrency import run_in_threadpool
 
 from . import codex_runner
+from .arxiv_import import ArxivImportError, download_arxiv_pdf, parse_arxiv_reference
 from .jobs import JobError
-from .models import AnalysisJob, AnalysisRequest, CodexStatus, Paper
+from .models import AnalysisJob, AnalysisRequest, ArxivImportRequest, CodexStatus, Paper
 from .pdf_extract import MAX_PDF_BYTES, PDFImportError, extract_pages_isolated
 
 router = APIRouter(prefix="/api")
@@ -38,6 +39,21 @@ async def upload_paper(request: Request, file: UploadFile = File(...)):
                                       file.filename or "paper.pdf", content, pages, warnings)
     finally:
         await file.close()
+
+
+@router.post("/papers/arxiv", response_model=Paper, status_code=201)
+async def import_arxiv_paper(payload: ArxivImportRequest, request: Request):
+    try:
+        identifier = parse_arxiv_reference(payload.reference)
+        content = await download_arxiv_pdf(identifier)
+        pages, warnings = await extract_pages_isolated(content)
+    except ArxivImportError as exc:
+        raise HTTPException(exc.status_code, str(exc)) from exc
+    except PDFImportError as exc:
+        raise HTTPException(422, str(exc)) from exc
+    filename = "arxiv-" + identifier.replace("/", "-") + ".pdf"
+    return await run_in_threadpool(request.app.state.storage.create_paper,
+                                  filename, content, pages, warnings)
 
 
 @router.get("/papers/{paper_id}/pdf")
@@ -89,3 +105,12 @@ async def cancel_analysis(job_id: str, request: Request):
         return await request.app.state.jobs.cancel(job_id)
     except (ValueError, FileNotFoundError):
         raise HTTPException(404, "未找到该分析任务。")
+
+
+@router.delete("/analyses/{job_id}", response_model=Dict[str, str])
+async def delete_analysis(job_id: str, request: Request):
+    try:
+        await request.app.state.jobs.delete(job_id)
+    except JobError as exc:
+        raise HTTPException(exc.status_code, str(exc)) from exc
+    return {"deleted_id": job_id}

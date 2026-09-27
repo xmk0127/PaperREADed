@@ -82,6 +82,10 @@ class Paper(StrictModel):
     warnings: List[str] = Field(default_factory=list)
 
 
+class ArxivImportRequest(StrictModel):
+    reference: str = Field(min_length=1, max_length=500)
+
+
 class AnalysisRequest(StrictModel):
     paper_id: str = Field(min_length=1, max_length=100)
     target: str = Field(min_length=1, max_length=500)
