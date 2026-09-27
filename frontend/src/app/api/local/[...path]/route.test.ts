@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { GET, POST } from "./route";
+import { DELETE, GET, POST } from "./route";
 
 const params = (path: string) => ({ params: Promise.resolve({ path: path.split("/") }) });
 
@@ -58,5 +58,85 @@ describe("Local backend proxy", () => {
     }), params("analyses"));
     expect(response.status).toBe(502);
     expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("forwards arXiv references as JSON to the fixed local import endpoint", async () => {
+    const fetchMock = vi.fn().mockResolvedValue(Response.json({ id: "imported-paper" }, { status: 201 }));
+    vi.stubGlobal("fetch", fetchMock);
+    const body = JSON.stringify({ reference: "https://arxiv.org/pdf/2309.07041" });
+    const response = await POST(new Request("http://127.0.0.1:3100/api/local/papers/arxiv", {
+      method: "POST", headers: { Origin: "http://127.0.0.1:3100", "Content-Type": "application/json" }, body,
+    }), params("papers/arxiv"));
+    expect(response.status).toBe(201);
+    const [url, options] = fetchMock.mock.calls[0];
+    expect(url.toString()).toBe("http://127.0.0.1:8100/api/papers/arxiv");
+    expect(options.headers.get("content-type")).toBe("application/json");
+    expect(new TextDecoder().decode(options.body)).toBe(body);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("does not allow untrusted arXiv imports or arbitrary remote proxy paths", async () => {
+    const fetchMock = vi.fn(); vi.stubGlobal("fetch", fetchMock);
+    expect((await POST(new Request("http://127.0.0.1:3100/api/local/papers/arxiv", {
+      method: "POST", headers: { Origin: "https://evil.example" },
+    }), params("papers/arxiv"))).status).toBe(403);
+    for (const path of ["papers/url", "papers/arxiv/2309.07041", "https://arxiv.org/pdf/2309.07041"]) {
+      expect((await POST(new Request("http://127.0.0.1:3100/api/local/papers/arxiv", {
+        method: "POST", headers: { Origin: "http://127.0.0.1:3100" },
+      }), params(path))).status).toBe(404);
+    }
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  it("forwards a same-origin single-record deletion without exposing the launch secret", async () => {
+    const id = "fe203b83-76f0-41c9-91ce-e598e32769d3";
+    const fetchMock = vi.fn().mockResolvedValue(Response.json({ deleted_id: id }));
+    vi.stubGlobal("fetch", fetchMock);
+    const response = await DELETE(new Request(`http://127.0.0.1:3100/api/local/analyses/${id}`, {
+      method: "DELETE", headers: { Origin: "http://127.0.0.1:3100", Cookie: "private=ignored" },
+    }), params(`analyses/${id}`));
+    expect(response.status).toBe(200);
+    expect(await response.json()).toEqual({ deleted_id: id });
+    expect(response.headers.get("x-reader-token")).toBeNull();
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    const [url, options] = fetchMock.mock.calls[0];
+    expect(url.toString()).toBe(`http://127.0.0.1:8100/api/analyses/${id}`);
+    expect(options.method).toBe("DELETE");
+    expect(options.headers.get("x-reader-token")).toBe("launch-secret");
+    expect(options.headers.get("cookie")).toBeNull();
+    expect(options.body).toBeUndefined();
+  });
+
+  it("rejects untrusted deletion requests and never allows bulk or paper deletion", async () => {
+    const fetchMock = vi.fn();
+    vi.stubGlobal("fetch", fetchMock);
+    const untrusted: HeadersInit[] = [{}, { Origin: "https://evil.example" }, {
+      Origin: "http://127.0.0.1:3100", "Sec-Fetch-Site": "cross-site",
+    }];
+    for (const headers of untrusted) {
+      expect((await DELETE(new Request("http://127.0.0.1:3100/api/local/analyses/job", {
+        method: "DELETE", headers,
+      }), params("analyses/job"))).status).toBe(403);
+    }
+    for (const path of ["analyses", "papers/job", "analyses/job/cancel", "analyses/../papers"]) {
+      expect((await DELETE(new Request(`http://127.0.0.1:3100/api/local/${path}`, {
+        method: "DELETE", headers: { Origin: "http://127.0.0.1:3100" },
+      }), params(path))).status).toBe(404);
+    }
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  it("preserves deletion conflicts and failures without retrying", async () => {
+    const fetchMock = vi.fn().mockResolvedValue(Response.json({ detail: "请先取消分析。" }, { status: 409 }));
+    vi.stubGlobal("fetch", fetchMock);
+    const request = () => new Request("http://127.0.0.1:3100/api/local/analyses/job", {
+      method: "DELETE", headers: { Origin: "http://127.0.0.1:3100" },
+    });
+    const conflict = await DELETE(request(), params("analyses/job"));
+    expect(conflict.status).toBe(409);
+    expect(await conflict.json()).toEqual({ detail: "请先取消分析。" });
+    fetchMock.mockRejectedValue(new Error("offline"));
+    expect((await DELETE(request(), params("analyses/job"))).status).toBe(502);
+    expect(fetchMock).toHaveBeenCalledTimes(2);
   });
 });
