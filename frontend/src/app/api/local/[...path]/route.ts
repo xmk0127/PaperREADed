@@ -7,7 +7,8 @@ const maxBodyBytes = 31 * 1024 * 1024;
 const idPattern = "[a-zA-Z0-9_-]+";
 const routes = new Map([
   ["GET", new RegExp(`^(health|codex/status|papers|analyses|papers/${idPattern}/pdf|papers/${idPattern}/pages/[1-9][0-9]*|analyses/${idPattern})$`)],
-  ["POST", new RegExp(`^(papers|analyses|analyses/${idPattern}/cancel)$`)],
+  ["POST", new RegExp(`^(papers|papers/arxiv|analyses|analyses/${idPattern}/cancel)$`)],
+  ["DELETE", new RegExp(`^analyses/${idPattern}$`)],
 ]);
 
 function failure(message: string, status: number) {
@@ -89,3 +90,4 @@ async function proxy(request: Request, context: { params: Promise<{ path: string
 
 export const GET = proxy;
 export const POST = proxy;
+export const DELETE = proxy;
